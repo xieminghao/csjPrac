@@ -1,0 +1,24 @@
+{
+  "name": "csj",
+  "version": "1.0.0",
+  "description": "csjtestwebsite",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --inline --hot",
+    "build": "webpack -p"
+  },
+  "author": "csj",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "open-browser-webpack-plugin": "^0.0.3",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.12.15",
+    "webpack-dev-server": "^1.14.1",
+    "less": "^2.7.2",
+    "less-loader": "^2.2.3"
+  },
+  "dependencies": {
+    "jquery": "^1.12.4"
+  }
+}
