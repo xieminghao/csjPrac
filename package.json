@@ -4,21 +4,29 @@
   "description": "csjtestwebsite",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot",
-    "build": "webpack -p"
+    "clean": "rm -rf output/",
+    "build": "rm -rf output/ && webpack --config webpack/webpack.config.js --progress --profile --colors --display-error-details --display-modules",
+    "dev": "rm -rf output/ && NODE_ENV=dev node webpack/server.js",
+    "release": "rm -rf output/ && NODE_ENV=release webpack --config webpack/webpack.config.js --colors --display-error-details",
+    "publish": "rm -rf output/ && NODE_ENV=production webpack --config webpack/webpack.config.js --colors --display-error-details"
   },
   "author": "csj",
   "license": "MIT",
   "devDependencies": {
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.23.1",
+    "less": "^2.7.2",
+    "less-loader": "^2.2.3",
     "open-browser-webpack-plugin": "^0.0.3",
     "style-loader": "^0.13.1",
     "webpack": "^1.12.15",
-    "webpack-dev-server": "^1.14.1",
-    "less": "^2.7.2",
-    "less-loader": "^2.2.3"
+    "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "extract-text-webpack-plugin": "^1.0.1",
+    "glob": "^7.1.1",
+    "html-loader": "^0.4.4",
+    "html-webpack-plugin": "^2.28.0",
     "jquery": "^1.12.4"
   }
 }
