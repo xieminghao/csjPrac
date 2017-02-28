@@ -6,7 +6,8 @@
   "scripts": {
     "clean": "rm -rf output/",
     "build": "webpack --config webpack/webpack.config.js --progress --profile --colors --display-error-details --display-modules",
-    "dev": "node webpack/server.js",
+    "dev": "rm -rf output/ && NODE_ENV=dev node webpack/server.js",
+    "dev_win": "node webpack/server.js",
     "release": "rm -rf output/ && NODE_ENV=release webpack --config webpack/webpack.config.js --colors --display-error-details",
     "publish": "rm -rf output/ && NODE_ENV=production webpack --config webpack/webpack.config.js --colors --display-error-details"
   },
