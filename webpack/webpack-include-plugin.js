@@ -59,8 +59,6 @@ function readFile(url){
     } catch (e) {
         //html = '';
     }
-    console.log('url:', path.join(__dirname, "../" + url))
-    console.log('readFile html', html)
     return html;
 }
 
