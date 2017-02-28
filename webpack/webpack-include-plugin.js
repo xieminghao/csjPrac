@@ -33,6 +33,7 @@ webpackIncludePlugin.prototype.apply = function(compiler) {
 function include(html){
     var html, include, matches, htmlArr, ioHtml;
     matches = parseTemplateText(html);
+    console.log('matches:',matches);
     htmlArr = matches.concat();
     matches.forEach(function (line, index) {
         if ((include = line.match(/^\s*include\s+(\S+)/))) {
