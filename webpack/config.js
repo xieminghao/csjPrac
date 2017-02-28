@@ -29,33 +29,36 @@ function getEntryHtml (globPath, opts) {
     opts.exclude.forEach(item => {
         excludeFiles = excludeFiles.concat(glob.sync(item));
     });
-
+    console.log('test5')
+    console.log(typeof(glob))
     glob.sync(globPath).forEach(filePath => {
+
+        console.log('filePath:', filePath)
+
         var jsName, htmlName;
         htmlName = filePath;
-
+        htmlName = htmlName.replace('src/','')
         //根据替换规则替换生成的html名称
-        Object.keys(opts.replaceHtml).forEach(replaceKey => {
-            htmlName = htmlName.replace(replaceKey, opts.replaceHtml[replaceKey]);
-        });
+        //Object.keys(opts.replaceHtml).forEach(replaceKey => {
+        //    htmlName = htmlName.replace(replaceKey, opts.replaceHtml[replaceKey]);
+        //});
 
         //根据映射规则指定自动注入的js文件名称
-        Object.keys(opts.mapJs).forEach(mapKey => {
-            if(filePath.startsWith(mapKey)){
-                jsName = opts.mapJs[mapKey];
-                return;
-            }
-        });
+        //Object.keys(opts.mapJs).forEach(mapKey => {
+        //    if(filePath.startsWith(mapKey)){
+        //        jsName = opts.mapJs[mapKey];
+        //        return;
+        //    }
+        //});
 
         //若js未匹配到映射规则,则默认使用与html同名的js
-        jsName = jsName || htmlName.replace(path.extname(htmlName), '');
+        // jsName = jsName || htmlName.replace(path.extname(htmlName), '');
 
         //若不需要打包的规则数组不包含filePath
         if(!excludeFiles.some(function(val){ return val === filePath})){
             files.push({
-                path: filePath,
+                path: '../' + filePath,
                 htmlName: htmlName.replace(path.extname(htmlName), ''),
-                jsName: jsName
             });
         }
     });
@@ -69,7 +72,6 @@ function getEntryJs (globPaths) {
     Object.keys(globPaths).forEach(globPath => {
         glob.sync(globPath).forEach(item => {
             var entry = {};
-
             //目录
             var dirname = path.dirname(item).replace(globPaths[globPath], '');
             //文件名

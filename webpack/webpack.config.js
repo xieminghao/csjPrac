@@ -9,7 +9,7 @@ var _config = require('./config.js');
 
 console.log('当前配置如下:', _config);
 
-module.exports = {
+var config = {
     entry: {
         // 'js/index' : [path.resolve(__dirname, '../src/index.js')]
     },
@@ -52,12 +52,16 @@ module.exports = {
             from: (path.resolve(__dirname, '../src/script')),
             to: (path.resolve(__dirname, '../output/script'))
         }]),
-        new HtmlWebpackPlugin({
-            filename: _config.htmlDir + 'view/index.html',    //生成的html存放路径
-            template: '../src/view/index.html',    //html模板路径
-            // chunks : ['js/index'],
-            inject: true,
-        })
+        new CopyWebpackPlugin([{
+            from: (path.resolve(__dirname, '../src/style')),
+            to: (path.resolve(__dirname, '../output/style'))
+        }]),
+        //new HtmlWebpackPlugin({
+        //    filename: _config.htmlDir + 'view/index.html',    //生成的html存放路径
+        //    template: '../src/view/index.html',    //html模板路径
+        //    // chunks : ['js/index'],
+        //    inject: true,
+        //})
     ],
     resolve: {
         modulesDirectories: ['node_modules'],
@@ -69,3 +73,56 @@ module.exports = {
 
     }
 };
+
+//注入普通页面
+function injectPage (config, opts) {
+    opts = Object.assign({
+        src: [],
+        exclude: [],
+        replaceHtml: {},
+        mapJs: {}
+    }, opts);
+    if(!Array.isArray(opts.src)){
+        opts.src = Array.of(opts.src);
+    }
+    if(!Array.isArray(opts.exclude)){
+        opts.exclude = Array.of(opts.exclude);
+    }
+    opts.src.forEach(globPath => {
+        console.log('test4', globPath)
+        _config.getEntryHtml(globPath, opts).forEach(function(item) {
+            console.log('>html开始注入:模块名:%s, html路径:%s;                                  ', item.htmlName, item.path);
+
+            //html自动注入js\css, 自动注入[common-apply.js、apply/index.js、apply/index.css]
+            //config.plugins.push(new HtmlWebpackPlugin({
+            //    filename: _config.htmlDir + item.htmlName + '.html',    //生成的html存放路径
+            //    template: item.path,    //html模板路径
+            //    chunks : ['common-apply', item.jsName]
+            //}));
+            config.plugins.push(new HtmlWebpackPlugin({
+                filename: _config.htmlDir + item.htmlName + '.html',    //生成的html存放路径
+                template: item.path,    //html模板路径
+                inject: true,
+            }));
+        });
+});
+}
+
+
+//注入HTML页面
+injectPage(config, {
+    //需要打包的页面
+    src: [
+        'src/view/**/*.html'
+    ],
+    //排除不需要打包的页面
+    exclude: [
+        'src/view/common/*.html'
+    ]
+    //ouput输出目录:生成的html名称[替换]规则
+    //replaceHtml: {'view/singlepage/apply-credit/html/': 'apply-credit/', 'view/page/': 'page/'},
+    //html中自动注入js[映射]规则
+    //mapJs: {'view/singlepage/apply-credit/html/': 'apply-credit/index'}
+});
+
+module.exports = config;
