@@ -37,7 +37,7 @@ function getEntryHtml (globPath, opts) {
 
         var jsName, htmlName;
         htmlName = filePath;
-        htmlName = htmlName.replace('src/','')
+        htmlName = htmlName.replace('src/view/','')
         //根据替换规则替换生成的html名称
         //Object.keys(opts.replaceHtml).forEach(replaceKey => {
         //    htmlName = htmlName.replace(replaceKey, opts.replaceHtml[replaceKey]);
