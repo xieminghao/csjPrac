@@ -1,4 +1,4 @@
-//process.env.NODE_ENV === 'dev';
+process.env.NODE_ENV = 'dev';
 var fs = require('fs');
 var os = require('os');
 var webpack = require('webpack');

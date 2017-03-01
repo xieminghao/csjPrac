@@ -95,7 +95,7 @@ function injectPage (config, opts) {
     opts.src.forEach(globPath => {
         console.log('test4', globPath)
         _config.getEntryHtml(globPath, opts).forEach(function(item) {
-            console.log('>html开始注入:模块名:%s, html路径:%s;                                  ', item.htmlName, item.path);
+            console.log('>html开始注入:模块名:%s, html路径:%s;', item.htmlName, item.path);
 
             //html自动注入js\css, 自动注入[common-apply.js、apply/index.js、apply/index.css]
             //config.plugins.push(new HtmlWebpackPlugin({

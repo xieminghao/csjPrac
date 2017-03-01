@@ -148,11 +148,11 @@
         color: #FFF;
         text-decoration: none;
         margin: 5px 10px 0px 0px;
-        background: url(../images/stat/sp_btn.png) no-repeat 0px 0px;
+        background: url(../../images/index/stat/sp_btn.png) no-repeat 0px 0px;
     }
     .lot-award .video_btn:hover {
         color:#ffff00;
-        background: url(../images/stat/sp_btn.png) no-repeat 0px -24px;
+        background: url(../../images/index/stat/sp_btn.png) no-repeat 0px -24px;
     }
 
 .addTopLine {
@@ -244,7 +244,7 @@
 }
 
 .warnTime .minute, .warnTime .second {
-    background: url(../images/time-bg2.png) no-repeat;
+    background: url(../../images/index/time-bg2.png) no-repeat;
     width: 49px;
     height: 48px;
     text-align: center;
@@ -256,7 +256,7 @@
 }
 
 .warnTime .hourminutesecond {
-    background: url(../images/bg_hour.png) no-repeat;
+    background: url(../../images/index/bg_hour.png) no-repeat;
     width: 145px;
     height: 48px;
     text-align: center;
@@ -268,7 +268,7 @@
 }
 
 .warnTime .sound {
-    background: url(../images/small/sound.jpg) no-repeat 0 -54px;
+    background: url(../../images/index/small/sound.jpg) no-repeat 0 -54px;
     display: block;
     float: left;
     width: 27px;
@@ -279,16 +279,16 @@
 
 .warnTime .close {
     border: 0;
-    background: url(../images/small/sound.jpg) no-repeat 0 0;
+    background: url(../../images/index/small/sound.jpg) no-repeat 0 0;
     margin-top: 12px;
 }
 
 .warnTime .red-bg {
-    background: url(../images/time-bg.png) no-repeat;
+    background: url(../../images/index/time-bg.png) no-repeat;
 }
 
 .warnTime .red-bg_hour {
-    background: url(../images/bg_hour_time.png) no-repeat;
+    background: url(../../images/index/bg_hour_time.png) no-repeat;
 }
 
 .warnTime .t2 {
@@ -312,7 +312,7 @@
         }
 
     .lot-award .navi .down {
-        background: url(../images/lot-down.png) 0 7px no-repeat;
+        background: url(../../images/index/lot-down.png) 0 7px no-repeat;
         padding-left: 15px;
     }
 
@@ -665,13 +665,13 @@
 
 .ico-up {
     display: block;
-    background: url(../images/up.gif) no-repeat 85px 0;
+    background: url(../../images/index/up.gif) no-repeat 85px 0;
     color: #c3271d;
 }
 
 .ico-down {
     display: block;
-    background: url(../images/down.gif) no-repeat 85px 0;
+    background: url(../../images/index/down.gif) no-repeat 85px 0;
     color: #c3271d;
 }
 
@@ -790,18 +790,18 @@
 }
 
     .f14 .ball {
-        background: url('../images/ballViolet.png') no-repeat center #fafafa;
+        background: url('../../images/index/ballViolet.png') no-repeat center #fafafa;
         width: 32px;
     }
 
     .f14 .ball7 {
-        background: url('../images/ballViolet.png') no-repeat center #fafafa;
+        background: url('../../images/index/ballViolet.png') no-repeat center #fafafa;
         width: 7%;
         text-align: center;
     }
 
     .f14 .ball4 {
-        background: url('../images/ballViolet.png') no-repeat center #fafafa;
+        background: url('../../images/index/ballViolet.png') no-repeat center #fafafa;
         width: 4%;
         text-align: center;
     }
@@ -858,7 +858,7 @@
         text-align: center;
         margin-top: 2px;
         color: gray;
-        background: url(../images/bg_wt2.png) no-repeat -40px -105px;
+        background: url(../../images/index/bg_wt2.png) no-repeat -40px -105px;
         outline: 0;
         text-shadow: 0 1px 0 #FFF;
     }
@@ -1052,7 +1052,7 @@
 }
 
 .move-down {
-    background: url(../images/move-down.gif) no-repeat;
+    background: url(../../images/index/move-down.gif) no-repeat;
     width: 25px;
     height: 18px;
     display: block;
@@ -1064,11 +1064,11 @@
 }
 
     .move-down:hover {
-        background: url(../images/move-down-cur.gif) no-repeat;
+        background: url(../../images/index/move-down-cur.gif) no-repeat;
     }
 
 .move-up {
-    background: url(../images/move-up.gif) no-repeat;
+    background: url(../../images/index/move-up.gif) no-repeat;
     width: 25px;
     float: right;
     height: 18px;
@@ -1080,7 +1080,7 @@
 }
 
     .move-up:hover {
-        background: url(../images/move-up-cur.gif) no-repeat;
+        background: url(../../images/index/move-up-cur.gif) no-repeat;
     }
 
 .lot-number-omit .type input {
@@ -1137,7 +1137,7 @@
 .changlong-setting {
     padding-left: 15px;
     margin-left: 25px;
-    background: url(../images/changlong-setting.png) 0 4px no-repeat;
+    background: url(../../images/index/changlong-setting.png) 0 4px no-repeat;
 }
 
 .cl_f {
@@ -1393,17 +1393,17 @@
     }
 
         .web_Sortk li.btn {
-            background: url(../images/small/jt0s.png) no-repeat center;
+            background: url(../../images/index/small/jt0s.png) no-repeat center;
             width: 20px;
             height: 22px;
         }
 
         .web_Sortk li.btnUp {
-            background: url(../images/small/jt0s21.png) no-repeat center;
+            background: url(../../images/index/small/jt0s21.png) no-repeat center;
         }
 
         .web_Sortk li.btnDown {
-            background: url(../images/small/jt0s22.png) no-repeat center;
+            background: url(../../images/index/small/jt0s22.png) no-repeat center;
         }
 
         .web_Sortk li.btn span {
@@ -1499,7 +1499,7 @@
 .redBalls2 {
     width: 18px;
     height: 18px;
-    background: url(../images/stat/ballks2_s.png) no-repeat center;
+    background: url(../../images/index/stat/ballks2_s.png) no-repeat center;
     display: block;
     font-family: Tahoma;
     font-size: 11px;
@@ -1516,7 +1516,7 @@
 .redBalls3 {
     width: 18px;
     height: 18px;
-    background: url(../images/small/ballks2_s2.png) no-repeat center;
+    background: url(../../images/index/small/ballks2_s2.png) no-repeat center;
     display: block;
     font-family: Tahoma;
     font-size: 11px;
@@ -1691,7 +1691,7 @@
 .web_moreVideoLeft {
     width: 45px;
     height: 125px;
-    background: url(../images/leftjt01sk.gif) no-repeat center;
+    background: url(../../images/index/leftjt01sk.gif) no-repeat center;
     cursor: pointer;
     float: left;
 }
@@ -1699,7 +1699,7 @@
 .web_moreVideoRight {
     width: 45px;
     height: 125px;
-    background: url(../images/leftjt02sk.gif) no-repeat center;
+    background: url(../../images/index/leftjt02sk.gif) no-repeat center;
     cursor: pointer;
     float: right;
 }
@@ -1761,7 +1761,7 @@
             width: 28px;
             height: 28px;
             float: right;
-            background: url(../images/rightJt098.jpg) no-repeat center;
+            background: url(../../images/index/rightJt098.jpg) no-repeat center;
             cursor: pointer;
         }
 
@@ -1811,7 +1811,7 @@
         display: block;
         float: left;
         cursor: pointer;
-        background: url(../images/stat/changeXuan1.png) no-repeat center;
+        background: url(../../images/index/stat/changeXuan1.png) no-repeat center;
         text-align: center;
         color: #666;
         line-height: 35px;
@@ -1821,23 +1821,23 @@
     }
 
         .web_listOP li.hover {
-            background: url(../images/stat/changeXuan2.png) no-repeat center;
+            background: url(../../images/index/stat/changeXuan2.png) no-repeat center;
         }
 
 .web_listChange li {
-    background: url(../images/stat/changeXuan3.png) no-repeat center;
+    background: url(../../images/index/stat/changeXuan3.png) no-repeat center;
 }
 
 .web_listOP li.listLong {
     width: 218px;
     height: 35px;
-    background: url(../images/stat/changeXuan3.gif) no-repeat;
+    background: url(../../images/index/stat/changeXuan3.gif) no-repeat;
 }
 
 .wen_newIcon {
     width: 20px;
     height: 11px;
-    background: url(../images/stat/newicon01.gif) no-repeat;
+    background: url(../../images/index/stat/newicon01.gif) no-repeat;
     font-size: 0;
     position: absolute;
     right: -3px;
@@ -1847,7 +1847,7 @@
 .hoticon {
     width: 20px;
     height: 11px;
-    background: url(../images/stat/hoticon.gif) no-repeat;
+    background: url(../../images/index/stat/hoticon.gif) no-repeat;
     font-size: 0;
     position: absolute;
     right: -3px;
@@ -1857,7 +1857,7 @@
 .wen_lasthostory {
     width: 59px;
     height: 16px;
-    background: url(../images/lasthostory.png) no-repeat;
+    background: url(../../images/index/lasthostory.png) no-repeat;
     font-size: 0;
     position: absolute;
     right: -3px;
@@ -1871,7 +1871,7 @@
 .wen_newIcon2 {
     width: 20px;
     height: 11px;
-    background: url(../images/stat/newicon01.gif) no-repeat;
+    background: url(../../images/index/stat/newicon01.gif) no-repeat;
     font-size: 0;
     position: absolute;
     right: 25px;
@@ -1889,7 +1889,7 @@
     .web_listOP a:hover {
         color: #fff;
         text-decoration: none;
-        background: url(../images/stat/changeXuan2.png) no-repeat center;
+        background: url(../../images/index/stat/changeXuan2.png) no-repeat center;
     }
 
 .web_listOP li.hover a {
@@ -1976,7 +1976,7 @@
     .InstructionsForUse .InstructionsForUse_btn {
         width: 62px;
         height: 24px;
-        background: url(../images/instructions/btn01.jpg) no-repeat;
+        background: url(../../images/index/instructions/btn01.jpg) no-repeat;
         display: block;
         cursor: pointer;
         line-height: 24px;
@@ -1991,7 +1991,7 @@
     }
 
     .InstructionsForUse .ForUse_hover {
-        background: url(../images/instructions/btn02.jpg) no-repeat;
+        background: url(../../images/index/instructions/btn02.jpg) no-repeat;
     }
 
     .InstructionsForUse .position {
@@ -2054,14 +2054,14 @@
         height: 12px;
         top: 0;
         left: 0;
-        background: url("../images/questionMark.png") no-repeat 0 0;
+        background: url("../../images/index/questionMark.png") no-repeat 0 0;
         display: block;
         cursor: pointer;
         font-size: 0;
     }
 
         .iconHelp i:hover {
-            background: url("../images/questionMark.png") no-repeat 0 -12px;
+            background: url("../../images/index/questionMark.png") no-repeat 0 -12px;
         }
 
 .helpWindow {
@@ -2159,7 +2159,7 @@
                 cursor: pointer;
                 font-weight: normal;
                 text-align: left;
-                background: url("../images/checkBox2.png") no-repeat 0 0;
+                background: url("../../images/index/checkBox2.png") no-repeat 0 0;
             }
 
         .checkBlock .checkBlockList .listCons2 b.newCheckBox {
@@ -2192,7 +2192,7 @@
         }
 
         .checkBlock .checkBlockList .listCons b.true {
-            background: url("../images/checkBox2.png") no-repeat 0 -14px;
+            background: url("../../images/index/checkBox2.png") no-repeat 0 -14px;
         }
 
 .fontAd {
@@ -2284,7 +2284,7 @@
 .fk_span {
     height: 20px;
     display: block;
-    background: url('../images/small/menu_icon.png') no-repeat 0 -79px;
+    background: url('../../images/index/small/menu_icon.png') no-repeat 0 -79px;
     line-height: 20px;
     text-indent: 22px;
     overflow: hidden;
@@ -2335,7 +2335,7 @@
 
 .px_span {
     height: 13px;
-    background: url('../images/small/menu_icon.png') no-repeat 0 -44px;
+    background: url('../../images/index/small/menu_icon.png') no-repeat 0 -44px;
     line-height: 13px;
     margin-top: 5px;
 }
@@ -2344,7 +2344,7 @@
     height: 22px;
     line-height: 22px;
     margin-top: 0;
-    background: url('../images/small/menu_icon.png') no-repeat 0 -57px;
+    background: url('../../images/index/small/menu_icon.png') no-repeat 0 -57px;
 }
 
     .unlock_span a.fk_spanLink {
@@ -2364,7 +2364,7 @@ a.leftBtn {
     overflow: hidden;
     text-align: center;
     line-height: 22px;
-    background: url('../images/small/menu_icon.png') no-repeat 0 -22px;
+    background: url('../../images/index/small/menu_icon.png') no-repeat 0 -22px;
     color: #fff !important;
     text-decoration: none;
     margin-left: 20px;
@@ -2379,7 +2379,7 @@ a.rightBtn {
     overflow: hidden;
     text-align: center;
     line-height: 22px;
-    background: url('../images/small/menu_icon.png') no-repeat 0 0;
+    background: url('../../images/index/small/menu_icon.png') no-repeat 0 0;
     color: #fff !important;
     text-decoration: none;
     margin-left: 20px;
@@ -2455,7 +2455,7 @@ a.rightBtn {
     }
 
 .close_hiswin {
-    background: url(../images/close.png) no-repeat center;
+    background: url(../../images/index/close.png) no-repeat center;
     display: block;
     width: 30px;
     height: 30px;
@@ -2529,7 +2529,7 @@ a.rightBtn {
     .dailyChangLongStatistics .lot-table .dcls_firstTd {
         width: 84px;
         height: 46px;
-        background: url("../images/stat/dcls_table_bg.gif") no-repeat top left;
+        background: url("../../images/index/stat/dcls_table_bg.gif") no-repeat top left;
     }
 
         .dailyChangLongStatistics .lot-table .dcls_firstTd span {
@@ -2721,10 +2721,10 @@ border-bottom: dashed 1px #ccc;
     cursor: pointer;
     font-weight: normal;
     font-size: 12px;
-    background: url("../images/checkBox2.png") no-repeat 0 0;
+    background: url("../../images/index/checkBox2.png") no-repeat 0 0;
 }
 .lot-number-omit2 .nda_selected{
-    background: url("../images/checkBox2.png") no-repeat 0 -14px;
+    background: url("../../images/index/checkBox2.png") no-repeat 0 -14px;
 }
 
-.jsloading{ height:200px; background:url(../images/stat/busy_anim.gif) no-repeat center #fff; width:100%;}
+.jsloading{ height:200px; background:url(../../images/index/stat/busy_anim.gif) no-repeat center #fff; width:100%;}

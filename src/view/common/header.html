@@ -1,0 +1,111 @@
+<!--头部 start-->
+    <div class="hj_public_topNav" style="z-index: 10000;">
+        <div class="hj_p_tn_content" style="z-index: 10000;">
+            <div class="topSmallNav">
+                <a href="http://www.1398x.com/" class="hover" target="_blank">彩世界</a>
+                <a href="http://www.1396mm.com/" rel="nofollow" target="_blank">博世界</a>
+                <a href="javascript:void(0);" class="last"><span></span></a>
+
+                
+
+            </div>
+            <div class="Announcement">
+                <marquee id="marquee" scrollamount="2" direction="left">
+尊敬的用户，最近发现有不法分子冒用皇家彩世界的名义建立网站牟利，为了确保您的利益不受损害，请认准1398导航站进入皇家彩世界，网址：www.1398x.com
+                </marquee>
+            </div>
+            <div class="rightLogin" id="unsignin">
+                <span><a href="/sso/login">登录</a></span>
+                <span class="line">|</span>
+                <span><a href="/sso/register">免费注册</a></span>
+                <span class="line">|</span>
+                <span class="res"><a href="javascript:void(0);" id="userfeedback">用户反馈</a></span>
+                <span class="line">|</span>
+                <span>
+                    <a href="javascript:if(confirm('请登录后再举报')){location.href='/sso/login';}" rel="nofollow" class="reportBtn" title="网站举报">&nbsp;</a>
+                </span>
+                <span class="line">|</span>
+                <span><a href="http://www.1396app.com" rel="nofollow" class="bw_downloadBtn">应用下载</a></span>
+            </div>
+            <div class="rightLogin" id="signin" style="display: none">
+                <span><a href="/uc/index" style="color: red; width: auto;" id="mname"></a></span>
+                <span class="line">|</span>
+                <span><a href="/sso/logout" onclick="return confirm('是否确认要需要退出？');">退出</a></span>
+                <span class="line">|</span>
+                <span class="res">
+                    <a href="/home/feedback" target="_blank">
+                        用户反馈
+                        <span class="hj_public_num" id="myfeedback" style="display: none;" onclick="window.open('/uc/myfeedback');return false;"></span>
+                    </a>
+                </span>
+                <span class="line">|</span>
+                    <span>
+                        <a href="http://mc.royaleu.com/sitereport.ashx" target="_blank" rel="nofollow" class="reportBtn" title="网站举报">&nbsp;</a>
+                    </span>
+                <span class="line">|</span>
+                <span><a href="http://www.1396app.com" rel="nofollow" class="bw_downloadBtn">应用下载</a></span>
+            </div>
+
+            <div class="hj_public_clearBoth"></div>
+            <div class="topSmallNav_more">
+                <table>
+                    <tr>
+                        <th colspan="2">网页</th>
+                        <th colspan="3">手机</th>
+                    </tr>
+                    <tr>
+                        <td width="20%"><a href="http://www.1396mm.com/" rel="nofollow" target="_blank">博世界</a></td>
+                        <td width="20%"><a href="http://www.1396app.com/" rel="nofollow" target="_blank">博应用<span class="hj_public_hot"></span></a></td>
+                        <td width="20%"><a href="http://www.1396app.com/ios/app/535?utm=1399p" rel="nofollow" target="_blank">重庆时时彩</a></td>
+                        <td width="20%"><a href="http://www.1396app.com/ios/app/379?utm=1399p" rel="nofollow" target="_blank">时时彩宝典<span class="hj_public_new"></span></a></td>
+                        <td width="20%"><a href="http://www.1396app.com/ios/app/591?utm=1399p" rel="nofollow" target="_blank">博应用</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://www.1399p.com/" target="_blank">彩世界</a></td>
+                        <td><a href="http://www.1399p.com/software/" rel="nofollow" target="_blank">软件中心</a></td>
+                        <td><a href="http://www.1396app.com/ios/app/422?utm=1399p" rel="nofollow" target="_blank">幸运农场</a></td>
+                        <td><a href="http://www.1396app.com/ios/app/536?utm=1399p" rel="nofollow" target="_blank">广东快乐十分</a></td>
+                        <td><a href="http://www.1396app.com/ios/app/4802?utm=1399p" rel="nofollow" target="_blank">博世界</a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><a href="http://www.1396app.com/android/app/664?utm=1399p" rel="nofollow" target="_blank">自动下注软件</a></td>
+                        <td><a href="http://www.1396app.com/android/app/2628?utm=1399p" rel="nofollow" target="_blank">北京快乐8</a></td>
+                        <td><a href="http://www.1396app.com/android/app/534?utm=1399p" rel="nofollow" target="_blank">北京PK10</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        try {
+            if (self != top && top.location.host == self.location.host) {
+                top.location.href = self.location.href;
+            }
+        } catch (e) {
+        }
+        $(function () {
+            $(".topSmallNav .last").mouseover(function () {
+                $(this).addClass("hover");
+                $(".topSmallNav_more").css("display", "block");
+            });
+            $(".topSmallNav_more").mouseleave(function () {
+                $(".topSmallNav .last").removeClass("hover");
+                $(this).css("display", "none");
+            });
+
+            //var d = new Date();
+            //if (d.getFullYear() == 2016 && d.getMonth() == 4 & d.getDay() < 20) {
+            //$('.top_jiamaoBackground').css('background', 'url(http:./themes/images/huodong/top_job_1.jpg) no-repeat').css("cursor", "pointer");
+            //$('.top_jiamaoBackground').on("click", function () {
+            //
+            //    window.open('http://www.1396mm.com/recruit/index.html');
+            //});
+            //}
+        })
+    </script>
+    <div class="ydAd" style="z-index: 1;">
+        
+    </div>
+    <!--头部 end-->
