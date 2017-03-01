@@ -26,7 +26,7 @@ var config = {
             { test: /\.js$/, loader: 'babel', exclude: /node_modules/, query: {compact: false}},
             { test: /\.css$/,loader: ExtractTextPlugin.extract('style-loader', 'css-loader')},
             { test: /\.scss$/,loader: ExtractTextPlugin.extract('style-loader', "css-loader!autoprefixer-loader!sass-loader")},
-            { test: /\.(png|jpg|gif|bmp)$/, loader: 'url-loader?limit=8192&name=image/[name]-[hash:8].[ext]'},
+            { test: /\.(png|jpg|gif|bmp)$/, loader: 'url-loader?limit=4324234328192'},
             { test: /\.(woff|woff2|eot|ttf|svg)(\??.*$|$)/, loader: 'url-loader?limit=100&name=fonts/[name]-[hash:8].[ext]'},
             { test: /\.(html)$/, loader: 'html?-minimize' },
         ],
@@ -55,6 +55,10 @@ var config = {
         new CopyWebpackPlugin([{
             from: (path.resolve(__dirname, '../src/style')),
             to: (path.resolve(__dirname, '../output/style'))
+        }]),
+        new CopyWebpackPlugin([{
+            from: (path.resolve(__dirname, '../src/images')),
+            to: (path.resolve(__dirname, '../output/images'))
         }]),
         //new HtmlWebpackPlugin({
         //    filename: _config.htmlDir + 'view/index.html',    //生成的html存放路径
