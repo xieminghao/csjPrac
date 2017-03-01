@@ -13,6 +13,7 @@
     <link href="../style/index/style.css" rel="stylesheet" />
     <link href="../style/index/draw5.css" rel="stylesheet" />
     <script type="text/javascript" src="../script/index/jquery.min.js"></script>
+    <script type="text/javascript" src="../script/index/common.js"></script>
     <link href="../style/index/lot/pk10.css" rel="stylesheet" type="text/css" /><link href="../style/index/step_module.css" rel="stylesheet" type="text/css" />
     
 </head>
@@ -375,17 +376,7 @@
 <div id="caishijie_pk10_right"></div>
 
 
-    <script type="text/javascript">
-        $(function () {
-            drawTrend();
-        });
-        function drawTrend() {
-            $.get("/pk10/numbertrendData", { ball: 1, count: 25, t: Math.random() }, function (result) {
-                var data = eval(result);
-                showChartline("冠军走势图", data, function () { return this.x + '期:' + this.y }, 0, 10, true, 0, "sContainer");
-            }, "json");
-        }
-    </script>
+    
 
 
     <div class="clear" style="height: 0px; font-size: 0px;"></div>
@@ -465,9 +456,21 @@
 
 
 <!--底部 end-->
-
+<script type="text/javascript" src="../script/index/diyCtrl.js"></script>
+<script type="text/javascript">    var lotteryLuzhu = "";</script>
     
 <script src="../script/index/lot/lotcommon.js" type="text/javascript"></script><script src="../script/index/lot/pk10/award.js" type="text/javascript"></script><script src="../script/index/lot/warntime.js" type="text/javascript"></script><script src="../script/index/highchats/highcharts.js" type="text/javascript"></script><script src="../script/index/jschart.js" type="text/javascript"></script>
+<script type="text/javascript">
+        $(function () {
+            drawTrend();
+        });
+        function drawTrend() {
+            $.get("/pk10/numbertrendData", { ball: 1, count: 25, t: Math.random() }, function (result) {
+                var data = eval(result);
+                showChartline("冠军走势图", data, function () { return this.x + '期:' + this.y }, 0, 10, true, 0, "sContainer");
+            }, "json");
+        }
+    </script>
 
 <div style="display: none;">
            <script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODE3MTczOF8zNzY4MDNfNDAwNjU0OTIwMF8"></script>
@@ -498,7 +501,7 @@
 </div>
 <script type="text/javascript" src="../script/index/fbloginframe.js?id=userfeedback&class=userfeedback"></script>
 
-<script type="text/javascript" src="../script/index/diyCtrl.js"></script>
+
     
 </body> 
 </html>
