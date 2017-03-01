@@ -5,5 +5,6 @@ $.ajax({
 	type:'get',
 	success:function(res){
 		$('#lot-content').html(res);
+		drawTrend();
 	}
 });
