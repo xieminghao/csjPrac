@@ -117,8 +117,9 @@ function injectPage (config, opts) {
 injectPage(config, {
     //需要打包的页面
     src: [
+        'src/view/*.html',
         'src/view/**/*.html',
-        'src/view/*.html'
+        'src/view/**/**/*.html',
     ],
     //排除不需要打包的页面
     exclude: [
