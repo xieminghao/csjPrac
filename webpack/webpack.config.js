@@ -26,7 +26,7 @@ var config = {
             { test: /\.js$/, loader: 'babel', exclude: /node_modules/, query: {compact: false}},
             { test: /\.css$/,loader: ExtractTextPlugin.extract('style-loader', 'css-loader')},
             { test: /\.scss$/,loader: ExtractTextPlugin.extract('style-loader', "css-loader!autoprefixer-loader!sass-loader")},
-            { test: /\.(png|jpg|gif|bmp)$/, loader: 'url-loader?limit=4324234328192'},
+            { test: /\.(png|jpg|gif|bmp)$/, loader: 'url-loader?limit=8192&name=images/[name]-[hash:8].[ext]'},
             { test: /\.(woff|woff2|eot|ttf|svg)(\??.*$|$)/, loader: 'url-loader?limit=100&name=fonts/[name]-[hash:8].[ext]'},
             { test: /\.(html)$/, loader: 'html?-minimize' },
         ],

@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html xmlns:v="urn:schemas-microsoft-com:vml">
 <head>
@@ -5,19 +6,21 @@
     <meta name="keywords" content="北京赛车pk10规律技巧, 北京赛车pk10技巧,北京赛车pk10开奖直播,北京赛车pk10开奖直播分析" />
     <meta name="description" content="北京赛车pk10频道提供北京赛车pk10专业的最新开奖,开奖数据历史,北京赛车pk10规律技巧,投注技巧,遗漏,走势图，北京赛车pk10开奖直播分析,全力为彩民提供所有需要的数据." />
     <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="baidu-site-verification" content="EDEMDIk3AI" />
 
     <link href="../../style/pk10/style.css" rel="stylesheet" />
     <link href="../../style/pk10/draw5.css" rel="stylesheet" />
     <script type="text/javascript" src="../../script/pk10/jquery.min.js"></script>
     <script type="text/javascript" src="../../script/public/common.js"></script>
-    <link href="../../style/pk10/lot/pk10.css" rel="stylesheet" type="text/css" /><link href="../../style/pk10/step_module.css" rel="stylesheet" type="text/css" />
+    <link href="../../style/pk10/lot/pk10.css" rel="stylesheet" type="text/css" />
+    <link href="../../style/pk10/step_module.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
 
-<%= include ../common/header.html =%>
+
+<%= include ./src/view/common/header.html =%>
+
 <div class="top_warn">
     <div class="topContent">
         <div class="top_jiamaoBackground">
@@ -368,13 +371,255 @@
             </ul>
         </li>
     </ul>
-    <div id="lot-content"></div>
+
+    <div class="lot-wrap">
+        <div class="feedbackDiv">
+            <span class="fk_span"><a href="/home/feedback/" target="_blank" class="fk_spanLink">反馈意见</a></span>
+    <span class="fk_span px_span" id="menu_drag_span">
+        <a href="javascript:enableMenuDrag();" class="fk_spanLink">自定义排序(会员功能)</a>
+    </span>
+
+    <span class="pd_span" style="display: none;" id="menu_drag_tip_span">
+        <span class="fk_span unlock_span fk_spanLink">已开启拖放排序功能</span>
+        <a href="javascript:disableMenuDrag(1);" class="leftBtn">确定</a>
+        <a href="javascript:disableMenuDrag(0);" class="rightBtn">取消</a>
+    </span>
+
+    <span class="pd_span" style="display: none;" id="menu_drag_unlogin_tip">
+        <span class="fk_span  noIcon">您需要登陆才可以使用该功能</span>
+        <a href="/sso/login/" class="leftBtn" id="login_a_btn">登录</a>
+        <a href="/sso/register/" class="leftBtn">注册</a>
+    </span>
+        </div>
+        <script type="text/javascript">
+            var lotMenu = 'pk10_memu';
+        </script>
+        <script type="text/javascript" src="../../script/pk10/navdrag.js"></script>
+
+        <div class="web_listOP">
+            <ul id="menu_ul" style="position: relative;">
+                <li class=hover data-tag="idx">
+                    <a href="/pk10/">北京赛车pk10</a>
+                </li>
+                <li  data-tag="kj">
+                    <a href="/pk10/kaijiang/">pk10开奖</a>
+                </li>
+                <li  data-tag="lza">
+                    <a href="/pk10/luzhuanalysis/">综合路珠分析</a>
+                    <span class="wen_newIcon"></span>
+                </li>
+                <li  data-tag="zh">
+                    <a href="/pk10/merge/">综合版面</a>
+                </li>
+                <li  data-tag="yl">
+                    <a href="/pk10/yilou/">号码遗漏统计</a>
+                </li>
+                <li   data-tag="mrcl">
+                    <a href="/pk10/changlongdaystat">每日长龙统计</a>
+                    <span class="wen_newIcon"></span>
+                </li>
+                <li  data-tag="npa">
+                    <a href="/pk10/numpositionalarm/" target="_blank">号码走位报警</a>
+                    <span class="wen_newIcon"></span>
+                </li>
+                <li  data-tag="lhl">
+                    <a href="/pk10/luzhulonghu/">龙虎路珠</a>
+                </li>
+                <li   data-tag="qhl">
+                    <a href="/pk10/luzhuleftorright/">号码前后路珠</a>
+                </li>
+                <li  data-tag="gyhl">
+                    <a href="/pk10/guanyahestat/">冠、亚和路珠</a>
+                </li>
+                <li  data-tag="dsl">
+                    <a href="/pk10/luzhubigorsmall/">单双大小路珠</a>
+                </li>
+                <li  data-tag="hmgl">
+                    <a href="/pk10/numberrulestat/">号码规律统计</a>
+                    <span class="wen_lasthostory"></span>
+                </li>
+                <li  data-tag="jrt">
+                    <a href="/pk10/opencodeanalysis/">今日号码统计</a>
+                </li>
+                <li  data-tag="dsls">
+                    <a href="/pk10/ballstat/">单双大小历史</a>
+                </li>
+                <li  data-tag="lhls">
+                    <a href="/pk10/numberstat/">龍虎历史</a>
+                </li>
+                <li  data-tag="tbm">
+                    <a href="/pk10/betmode/">淘宝模式</a>
+                </li>
+                <li  data-tag="mfc">
+                    <a href="/pk10/betgame/">免费参考</a>
+                </li>
+                <li  data-tag="kjs">
+                    <a href="/pk10/shipin/" title="在线观看pk10开奖直播" class="redColor">pk10开奖直播</a>
+                </li>
+                <li    data-tag="lrf">
+                    <a href="/pk10/coldhotnumber/">冷热码分析</a>
+                </li>
+                <li    data-tag="sdd">
+                    <a href="/pk10/shdd/">杀号定胆</a>
+                </li>
+                <li     data-tag="jq">
+                    <a href="/jiqiao/pk10/">pk10技巧</a>
+                </li>
+                <li    data-tag="yld">
+                    <a href="/pk10/omitdata/">遗漏大数据</a>
+                </li>
+                <li    data-tag="tsxts">
+                    <a href="/pk10/specialformdata/">特殊形态统计</a>
+                    <span class="wen_newIcon"></span>
+                </li>
+                <li  data-tag="lmt">
+                    <a href="/pk10/twosidedstat/">两面数据统计</a>
+                </li>
+                <li   data-tag="mfdx">
+                    <a href="/pk10/positionanalyze/">免费多选分析</a>
+                </li>
+                <li   data-tag="hzs">
+                    <a href="/pk10/zoushitu/">横版走势图</a>
+                </li>
+                <li   data-tag="jgjh">
+                    <a href="/pk10/nineplan/">九宫计划</a>
+                </li>
+                <li   data-tag="dsz">
+                    <a href="/pk10/bsoetrend/">单双大小走势图</a>
+                </li>
+                <li   data-tag="gyl">
+                    <a href="/pk10/guanyahestat/2/">冠亚和两面历史</a>
+                </li>
+                <li   data-tag="gyy">
+                    <a href="/pk10/guanyahestat/1/">冠亚和遗漏统计</a>
+                </li>
+                <li data-tag="sjyy">
+                    <a href="http://www.1396app.com/promotiontopic?code=pk10" class="sjyy" target="_blank" rel="nofollow">手机应用</a>
+                </li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+
+
+        <div style="clear: left; width: 100%; float: left;">
+        </div>
+
+        <script type="text/javascript">    var lotteryLuzhu = "";</script>
+
+
+
+        <div class="index-head">
+            <a class="banner" href="/pk10/shipin/" title="北京赛车pk10视频">
+                <img src="../../images/pk10-index.png" alt="北京赛车pk10视频" />
+            </a>
+            <div class="trend">
+                <div class="l-title">
+                    <h2>北京赛车pk10号码走势图</h2>
+                    <div id="caishijie_lot_index_trend_title" class="fontAd fontWidth01"></div>
+
+
+                    <a href="/pk10/positiontrend/" target="_blank">详细走势>></a>
+                </div>
+                <div id="sContainer">
+                    正在加载中...
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div id="caishijie_pk10_synopsis_bottom" class="w980"></div>
+        <div id="caishijie_pk10_synopsis_bottom_lr" class="ad_small_banner_s"></div>
+
+
+        <div class="index-history">
+            <div id="lot-content"></div>
+            <div class="lot-article mt10">
+                <div class="l-title">
+                    <h2>
+                        北京赛车pk10技巧</h2>
+                    <a href="/pk10/jiqiao">更多>></a>
+                </div>
+                <div class="wrap">
+                    <h1>
+                        <a href="/pk10/jiqiaoview/64880">最影响北京赛车pk输赢的原因竟是?！</a>
+                    </h1>
+                    <p>
+                        北京赛车pk10开奖记录是每个玩高频彩玩家都非常关注的，和我一起玩彩的朋友每…
+                    </p>
+                    <ul>
+                        <li><a href="/jiqiao/pk10/64872.html" target="_blank">·稳赚不赔的北京赛车pk10技巧</a> </li>
+                        <li><a href="/jiqiao/pk10/64795.html" target="_blank">·一次就连本带利揽胜的北京赛车pk10战略</a> </li>
+                        <li><a href="/jiqiao/pk10/64791.html" target="_blank">·北京赛车pk10玩家：理性面对输赢</a> </li>
+                        <li><a href="/jiqiao/pk10/64729.html" target="_blank">·北京赛车pk10技巧之中奖诀窍</a> </li>
+                        <li><a href="/jiqiao/pk10/64723.html" target="_blank">·北京赛车pk10赚得盆满钵满的窍门</a> </li>
+                        <li><a href="/jiqiao/pk10/64711.html" target="_blank">·命中率极高的北京赛车pk10投注六码</a> </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+            <div class="lot-about mt10">
+                <div class="l-title">
+                    <h2>关于北京赛车pk10</h2>
+                </div>
+                <p>
+                    北京赛车PK10是中国福利彩票高频彩的其中一种，每天从9:00-24:00，每五分钟开奖一次，每天共179期，每期由10辆赛车进行比赛的结果作为开奖号码。 游戏玩法：两面盘、大小、单双、冠亚和值、单选、龙虎等。
+                </p>
+            </div>
+            <div class="lot-soft mt10">
+                <div class="l-title">
+                    <h2>北京赛车pk10软件</h2>
+                    <a href="/software/">查看全部>></a>
+                </div>
+                <ul>
+                    <li class="soft-logo"><a href="/soft/autobet/index.html"
+                                             target="_blank">
+                        <img src="../../images/autobet.png" alt="北京赛车pk10软件">
+                    </a></li>
+                    <li class="name"><a class="">自动追号软件</a>
+                        <p>
+                            本软件可按条件设置自动下注及快速下注功能，支持顺追或反追，按设定条件自动止盈止损，并自动按设置倍数下注。
+                        </p>
+                    </li>
+                    <li class="soft-logo"><a href="/soft/gather/index.html"
+                                             target="_blank">
+                        <img src="../../images/gather.png" alt="北京赛车pk10软件">
+                    </a></li>
+                    <li class="name"><a class="">注单采集软件</a>
+                        <p>
+                            具有采集及自动下注功能，通过采集软件可以把采集对象的下注注单内容转为自已的注单，采集功能包括跟下、反下及可设置跟单金额百分比。
+                        </p>
+                    </li>
+                </ul>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div id="caishijie_pk10_bottom" class="w980"></div>
+        <div id="caishijie_pk10_bottom_lr" class="ad_small_banner_s"></div>
+
+
+    </div>
 </div>
 <div id="caishijie_pk10_left"></div>
 <div id="caishijie_pk10_right"></div>
 
 
-
+<script type="text/javascript">
+    $(function () {
+        drawTrend();
+    });
+    function drawTrend() {
+        $.get("/pk10/numbertrendData", { ball: 1, count: 25, t: Math.random() }, function (result) {
+            var data = eval(result);
+            showChartline("冠军走势图", data, function () { return this.x + '期:' + this.y }, 0, 10, true, 0, "sContainer");
+        }, "json");
+    }
+</script>
 
 
 <div class="clear" style="height: 0px; font-size: 0px;"></div>
@@ -384,58 +629,8 @@
     <div class="ad_small_banner" id="caishijie_bottom_leftright"></div>
     <div  class="web_winner"><span>敬告用户：</span>除皇家产品外，本站所刊登广告的网站和内容一概与本站无关，用户须自行判断广告网站的真实性，由此所产生的后果本公司概不负责！</div>
 </div>
-<!--底部 start-->
-<div class="hj_public_foot">
-    <div class="hj_public_foot_d">
 
-        <div class="hj_public_foot_d1">
-            <div class="leftContent">
-                <i>皇家彩世界</i>
-                <div class="leftContent_d">
-                    <div class="lc_d">
-                        <span class="lc_name">關于我們：</span>
-                        <div class="lc_info">
-                            <a href="/official/193" rel="nofollow">免责声明</a>
-                            <a href="/official/194" rel="nofollow">法律声明</a>
-                            <a href="/help/" target="_blank">帮助中心</a>
-                        </div>
-                        <div class="hj_public_clearBoth"></div>
-                    </div>
-                    <div class="lc_d">
-                        <span class="lc_name">相關産品：</span>
-                        <div class="lc_info">
-                            <a href="/zhibo/" target="_blank">開獎直播</a>
-                            <a href="/software/" target="_blank">軟件中心</a>
-                            <a href="/map.html" target="_blank">網站地圖</a>
-                        </div>
-                        <div class="hj_public_clearBoth"></div>
-                    </div>
-
-                    <div class="lc_d">
-                        <span class="lc_name">交&nbsp;流&nbsp;群：</span>
-                        <div class="lc_info">
-                            <span>329235586</span>
-                            <span>220634190</span>
-                            <span>284202968</span>
-                            <span>98470270</span>
-                            <span>235983757<a href="http://shang.qq.com/wpa/qunwpa?idkey=87c5bcb73f504d114adcacdf867065d5f2fe749aae312b9b0a905e4956d6e3b0" rel="nofollow">加入</a></span>
-                        </div>
-                        <div class="hj_public_clearBoth"></div>
-                    </div>
-                </div>
-            </div>
-
-
-
-        </div>
-
-        <%= include ../common/footer.html =%>
-
-        <div class="hj_public_clearBoth"></div>
-
-    </div>
-</div>
-
+<%= include ./src/view/common/footer.html =%>
 
 <div class="web370_online">
     <a onclick="javascript:window.open('http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzkzODE3MTczOF8zNzU4NzBfNDAwNjU0OTIwMF8yXw', '_blank', 'height=502, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');" class="web370_online_qq"  href="javascript:void(0);" ></a>
@@ -453,24 +648,13 @@
 <script  src="http://a.591dyd.com/service/adjs?codes=caishijie_lot_pk10,csj_lot_pk10_lotmenu_s_banner,caishijie_lot_index_trend_title,caishijie_pk10_synopsis_bottom,caishijie_lot_index_history_title,caishijie_pk10_bottom,caishijie_pk10_left,caishijie_pk10_right,caishijie_bottom,caishijie_logo_right,caishijie_pk10_synopsis_bottom_lr,caishijie_pk10_bottom_lr,caishijie_bottom_leftright&amp;format=html&amp;website=42&amp;jsoncallback=AddList"></script>
 
 
-<!--底部 end-->
 
-<script type="text/javascript">    var lotteryLuzhu = "";</script>
-
-<script src="../../script/pk10/lot/lotcommon.js" type="text/javascript"></script><script src="../../script/pk10/lot/pk10/award.js" type="text/javascript"></script><script src="../../script/pk10/lot/warntime.js" type="text/javascript"></script><script src="../../script/pk10/highchats/highcharts.js" type="text/javascript"></script><script src="../../script/pk10/jschart.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-    // $(function () {
-    //     drawTrend();
-    // });
-    function drawTrend() {
-        $.get("/pk10/numbertrendData", { ball: 1, count: 25, t: Math.random() }, function (result) {
-            var data = eval(result);
-            showChartline("冠军走势图", data, function () { return this.x + '期:' + this.y }, 0, 10, true, 0, "sContainer");
-        }, "json");
-    }
-</script>
 <script type="text/javascript" src="../../script/pk10/diyCtrl.js"></script>
+<script src="../../script/pk10/lot/lotcommon.js" type="text/javascript"></script>
+<script src="../../script/pk10/lot/pk10/award.js" type="text/javascript"></script>
+<script src="../../script/pk10/lot/warntime.js" type="text/javascript"></script>
+<script src="../../script/pk10/highchats/highcharts.js" type="text/javascript"></script>
+<script src="../../script/pk10/jschart.js" type="text/javascript"></script>
 
 <div style="display: none;">
     <script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODE3MTczOF8zNzY4MDNfNDAwNjU0OTIwMF8"></script>
@@ -499,9 +683,7 @@
     </script>
 
 </div>
-<script type="text/javascript" src="../../script/pk10/fbloginframe.js?id=userfeedback&class=userfeedback"></script>
-
-
+<script type="text/javascript" src="http://rescsj.56hx.com/membercenter/js/fbloginframe.js?id=userfeedback&class=userfeedback"></script>
 
 </body>
 </html>
