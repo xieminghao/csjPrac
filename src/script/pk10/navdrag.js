@@ -55,10 +55,10 @@ var menuPosition = [];
 var newPositionMenu = [];
 var curMenu = "";
 function enableMenuDrag() {
-    if (!member.userLogined || member.id == 0) {
-        $("#menu_drag_unlogin_tip").show();
-        return;
-    }
+    // if (!member.userLogined || member.id == 0) {
+    //     $("#menu_drag_unlogin_tip").show();
+    //     return;
+    // }
 
     $("#menu_drag_span").hide();
     $("#menu_drag_tip_span").show();
