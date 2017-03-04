@@ -12,11 +12,11 @@ var ip = isDev? getIp(): '';
 //获取本机IP
 function getIp(){
     var IPv4 = '127.0.0.1';
-     os.networkInterfaces().en0.forEach(function (item) {
-         if(item.family=='IPv4'){
-             IPv4 = item.address;
-         }
-     });
+     // os.networkInterfaces().en0.forEach(function (item) {
+     //     if(item.family=='IPv4'){
+     //         IPv4 = item.address;
+     //     }
+     // });
     return IPv4;
 };
 

@@ -109,3 +109,40 @@
         
     </div>
     <!--头部 end-->
+
+    <!-- 提醒部分开始 -->
+    <div class="top_warn">
+        <div class="topContent">
+            <div class="top_jiamaoBackground">
+                <div class="top_hotPoint">
+                    <div class="topselectBtns"></div>
+                    <a class="closeBtns" href="javascript:void(0);"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 提醒部分结束 -->
+    
+    <!-- logo部分开始 -->
+    <div class="header" style="z-index:1000">
+        <div class="logo">
+            <a href="/">
+                <img src="../../images/logo.png" alt="皇家彩世界"/></a>
+        </div>
+        <div class="rf">
+            <div id="caishijie_logo_right" class="ad_head_banner w535"></div>
+
+            <script type="text/javascript">
+                $(document).ready(function(e) {
+                    if(8000==0) return;
+                    var webTimer=window.setInterval(function(){
+                        var temp = $("#caishijie_logo_right a:first-child");
+                        $("#caishijie_logo_right a:first-child").remove();
+                        $("#caishijie_logo_right").append(temp);
+                    },8000);
+                });
+            </script>
+        </div>
+    </div>
+
+    <!-- logo部分结束 -->
