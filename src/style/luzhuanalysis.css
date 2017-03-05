@@ -1,0 +1,164 @@
+.mode-type {margin: 10px 0px;height: 30px;}
+.mode-type a {width: 150px;height: 30px;line-height: 30px;border: solid 1px #333333;display: block;float: left;font-weight: bold;}
+.mode-type .cur {color: #fff;background-color: #333333;}
+.roadmap-table span, .roadmap-table label, .roadmap-table p {width: 20px;}
+.roadmap-table-caption td {color:#531A07;width:auto;}
+.iconHelp { float: left;margin: 7px 10px 0px -8px;display: block;width: 12px;height: 12px;}
+.helpWindow {left: -293px;}
+.helpWindow .triangleBg {left: 290px;}
+.helpWindow .triangleBorder {left: 290px;}
+.cp_xsdbBlock{
+    width: 978px;
+    height: 32px;
+    line-height: 32px;
+    background: #dedede;
+    font-size: 12px;
+    background-color: #f4f4f4;
+    padding: 0;
+    border: 1px solid #cccccc;
+    border-bottom: none;
+    position: relative;
+}
+
+.cp_xsdbBlock .cp_numBlock{
+    width: 22px;
+    height: 22px;
+    line-height:22px;
+    text-align:center;
+    color:#fff;
+    display: inline-block;
+    margin-left: 10px;
+    float: left;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.cp_xsdbBlock .cp_floatFont{
+    float: left;
+    padding-left: 25px;
+}
+.cp_xsdbBlock .cp_numIcon1{
+    background: url('../images/stat/cp_numIcon.jpg') no-repeat 0 0;
+}
+.cp_xsdbBlock  .cp_numIcon2{
+    background: url('../images/stat/cp_numIcon.jpg') no-repeat 0 -22px;
+}
+.cp_xsdbBlock  .cp_numIcon3{
+    background: url('../images/stat/cp_numIcon.jpg') no-repeat 0 -44px;
+}
+.cp_xsdbBlock  .cp_numIcon4{
+    background: url('../images/stat/cp_numIcon.jpg') no-repeat 0 -66px;
+}
+.cp_borderWhite{
+    width: 470px;
+    height: 23px;
+    background: #fff;
+    border: 1px solid #a9a9a9;
+    display: inline-block;
+    float: left;
+    margin: 3px 0 0 10px;
+    line-height: 23px;
+    text-align: center;
+    font-size:0px;
+}
+.cp_borderWhite b{
+    display: inline-block;
+    font-style: normal;
+    font-weight:normal;
+    font-size: 14px;
+    margin:0px;
+    padding:0px 3px 0 0;
+    text-align:center;
+    color: #aaa;
+}
+.cp_borderWhite i{
+    display: inline-block;
+    font-style: normal;
+    font-size: 14px;
+    margin:0px;
+    padding:0px 3px 0 0;
+    text-align:center;
+}
+.cp_borderWhite i{
+    color: #999;
+}
+.cp_borderWhite i.blue{
+    color: blue;
+}
+.cp_borderWhite i.red{
+    color: red;
+}
+.cp_selectBlock{
+    width: 70px;
+    height:25px;
+    line-height:normal;
+    padding: 3px 0 0 10px;
+    display: inline-block;
+    float: left;
+}
+.cp_selectBlock select{
+    width: 75px;
+    height: 25px;
+    display:block;
+}
+.cp_tongjiBtn{
+    width: 72px;
+    height: 24px;
+    background: url('../images/stat/cp_redBtn.jpg') no-repeat 0 0;
+    display: inline-block;
+    text-align: center;
+    line-height: 24px;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 4px 0 0 5px;
+    *margin: 0px 0 0 5px;
+    color: #fff;
+}
+.cp_tongjiBtn_disable{
+    color:#666;
+    background: url('../images/stat/cp_redBtn.jpg') no-repeat 0 -24px;
+    cursor:default;
+}
+
+.cp_floatFont2{
+    padding-left: 10px;
+}
+.cp_floatFont2 b{
+    font-weight: bold;
+    font-family: 'Tohema';
+}
+.cp_closeBtn{
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background: url('../images/stat/cp_closeBtn.jpg') no-repeat 0 0;
+    cursor: pointer;
+    margin: 10px 10px 0 0;
+    font-size: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.roadmap-table-caption .cp_alignCenter{
+    text-align:center;
+    position:relative;
+}
+.cp_helpIconButton {
+    width:12px;
+    height:12px;
+    background-color:red;
+    display:inline-block;
+    margin-top:5px;
+    position:absolute;
+    right:5px;
+    top:4px;
+    cursor:pointer;
+    background:url('../images/questionMark.png') no-repeat 0 0;
+}
+.cp_helpIconButton:hover{
+    background:url('../images/questionMark.png') no-repeat 0 -12px;
+}
+.formstatbtn {
+    cursor:pointer;
+    padding:0;
+    height:22px;
+}
