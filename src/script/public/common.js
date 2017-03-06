@@ -16,5 +16,19 @@ jQuery.extend({
             success: callback,
             dataType: type
         });
-    }
+    },
+    post: function (url, data, callback, type) {
+
+        if (jQuery.isFunction(data)) {
+            callback = data;
+            data = {};
+        }
+        return jQuery.ajax({
+            type: "POST",
+            url: HOST+url,
+            data: data,
+            success: callback,
+            dataType: type
+        });
+    },
 });

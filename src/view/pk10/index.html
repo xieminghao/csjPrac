@@ -29,25 +29,6 @@
     <%= include ./src/view/common/pk10/pk10contentHeader.html =%>
 
     <div class="lot-wrap">
-        <div class="feedbackDiv">
-            <span class="fk_span">
-                <a href="/home/feedback/" target="_blank" class="fk_spanLink">反馈意见</a>
-            </span>
-            <span class="fk_span px_span" id="menu_drag_span">
-                <a href="javascript:enableMenuDrag();" class="fk_spanLink">自定义排序(会员功能)</a>
-            </span>
-            <span class="pd_span" style="display: none;" id="menu_drag_tip_span">
-                <span class="fk_span unlock_span fk_spanLink">已开启拖放排序功能</span>
-                <a href="javascript:disableMenuDrag(1);" class="leftBtn">确定</a>
-                <a href="javascript:disableMenuDrag(0);" class="rightBtn">取消</a>
-            </span>
-
-            <span class="pd_span" style="display: none;" id="menu_drag_unlogin_tip">
-                <span class="fk_span  noIcon">您需要登陆才可以使用该功能</span>
-                <a href="/sso/login/" class="leftBtn" id="login_a_btn">登录</a>
-                <a href="/sso/register/" class="leftBtn">注册</a>
-            </span>
-        </div>
         <script type="text/javascript">
             var lotMenu = 'pk10_memu';
         </script>

@@ -3,28 +3,27 @@ var host = 'http://120.76.188.66:8080'
 var pathname = location.pathname.replace('index.html','');
 console.log(pathname);
 
-if(pathname == '/pk10/'){
-	$.ajax({
-		url: host+pathname,
-		data:{},
-		datatype:'html',
-		type:'get',
-		success:function(res){
-			console.log(res);
-			$('#lot-content').html(res);
-			// drawTrend();
-		}
-	});
-} else {
-	$.ajax({
-		url: host+pathname,
-		data:{},
-		datatype:'html',
-		type:'get',
-		success:function(res){
-			console.log(res);
-			$('.lot-wrap').replaceWith(res);
-			console.log('replace completed');
-		}
-	});
+var successFn = function(res){
+	console.log(res);
+	if(pathname == '/pk10/'){
+		$('#lot-content').html(res);
+	} else {
+		$('.lot-wrap').replaceWith(res);
+	}
+
+	$('.feedbackDiv').remove();
+	$('li[data-tag="zh"]').remove();
+	$('li[data-tag="tbm"]').remove();
+
+
 }
+
+$.ajax({
+	url: host+pathname,
+	data:{},
+	datatype:'html',
+	type:'get',
+	success: successFn
+});
+
+
