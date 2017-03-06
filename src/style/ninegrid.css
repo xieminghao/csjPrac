@@ -46,7 +46,7 @@ body{
 }
 
 .web_custom .btns{
-	background:url(../../images/stat/nine_btn01.gif) no-repeat;
+	background:url(/images/stat/nine_btn01.gif) no-repeat;
 	width:37px;
 	height:21px;
 	display:block;
@@ -181,7 +181,7 @@ body{
 }
 .web_nineGrid1 span.listBlock span.web_jtPos span.jtk{
 	width:85%;
-	background:url(../../images/stat/nineJt01.gif) no-repeat right 6px;
+	background:url(/images/stat/nineJt01.gif) no-repeat right 6px;
 	display:block;
 	cursor:pointer;
 	border:none;
@@ -201,7 +201,7 @@ body{
 	height:auto;
 }
 .web_nine_balls{
-	background:url(../../images/stat/ballks2.png) no-repeat center;
+	background:url(/images/stat/ballks2.png) no-repeat center;
 	text-align:center;
 	color:#fff;
 	font-weight:bold;
@@ -263,4 +263,4 @@ body{
 	border-bottom:1px solid #000;
 }
 
-.jsloading{ height:200px; background:url(../../images/stat/busy_anim.gif) no-repeat center #fff; width:100%;}
+.jsloading{ height:200px; background:url(/images/stat/busy_anim.gif) no-repeat center #fff; width:100%;}

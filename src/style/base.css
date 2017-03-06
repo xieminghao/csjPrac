@@ -101,14 +101,14 @@ body {
     width: 8px;
     height: 12px;
     overflow: hidden;
-    background: url(../../images/top-01.png) -9px 0 no-repeat;
+    background: url(/images/top-01.png) -9px 0 no-repeat;
     position: absolute;
     top: 12px;
     margin-left: -12px
 }
 
 .top .fast-nav ul li .phone:hover .icon-phone {
-    background: url(../../images/top-01.png) 0 0 no-repeat
+    background: url(/images/top-01.png) 0 0 no-repeat
 }
 
 .top .fast-nav ul li .lot-item {
@@ -127,7 +127,7 @@ body {
 }
 
 .top .fast-nav ul li .lot-item b {
-    background: url(../../images/top-01.png) 0 -13px no-repeat;
+    background: url(/images/top-01.png) 0 -13px no-repeat;
     height: 5px;
     width: 7px;
     position: absolute;
@@ -234,7 +234,7 @@ body {
     width: 15px;
     height: 15px;
     position: absolute;
-    background: url(../../images/feedback/chat01.png) no-repeat;
+    background: url(/images/feedback/chat01.png) no-repeat;
     top: 0;
     right: -2px;
     text-align: center;
@@ -260,7 +260,7 @@ body {
 }
 
 .fast-nav .signin-cont .member-name {
-    background: url(../../images/home-member-name.png) 0 10px no-repeat;
+    background: url(/images/home-member-name.png) 0 10px no-repeat;
     text-align: left;
     padding-left: 20px;
     display: block;
@@ -309,7 +309,7 @@ body {
 }
 
 #bookmarkli a b {
-    background: url(../../images/top-01.png) 0 -13px no-repeat;
+    background: url(/images/top-01.png) 0 -13px no-repeat;
     height: 5px;
     width: 7px;
     position: absolute;
@@ -418,7 +418,7 @@ body {
 .snow {
     width: 1000px;
     height: 25px;
-    background: url(../../images/huodong/snow.png) no-repeat center 10px;
+    background: url(/images/huodong/snow.png) no-repeat center 10px;
     overflow: hidden;
     position: absolute;
     top: -10px;
@@ -447,7 +447,7 @@ body {
     height: 30px;
     width: 140px;
     text-align: left;
-    background: url(../../images/menu-hot.png) 103px 8px no-repeat
+    background: url(/images/menu-hot.png) 103px 8px no-repeat
 }
 
 .menu .hot b {
@@ -497,7 +497,7 @@ body {
     overflow: hidden;
     width: 400px;
     height: 5px;
-    background: #353535 url(../../images/tab_style_nav.jpg) no-repeat right 0;
+    background: #353535 url(/images/tab_style_nav.jpg) no-repeat right 0;
     position: absolute;
     right: 0;
     top: -5px;
@@ -606,7 +606,7 @@ a.pagelink:hover {
     width: 135px;
     _width: 125px;
     float: left;
-    background: url(../../images/footer-ico.png) no-repeat
+    background: url(/images/footer-ico.png) no-repeat
 }
 
 .foot .foot-wrap .fix .dl4 {
@@ -688,7 +688,7 @@ a.pagelink:hover {
 }
 
 .foot .foot-wrap .fix .contact .content {
-    background: url(../../images/foot-phone.png) no-repeat;
+    background: url(/images/foot-phone.png) no-repeat;
     width: 230px;
     margin-left: 15px
 }
@@ -714,7 +714,7 @@ a.pagelink:hover {
     cursor: pointer;
     display: block;
     height: 84px;
-    background: url(../../images/foot-qq.png) no-repeat
+    background: url(/images/foot-qq.png) no-repeat
 }
 
 .foot .foot-info .link-box {
@@ -734,7 +734,7 @@ a.pagelink:hover {
 
 .foot .foot-info .statement {
     color: #b30000;
-    background: url(../../images/index-statement.png) 0 5px no-repeat;
+    background: url(/images/index-statement.png) 0 5px no-repeat;
     padding-left: 25px;
     line-height: 24px;
     display: block
@@ -769,8 +769,8 @@ a.pagelink:hover {
     display: block;
     width: 36px;
     height: 156px;
-    background: url(../../images/online_bg.png) no-repeat;
-    _background: url(../../images/online_bg_ie6.png) no-repeat
+    background: url(/images/online_bg.png) no-repeat;
+    _background: url(/images/online_bg_ie6.png) no-repeat
 }
 
 .online_windows {
@@ -778,32 +778,32 @@ a.pagelink:hover {
 }
 
 .online_w_top {
-    background: url(../../images/online_bg.png) no-repeat -36px 0;
+    background: url(/images/online_bg.png) no-repeat -36px 0;
     height: 10px;
-    _background: url(../../images/online_bg_ie6.png) no-repeat -36px 0;
+    _background: url(/images/online_bg_ie6.png) no-repeat -36px 0;
     _margin-bottom: -7px
 }
 
 .online_w_c {
-    background: url(../../images/online_bg.png) repeat-y 0 -185px;
+    background: url(/images/online_bg.png) repeat-y 0 -185px;
     padding: 0 5px;
-    _background: url(../../images/online_bg_ie6.png) repeat-y 0 -185px
+    _background: url(/images/online_bg_ie6.png) repeat-y 0 -185px
 }
 
 .online_w_bottom {
-    background: url(../../images/online_bg.png) repeat-y -36px -35px;
+    background: url(/images/online_bg.png) repeat-y -36px -35px;
     height: 29px;
-    _background: url(../../images/online_bg_ie6.png) repeat-y -36px -35px
+    _background: url(/images/online_bg_ie6.png) repeat-y -36px -35px
 }
 
 .online_content {
-    background: url(../../images/online_bg.png) no-repeat -147px -185px;
+    background: url(/images/online_bg.png) no-repeat -147px -185px;
     padding-top: 11px;
-    _background: url(../../images/online_bg_ie6.png) no-repeat -147px -185px
+    _background: url(/images/online_bg_ie6.png) no-repeat -147px -185px
 }
 
 .online_content a.qq_icon {
-    background: url(../../images/online_bg.png) no-repeat -37px -130px;
+    background: url(/images/online_bg.png) no-repeat -37px -130px;
     width: 121px;
     height: 25px;
     display: block;
@@ -811,7 +811,7 @@ a.pagelink:hover {
     text-indent: 30px;
     line-height: 23px;
     cursor: pointer;
-    _background: url(../../images/online_bg_ie6.png) no-repeat -37px -130px
+    _background: url(/images/online_bg_ie6.png) no-repeat -37px -130px
 }
 
 .online_content a.qq_icon:hover {
@@ -820,13 +820,13 @@ a.pagelink:hover {
 }
 
 .online_bar h2 {
-    background: url(../../images/online_bg.png) repeat-x 0 -156px;
+    background: url(/images/online_bg.png) repeat-x 0 -156px;
     height: 29px;
     line-height: 27px;
     font-size: 12px;
     color: #666;
     text-align: left;
-    _background: url(../../images/online_bg_ie6.png) repeat-x 0 -156px
+    _background: url(/images/online_bg_ie6.png) repeat-x 0 -156px
 }
 
 .online_bar h2 a {
@@ -837,13 +837,13 @@ a.pagelink:hover {
 }
 
 .expand h2 a {
-    background: url(../../images/online_bg.png) no-repeat -36px -69px;
-    _background: url(../../images/online_bg_ie6.png) no-repeat -36px -69px
+    background: url(/images/online_bg.png) no-repeat -36px -69px;
+    _background: url(/images/online_bg_ie6.png) no-repeat -36px -69px
 }
 
 .collapse h2 a {
-    background: url(../../images/online_bg.png) no-repeat -36px -96px;
-    _background: url(../../images/online_bg_ie6.png) no-repeat -36px -96px
+    background: url(/images/online_bg.png) no-repeat -36px -96px;
+    _background: url(/images/online_bg_ie6.png) no-repeat -36px -96px
 }
 
 .expand h2 a:hover,.collapse h2 a:hover {
@@ -909,11 +909,11 @@ a.pagelink:hover {
     float: left;
     height: 15px;
     cursor: pointer;
-    background: url(../../images/checkbox.png) -18px 0 no-repeat
+    background: url(/images/checkbox.png) -18px 0 no-repeat
 }
 
 .checked {
-    background: url(../../images/checkbox.png) 0 0 no-repeat
+    background: url(/images/checkbox.png) 0 0 no-repeat
 }
 
 .show-bjl {
@@ -1033,7 +1033,7 @@ a.pagelink:hover {
 .top_jiamaoBackground {
     width: 1000px;
     height: 30px;
-    background: url(../../images/1399p.jpg) no-repeat
+    background: url(/images/1399p.jpg) no-repeat
 }
 
 .top_hotPoint {
@@ -1086,7 +1086,7 @@ a.pagelink:hover {
 .advertisementLeft {
     width: 146px;
     height: 121px;
-    background: url(../../images/huodong/ydicon1.png) no-repeat center top;
+    background: url(/images/huodong/ydicon1.png) no-repeat center top;
     top: 0;
     left: 0;
     position: absolute;
@@ -1096,7 +1096,7 @@ a.pagelink:hover {
 .advertisementRight {
     width: 140px;
     height: 119px;
-    background: url(../../images/huodong/ydicon2.png) no-repeat center top;
+    background: url(/images/huodong/ydicon2.png) no-repeat center top;
     top: 0;
     right: 0;
     position: absolute;
@@ -1157,7 +1157,7 @@ a.pagelink:hover {
 .hj_public_topNav {
     width: 100%;
     height: 37px;
-    background: url("../../images/headfoot/hj_public_head_bg.jpg") repeat-x bottom;
+    background: url("/images/headfoot/hj_public_head_bg.jpg") repeat-x bottom;
     font-family: "宋体";
     font-size: 12px;
     color: #666
@@ -1214,7 +1214,7 @@ a.pagelink:hover {
     display: block;
     width: 33px;
     height: 37px;
-    background: url("../../images/headfoot/hj_public_head_select.png") no-repeat center
+    background: url("/images/headfoot/hj_public_head_select.png") no-repeat center
 }
 
 .hj_public_topNav .hj_p_tn_content .Announcement {
@@ -1225,7 +1225,7 @@ a.pagelink:hover {
     color: #b90000;
     width: 465px;
     line-height: 25px;
-    background: url("../../images/headfoot/hj_public_head_AIcon.jpg") no-repeat left 11px
+    background: url("/images/headfoot/hj_public_head_AIcon.jpg") no-repeat left 11px
 }
 
 .hj_public_topNav .hj_p_tn_content .rightLogin {
@@ -1262,13 +1262,13 @@ a.pagelink:hover {
 }
 
 .hj_public_topNav .hj_p_tn_content .rightLogin span a.bw_downloadBtn {
-    background: url("../../images/headfoot/hj_public_head_downIcon.jpg") no-repeat center left;
+    background: url("/images/headfoot/hj_public_head_downIcon.jpg") no-repeat center left;
     padding-left: 25px;
     color: #666
 }
 
 .hj_public_topNav .hj_p_tn_content .rightLogin span a.reportBtn {
-    background: url("../../images/web_bjIcon.png") no-repeat center left;
+    background: url("/images/web_bjIcon.png") no-repeat center left;
     width: 12px;
     color: #666
 }
@@ -1284,7 +1284,7 @@ a.pagelink:hover {
     color: #FFF;
     line-height: 16px;
     text-align: center;
-    background: url("../../images/headfoot/hj_public_numBg.png") no-repeat center
+    background: url("/images/headfoot/hj_public_numBg.png") no-repeat center
 }
 
 .hj_public_topNav .hj_p_tn_content .topSmallNav_more {
@@ -1294,7 +1294,7 @@ a.pagelink:hover {
     z-index: 99999;
     display: none;
     padding: 0 3px 4px 0;
-    background: url("../../images/headfoot/hj_public_table_bg.png") no-repeat bottom right
+    background: url("/images/headfoot/hj_public_table_bg.png") no-repeat bottom right
 }
 
 .hj_public_topNav .hj_p_tn_content .topSmallNav_more table {
@@ -1336,7 +1336,7 @@ a.pagelink:hover {
     right: -22px;
     width: 21px;
     height: 10px;
-    background: url("../../images/headfoot/hj_public_hot.jpg") no-repeat
+    background: url("/images/headfoot/hj_public_hot.jpg") no-repeat
 }
 
 .hj_public_topNav .hj_p_tn_content .topSmallNav_more table td a .hj_public_new {
@@ -1346,7 +1346,7 @@ a.pagelink:hover {
     right: -22px;
     width: 21px;
     height: 10px;
-    background: url("../../images/headfoot/hj_public_new.jpg") no-repeat
+    background: url("/images/headfoot/hj_public_new.jpg") no-repeat
 }
 
 .hj_public_topNav .hj_p_tn_content .topSmallNav_more table td:hover {
@@ -1473,7 +1473,7 @@ a.pagelink:hover {
 .hj_public_foot .hj_public_foot_d .hj_public_foot_d1 .rightContent .rightContent_d li {
     list-style-type: none;
     padding-left: 10px;
-    background: url("../../images/headfoot/hj_public_head_dot.jpg") no-repeat center left
+    background: url("/images/headfoot/hj_public_head_dot.jpg") no-repeat center left
 }
 
 .hj_public_foot .hj_public_foot_d .hj_public_foot_d1 .rightContent .rightContent_d li a {
@@ -1498,7 +1498,7 @@ a.pagelink:hover {
     width: 195px;
     height: 177px;
     padding: 16px 5px 0;
-    background: url("../../images/headfoot/hj_public_foot_rightContent1Bg.jpg") no-repeat top left
+    background: url("/images/headfoot/hj_public_foot_rightContent1Bg.jpg") no-repeat top left
 }
 
 .hj_public_foot .hj_public_foot_d .hj_public_foot_d1 .rightContent1 .rightContent1_title {
@@ -1524,7 +1524,7 @@ a.pagelink:hover {
     width: 182px;
     height: 44px;
     margin: 0 auto;
-    background: url("../../images/headfoot/hj_public_foot_btn.png") no-repeat center
+    background: url("/images/headfoot/hj_public_foot_btn.png") no-repeat center
 }
 
 .hj_public_foot .hj_public_foot_d .hj_public_foot_d2 {
@@ -1552,7 +1552,7 @@ a.pagelink:hover {
     width: 72px;
     height: 72px;
     font-size: 0;
-    background: url("../../images/headfoot/hj_public_img.jpg") no-repeat top center;
+    background: url("/images/headfoot/hj_public_img.jpg") no-repeat top center;
     background-position: 0 0
 }
 
@@ -1584,7 +1584,7 @@ a.pagelink:hover {
     font-size: 15px;
     line-height: 21px;
     padding-left: 40px;
-    background: url("../../images/headfoot/hj_public_foot_phoIcon.jpg") no-repeat center left
+    background: url("/images/headfoot/hj_public_foot_phoIcon.jpg") no-repeat center left
 }
 
 .hj_public_foot .hj_public_foot_d .hj_public_foot_d2 .Contact .PhoneNumber span {
@@ -1784,7 +1784,7 @@ a.pagelink:hover {
 .web_colorSpeedSelectBlock .web_colorSpeedSelectCon .web_colorSpeedLi .web_colorSpeedFont .web_colorSpeedHot {
     width: 20px;
     height: 11px;
-    background: url("../../images/nav/web_colorSpeedHotIcon.gif") no-repeat;
+    background: url("/images/nav/web_colorSpeedHotIcon.gif") no-repeat;
     position: absolute;
     right: -15px;
     top: -10px;
@@ -1794,7 +1794,7 @@ a.pagelink:hover {
 .web_colorSpeedSelectBlock .web_colorSpeedSelectCon .web_colorSpeedLi .web_colorSpeedFont .web_colorSpeedNew {
     width: 20px;
     height: 11px;
-    background: url("../../images/nav/web_colorSpeedHotIcon.gif") no-repeat 0 -11px;
+    background: url("/images/nav/web_colorSpeedHotIcon.gif") no-repeat 0 -11px;
     position: absolute;
     right: -15px;
     top: -10px;
@@ -1871,7 +1871,7 @@ a.pagelink:hover {
     display: block;
     width: 47px;
     height: 74px;
-    background: url("../../images/headfoot/web370_online_bg.png") no-repeat 0 0
+    background: url("/images/headfoot/web370_online_bg.png") no-repeat 0 0
 }
 
 .web370_online a.web370_online_qq:hover {
@@ -1905,7 +1905,7 @@ a.pagelink:hover {
 .web_colorSpeedSelectBlock .web370_cssb_l_referralProgram .web_colorSpeedSelectCon .web_colorSpeedLi .web_colorSpeedFont .web370_colorSpeedUnderway {
     width: 36px;
     height: 19px;
-    background: url("../../images/nav/web370_colorSpeedUnderway.png") no-repeat;
+    background: url("/images/nav/web370_colorSpeedUnderway.png") no-repeat;
     position: absolute;
     right: 0;
     top: -16px;

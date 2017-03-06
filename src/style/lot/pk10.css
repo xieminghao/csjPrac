@@ -9,7 +9,7 @@
 }
 
     .lot-nums span {
-        background: url(../../../images/pk10-nums.gif) no-repeat;
+        background: url(/images/pk10-nums.gif) no-repeat;
         width: 25px;
         height: 25px;
         float: left;
@@ -22,7 +22,7 @@
 }
 
     .nums i {
-        background: url(../../../images/pk10-nums.gif) no-repeat;
+        background: url(/images/pk10-nums.gif) no-repeat;
         width: 25px;
         height: 25px;
         float: left;
@@ -31,25 +31,25 @@
     }
 
 .shade-num i {
-    background: url(../../../images/pk10-nums-shade-1.png) no-repeat;
+    background: url(/images/pk10-nums-shade-1.png) no-repeat;
 }
 
 .shade-oe i {
-     background: url(../../../images/pk10-nums-shade-oe.png) no-repeat;
+     background: url(/images/pk10-nums-shade-oe.png) no-repeat;
 }
 .shade-bs i {
-    background: url(../../../images/pk10-nums-shade-bs.png) no-repeat;
+    background: url(/images/pk10-nums-shade-bs.png) no-repeat;
 }
 
 .noshade-num {
-    background: url(../../../images/pk10-nums.gif) no-repeat !important;
+    background: url(/images/pk10-nums.gif) no-repeat !important;
 }
 
 .num-bs i,.noshade-bs{
-    background: url(../../../images/pk10-bs2.png) no-repeat  !important;
+    background: url(/images/pk10-bs2.png) no-repeat  !important;
 }
 .num-oe i,.noshade-oe{
-    background: url(../../../images/pk10-oe2.png) no-repeat  !important;
+    background: url(/images/pk10-oe2.png) no-repeat  !important;
 }
 
 .num-empty {
@@ -151,7 +151,7 @@
 .pk10_wen_newIcon {
     width: 20px;
     height: 11px;
-    background: url(../../../images/stat/newicon01.gif) no-repeat;
+    background: url(/images/stat/newicon01.gif) no-repeat;
     font-size: 0;
     position: absolute;
     right: 8px;
@@ -231,12 +231,12 @@
     cursor: pointer;
     margin: 5px 13px 0px 0px;
     margin-top:7px\9;
-    background: url("../../../images/stat/spanAdd.png") no-repeat 0px 0px;
+    background: url("/images/stat/spanAdd.png") no-repeat 0px 0px;
 }
 #colorSet .spanAdd2.sa2{
     margin: 2px 0px 0px 13px;
     margin-top:5px\9;
-    background: url("../../../images/stat/spanAdd.png") no-repeat 0px -19px;
+    background: url("/images/stat/spanAdd.png") no-repeat 0px -19px;
 }
     #colorSet .color_red {
         background-color: red;
@@ -315,11 +315,11 @@
 
 
 .shade-num .numsRed {
-        background: url(../../../images/pk10-nums-red.gif) no-repeat;
+        background: url(/images/pk10-nums-red.gif) no-repeat;
     }
 
 .nums .output-li {
-    background: url(../../../images/pk10-nums.gif) no-repeat;
+    background: url(/images/pk10-nums.gif) no-repeat;
     width: 35px;
     height: 25px;
     float: left;
@@ -329,7 +329,7 @@
 }
 
 .nums .output-li-bs {
-    background: url(../../../images/pk10-bs.png) no-repeat;
+    background: url(/images/pk10-bs.png) no-repeat;
     width: 35px;
     height: 25px;
     float: left;
@@ -338,7 +338,7 @@
     padding-right: 3px;
 }
 .nums .output-li-oe {
-    background: url(../../../images/pk10-oe.png) no-repeat;
+    background: url(/images/pk10-oe.png) no-repeat;
     width: 35px;
     height: 25px;
     float: left;
@@ -356,7 +356,7 @@
     margin: 0px 5px;
     font-size:12px;
     color:#FFF;
-    background: url(../../../images/stat/type_bg.png) no-repeat 0 0;
+    background: url(/images/stat/type_bg.png) no-repeat 0 0;
 }
 #show-type a:hover , #show-type a.cur {
 background-position:0px -22px;
