@@ -1,0 +1,161 @@
+/*****************************************************号码走位报警*********************************************************/
+.numberDislocationAlarm{
+
+}
+.numberDislocationAlarm i{
+    font-style: normal;
+}
+.numberDislocationAlarm .floatLeft{
+    float: left;
+}
+.numberDislocationAlarm .floatRight{
+    float: right;
+}
+.numberDislocationAlarm .nda_checkbox{
+    height: 14px;
+    display: block;
+    margin-top: 6px;
+    white-space: nowrap;
+    _display: inline;
+    padding-left: 20px;
+    line-height:14px;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 12px;
+    background: url("../images/checkBox2.png") no-repeat 0 0;
+}
+.numberDislocationAlarm .nda_selected{
+    background: url("../images/checkBox2.png") no-repeat 0 -14px;
+}
+.numberDislocationAlarm .nda_tool1{
+    margin-top:5px;
+    margin-bottom: 15px;
+}
+.numberDislocationAlarm .nda_tool1 span{
+    color:#E84147;
+}
+.numberDislocationAlarm .nda_tool1 label{
+    padding-left: 60px;
+}
+.numberDislocationAlarm .kaijiang_tiptool .tiptool_head .nda_checkbox{
+    color: #ed1c24;
+    float: right;
+}
+.numberDislocationAlarm .kaijiang_tiptool{
+    width: 980px;
+    margin-bottom: 12px;
+}
+.numberDislocationAlarm .kaijiang_tiptool .tiptool_head{
+    width: auto;
+}
+.numberDislocationAlarm .kaijiang_tiptool .tiptool_head li{
+    color: #000;
+}
+.numberDislocationAlarm .kaijiang_tiptool .tiptool_head .fontBold{
+    font-weight: bold;
+}
+.numberDislocationAlarm .kaijiang_tiptool .nda_checkbox{
+    width: auto;
+    float: left;
+    margin: 6px 12px;
+    color: #000;
+}
+.numberDislocationAlarm .kaijiang_tiptool .tiptool_info{
+    border-bottom: 1px solid #ccc;
+}
+.numberDislocationAlarm .kaijiang_tiptool .tiptool_info a{
+    font-size: 12px;
+    color: #000;
+    line-height: 14px;
+    padding: 1px 0px;
+    margin: 4px 10px;
+    border-bottom: 1px solid #000;
+    float: right;
+}
+.numberDislocationAlarm .nda_tool2{
+    width: 100%;
+    margin-bottom: 12px;
+}
+.numberDislocationAlarm .nda_tool2 .nda_t2_btn{
+    display: block;
+    font-size: 14px;
+
+    width: 113px;
+    height: 29px;
+    text-align: center;
+    line-height: 29px;
+    margin: 0px auto;
+    color: #666;
+    background-color: #eaeaea;
+    border: 1px solid #b5b5b5;
+
+    cursor: pointer;
+}
+.numberDislocationAlarm .nda_tool2 .nda_t2_btn.hover{
+    color: #FFF;
+    background-color: #009944;
+    border: 1px solid #009944;
+}
+.numberDislocationAlarm .nda_tool2 .nda_t2_btn.active{
+    color: #FFF;
+    background-color: #d81425;
+    border: 1px solid #d81425;
+}
+.numberDislocationAlarm .nda_tool3{
+    border-top: 1px dashed #ccc;
+    line-height: 30px;
+    font-size: 14px;
+    color: #1d1d1d;
+    /*padding-left: 26px;*/
+    font-weight:bold;
+    /*background: url("../images/stat/nda_t2_img.gif ") no-repeat center left;*/
+}
+
+.numberDislocationAlarm .nda_block{
+    border: 1px solid #b5b5b5;
+    padding: 14px 0px 0px 16px;
+}
+.numberDislocationAlarm .nda_block li{
+    float: left;
+    height:251px;
+    width: 177px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+.numberDislocationAlarm .nda_block table{
+    width:100%;
+}
+.numberDislocationAlarm .nda_block td{
+    border: 1px solid #959595;
+    background-color: #FFF;
+    /*width: 87px;*/
+    height: 21px;
+    text-align: center;
+    line-height: 21px;
+    border: 1px solid #959595;
+    font-size: 12px;
+    color: #000;
+}
+.numberDislocationAlarm .nda_block .nda_table_num{
+    font-size: 14px;
+}
+.numberDislocationAlarm .nda_block .nda_table_title{
+    border: 1px solid #959595;
+    background-color: #FFF;
+    height: 29px;
+    line-height: 21px;
+    color: #000;
+}
+
+.numberDislocationAlarm .nda_block .nda_dataTable .nda_table_title{
+    border: 1px solid #d81425;
+    background-color: #d81425;
+    color: #FFF;
+}
+.numberDislocationAlarm .nda_block td.nda_table_text{
+    color: #999;
+    width: 175px;
+    height: 219px;
+    text-align: center;
+    line-height: 218px;
+}
