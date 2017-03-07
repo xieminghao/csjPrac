@@ -4,16 +4,19 @@ var pathname = location.pathname.replace('index.html','');
 console.log(host+pathname);
 
 var successFn = function(res){
-	console.log(res);
+	// console.log(res);
 	if(pathname == '/pk10/'){
 		$('#lot-content').html(res);
 	} else {
+		// var x = res.match(/<script[\s\S]*?\/script>/g);
+		// console.log(x);
 		$('.lot-wrap').replaceWith(res);
 	}
 
 	$('.feedbackDiv').remove();
 	$('li[data-tag="zh"]').remove();
 	$('li[data-tag="tbm"]').remove();
+	$('li[data-tag="sjyy"]').remove();
 
 
 }
