@@ -4,16 +4,6 @@ var pathname = location.pathname.replace('index.html','');
 var lotteryLuzhu = "";
 // console.log(host+pathname);
 
-// var successFn = function(res){
-// 	// console.log(res);
-// 	if(pathname == '/pk10/'){
-// 		$('#lot-content').html(res);
-// 	} else {
-// 		// var x = res.match(/<script[\s\S]*?\/script>/g);
-// 		// console.log(x);
-// 		$('.lot-wrap').replaceWith(res);
-// 	}
-
 // 	$('.feedbackDiv').remove();
 // 	$('li[data-tag="zh"]').remove();
 // 	$('li[data-tag="tbm"]').remove();
@@ -32,10 +22,11 @@ $.ajax({
 		$('.lot-wrap').replaceWith(res);
 
 		tick();
+        gethistoryandbetgame();
         function gethistoryandbetgame(){
-            $.get('/pk10/gethistoryandbetgame', { count: 20, t: Math.random() }, function (result) {
-                debugger;
-                result = eval('(' + result + ')');
+            $.get('/pk10/gethistoryandbetgame', { count: 20, t: Math.random()}, function (result) {
+                // debugger;
+                // result = eval('(' + result + ')');
                 var htmlrs = "";
                 var table = '<table  class="lot-table">';
                 for (var j = 0; j < result.itemArray.length; j++) {
@@ -50,7 +41,7 @@ $.ajax({
                 }
                 table += '</table>';
                 $("#historyBetGame").html(table);
-            });
+            },'json');
         }
 
 
@@ -61,7 +52,7 @@ $.ajax({
         function tick() {
             $.get('/pk10/getcurrentbetgame', { t: Math.random() },
             function (result) {
-                result = eval('(' + result + ')');
+                // result = eval('(' + result + ')');
                 var allBetCount = betCount;
                 var nPid = pId;
                 var htmlrs = appendTable(result.itemArray[0], "★");
@@ -74,7 +65,7 @@ $.ajax({
                 }
                 //if (tickTimer) clearTimeout(tickTimer);
                 //tickTimer = setTimeout(tick, 20000);
-            });
+            },'json');
         }
 
 

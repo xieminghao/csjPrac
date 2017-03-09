@@ -1,6 +1,10 @@
 console.log('load common!');
 var HOST = 'http://120.76.188.66:8080';
 
+// $.ajaxSetup({
+//     headers: {"X-Requested-With":"XMLHttpRequest"}
+// });
+
 jQuery.extend({
     //HTTP get方法
     get: function (url, data, callback, type) {
@@ -9,10 +13,18 @@ jQuery.extend({
             callback = data;
             data = null;
         }
+        // debugger;
         return jQuery.ajax({
             type: "GET",
             url: HOST+url,
-            data: data,
+            data: $.extend(data,{isa:true}),
+            // headers: {
+            //     // 'X-Requested-With': 'XMLHttpRequest',
+            //     "Access-Control-Allow-Headers":"X-Requested-With"
+            // },
+            // beforeSend: function(xhr){
+            //      xhr.setRequestHeader('X-Requested-With','XMLHttpRequest');
+            // },
             success: callback,
             dataType: type
         });
