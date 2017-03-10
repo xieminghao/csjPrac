@@ -1,0 +1,2517 @@
+<!DOCTYPE HTML>
+<html xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+    <title>【北京赛车pk10号码规律统计_北京赛车号码规律统计】-皇家彩世界</title>
+    <meta name="keywords" content="北京赛车pk10号码规律统计,北京赛车号码规律统计" />
+    <meta name="description" content="彩世界北京赛车pk10号码规律统计频道专门为北京赛车PK10的玩家提供专业的北京赛车pk10号码规律统计,北京赛车号码规律统计,专业的开奖数据统计、开奖直播视频以及独家的免费推荐、淘宝模式,不必担心因为没有PK10技巧而产生困扰,为您一站解决购彩的烦恼" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="baidu-site-verification" content="EDEMDIk3AI" />
+    <%= include ./src/view/common/link.html =%>
+    <link href="../../style/lot/pk10.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        v\:line, v\:rect, v\:oval, v\:group, v\:stroke, v\:fill, v\:polyline {behavior: url(#default#VML);}
+        .cvs { position: absolute;}
+        #trendChart {padding: 0;position: relative;left:0;top:0;}
+        #canvas{ z-index:999; position:absolute; left:0; top:0;}
+    </style>
+    <!--[if lte IE 9]> <style type="text/css">.dateLineTable	*{padding:auto;margin:auto;}</style><![endif]-->
+</head>
+<body>
+
+<!--头部 start-->
+<%= include ./src/view/common/header.html =%>
+<%= include ./src/view/common/navMenu.html =%>
+
+<div class="body-content">
+    <%= include ./src/view/common/pk10/pk10contentHeader.html =%>
+    <div class="lot-wrap">
+        <div class="feedbackDiv">
+            <span class="fk_span"><a href="/home/feedback/" target="_blank" class="fk_spanLink">反馈意见</a></span>
+    <span class="fk_span px_span" id="menu_drag_span">
+        <a href="javascript:enableMenuDrag();" class="fk_spanLink">自定义排序(会员功能)</a>
+    </span>
+
+    <span class="pd_span" style="display: none;" id="menu_drag_tip_span">
+        <span class="fk_span unlock_span fk_spanLink">已开启拖放排序功能</span>
+        <a href="javascript:disableMenuDrag(1);" class="leftBtn">确定</a>
+        <a href="javascript:disableMenuDrag(0);" class="rightBtn">取消</a>
+    </span>
+
+    <span class="pd_span" style="display: none;" id="menu_drag_unlogin_tip">
+        <span class="fk_span  noIcon">您需要登陆才可以使用该功能</span>
+        <a href="/sso/login/" class="leftBtn" id="login_a_btn">登录</a>
+        <a href="/sso/register/" class="leftBtn">注册</a>
+    </span>
+        </div>
+        <script type="text/javascript">
+            var lotMenu = 'pk10_memu';
+        </script>
+        <script type="text/javascript" src="../../script/navdrag.js"></script>
+
+        <div class="web_listOP">
+            <ul id="menu_ul" style="position: relative;">
+                <li  data-tag="idx">
+                    <a href="/pk10/">北京赛车pk10</a>
+                </li>
+                <li  data-tag="kj">
+                    <a href="/pk10/kaijiang/">pk10开奖</a>
+                </li>
+                <li  data-tag="lza">
+                    <a href="/pk10/luzhuanalysis/">综合路珠分析</a>
+                    <span class="wen_newIcon"></span>
+                </li>
+                <li  data-tag="zh">
+                    <a href="/pk10/merge/">综合版面</a>
+                </li>
+                <li  data-tag="yl">
+                    <a href="/pk10/yilou/">号码遗漏统计</a>
+                </li>
+                <li   data-tag="mrcl">
+                    <a href="/pk10/changlongdaystat">每日长龙统计</a>
+                    <span class="wen_newIcon"></span>
+                </li>
+                <li  data-tag="npa">
+                    <a href="/pk10/numpositionalarm/" target="_blank">号码走位报警</a>
+                    <span class="wen_newIcon"></span>
+                </li>
+                <li  data-tag="lhl">
+                    <a href="/pk10/luzhulonghu/">龙虎路珠</a>
+                </li>
+                <li   data-tag="qhl">
+                    <a href="/pk10/luzhuleftorright/">号码前后路珠</a>
+                </li>
+                <li  data-tag="gyhl">
+                    <a href="/pk10/guanyahestat/">冠、亚和路珠</a>
+                </li>
+                <li  data-tag="dsl">
+                    <a href="/pk10/luzhubigorsmall/">单双大小路珠</a>
+                </li>
+                <li class=hover data-tag="hmgl">
+                    <a href="/pk10/numberrulestat/">号码规律统计</a>
+                    <span class="wen_lasthostory"></span>
+                </li>
+                <li  data-tag="jrt">
+                    <a href="/pk10/opencodeanalysis/">今日号码统计</a>
+                </li>
+                <li  data-tag="dsls">
+                    <a href="/pk10/ballstat/">单双大小历史</a>
+                </li>
+                <li  data-tag="lhls">
+                    <a href="/pk10/numberstat/">龍虎历史</a>
+                </li>
+                <li  data-tag="tbm">
+                    <a href="/pk10/betmode/">淘宝模式</a>
+                </li>
+                <li  data-tag="mfc">
+                    <a href="/pk10/betgame/">免费参考</a>
+                </li>
+                <li  data-tag="kjs">
+                    <a href="/pk10/shipin/" title="在线观看pk10开奖直播" class="redColor">pk10开奖直播</a>
+                </li>
+                <li    data-tag="lrf">
+                    <a href="/pk10/coldhotnumber/">冷热码分析</a>
+                </li>
+                <li    data-tag="sdd">
+                    <a href="/pk10/shdd/">杀号定胆</a>
+                </li>
+                <li     data-tag="jq">
+                    <a href="/jiqiao/pk10/">pk10技巧</a>
+                </li>
+                <li    data-tag="yld">
+                    <a href="/pk10/omitdata/">遗漏大数据</a>
+                </li>
+                <li    data-tag="tsxts">
+                    <a href="/pk10/specialformdata/">特殊形态统计</a>
+                    <span class="wen_newIcon"></span>
+                </li>
+                <li  data-tag="lmt">
+                    <a href="/pk10/twosidedstat/">两面数据统计</a>
+                </li>
+                <li   data-tag="mfdx">
+                    <a href="/pk10/positionanalyze/">免费多选分析</a>
+                </li>
+                <li   data-tag="hzs">
+                    <a href="/pk10/zoushitu/">横版走势图</a>
+                </li>
+                <li   data-tag="jgjh">
+                    <a href="/pk10/nineplan/">九宫计划</a>
+                </li>
+                <li   data-tag="dsz">
+                    <a href="/pk10/bsoetrend/">单双大小走势图</a>
+                </li>
+                <li   data-tag="gyl">
+                    <a href="/pk10/guanyahestat/2/">冠亚和两面历史</a>
+                </li>
+                <li   data-tag="gyy">
+                    <a href="/pk10/guanyahestat/1/">冠亚和遗漏统计</a>
+                </li>
+                <li data-tag="sjyy">
+                    <a href="http://www.1396app.com/promotiontopic?code=pk10" class="sjyy" target="_blank" rel="nofollow">手机应用</a>
+                </li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+
+
+        <div style="clear: left; width: 100%; float: left;">
+        </div>
+
+        <script type="text/javascript">    var lotteryLuzhu = "";</script>
+
+
+
+        <div id="lot-wrap" style="margin-bottom: 20px;">
+
+
+            <input type="hidden" value="awardNewData" id="callFun" time="10000" />
+            <div class="explain_table">
+                1、【号码规律统计】提供号码开出位置的历史同位号码统计。例如第1期开出号码1后，在第1期开出号码1的相同位置，第2期开出号码为2，如此以上期开奖号码为参照，辅助预测同位开出的号码；<br />
+                2、柱形图表为历史同位开出号码的次数分布，用于查看已开出号码的分布及趋势，亦可作为参考辅助杀号。
+            </div>
+            <div class="clear"></div>
+            <div class="lot-search">
+                <div class="car-num">
+                    <ul class="lot-number-omit" style="margin-bottom: 10px;">
+                        <li class="ball" style="padding-bottom: 2px;">
+                            <ul style="width: 890px; _width: 880px; float: left; margin-left: 10px;">
+                                <li><a href="javascript:void(0);" data-ball="1" class=cur >号码1</a>| </li>
+                                <li><a href="javascript:void(0);" data-ball="2"   >号码2</a>| </li>
+                                <li><a href="javascript:void(0);" data-ball="3" >号码3</a>| </li>
+                                <li><a href="javascript:void(0);" data-ball="4" >号码4</a>| </li>
+                                <li><a href="javascript:void(0);" data-ball="5" >号码5</a>|  </li>
+                                <li><a href="javascript:void(0);" data-ball="6" >号码6</a>| </li>
+                                <li><a href="javascript:void(0);" data-ball="7" >号码7</a>| </li>
+                                <li><a href="javascript:void(0);" data-ball="8" >号码8</a>| </li>
+                                <li><a href="javascript:void(0);" data-ball="9" >号码9</a>| </li>
+                                <li><a href="javascript:void(0);" data-ball="10" >号码10</a> |</li>
+                                <li><a href="/pk10/numbertooutput">全部号码</a> </li>
+                            </ul>
+                            <ul style="float: right; width: 80px; text-align: right;">
+                                <li>
+                                    <select id="selDate">
+                                        <option value="60">60期</option>
+                                        <option value="30">30期</option>
+                                        <option value="90" >90期</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div id="chartcontainer" style="height:200px;width:100%"></div>
+            <div class="clear"></div>
+
+
+            <div class="dateLineTable" style="padding: 0;" id="trendChart">
+                <table class="lot-table" id="history" >
+                    <tr class="head">
+                        <td rowspan="2" width="160">时间
+                        </td>
+                        <td width="350" rowspan="2">
+                            同位开奖号码分布
+                            <p id="ckb-samepn" style="width:100px;margin:0 auto;">
+                                <b class="checkbox" style="margin: 10px 5px 0 0;"></b>
+                        <span style="float:left;">
+                            <label style="cursor: pointer;color:#c3271d">显示同位号码</label></span>
+                            </p>
+                        </td>
+                        <td rowspan="2" width="120">升平降
+                        </td>
+                        <td   colspan="2">单双</td>
+                        <td colspan="2"  >大小</td>
+                    </tr>
+                    <tr class="head">
+                        <td>单</td>
+                        <td>双</td>
+                        <td>大</td>
+                        <td>小</td>
+                    </tr>
+                    <tbody id="chart">
+
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605876 </p>
+                            <p class="t">03-08 21:52</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605875 </p>
+                            <p class="t">03-08 21:47</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605874 </p>
+                            <p class="t">03-08 21:42</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605873 </p>
+                            <p class="t">03-08 21:37</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605872 </p>
+                            <p class="t">03-08 21:32</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605871 </p>
+                            <p class="t">03-08 21:27</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605870 </p>
+                            <p class="t">03-08 21:22</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605869 </p>
+                            <p class="t">03-08 21:17</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605868 </p>
+                            <p class="t">03-08 21:12</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605867 </p>
+                            <p class="t">03-08 21:07</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605866 </p>
+                            <p class="t">03-08 21:02</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605865 </p>
+                            <p class="t">03-08 20:57</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605864 </p>
+                            <p class="t">03-08 20:52</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605863 </p>
+                            <p class="t">03-08 20:47</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605862 </p>
+                            <p class="t">03-08 20:42</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605861 </p>
+                            <p class="t">03-08 20:37</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605860 </p>
+                            <p class="t">03-08 20:32</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605859 </p>
+                            <p class="t">03-08 20:27</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605858 </p>
+                            <p class="t">03-08 20:22</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605857 </p>
+                            <p class="t">03-08 20:17</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605856 </p>
+                            <p class="t">03-08 20:12</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605855 </p>
+                            <p class="t">03-08 20:07</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605854 </p>
+                            <p class="t">03-08 20:02</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605853 </p>
+                            <p class="t">03-08 19:57</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605852 </p>
+                            <p class="t">03-08 19:52</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605851 </p>
+                            <p class="t">03-08 19:47</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605850 </p>
+                            <p class="t">03-08 19:42</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605849 </p>
+                            <p class="t">03-08 19:37</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605848 </p>
+                            <p class="t">03-08 19:32</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605847 </p>
+                            <p class="t">03-08 19:27</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605846 </p>
+                            <p class="t">03-08 19:22</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605845 </p>
+                            <p class="t">03-08 19:17</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605844 </p>
+                            <p class="t">03-08 19:12</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605843 </p>
+                            <p class="t">03-08 19:07</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605842 </p>
+                            <p class="t">03-08 19:02</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605841 </p>
+                            <p class="t">03-08 18:57</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605840 </p>
+                            <p class="t">03-08 18:52</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605839 </p>
+                            <p class="t">03-08 18:47</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605838 </p>
+                            <p class="t">03-08 18:42</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605837 </p>
+                            <p class="t">03-08 18:37</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605836 </p>
+                            <p class="t">03-08 18:32</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605835 </p>
+                            <p class="t">03-08 18:27</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605834 </p>
+                            <p class="t">03-08 18:22</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605833 </p>
+                            <p class="t">03-08 18:17</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605832 </p>
+                            <p class="t">03-08 18:12</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605831 </p>
+                            <p class="t">03-08 18:07</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605830 </p>
+                            <p class="t">03-08 18:02</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605829 </p>
+                            <p class="t">03-08 17:57</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605828 </p>
+                            <p class="t">03-08 17:52</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605827 </p>
+                            <p class="t">03-08 17:47</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605826 </p>
+                            <p class="t">03-08 17:42</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605825 </p>
+                            <p class="t">03-08 17:37</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605824 </p>
+                            <p class="t">03-08 17:32</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605823 </p>
+                            <p class="t">03-08 17:27</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605822 </p>
+                            <p class="t">03-08 17:22</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605821 </p>
+                            <p class="t">03-08 17:17</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605820 </p>
+                            <p class="t">03-08 17:12</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605819 </p>
+                            <p class="t">03-08 17:07</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605818 </p>
+                            <p class="t">03-08 17:02</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605817 </p>
+                            <p class="t">03-08 16:57</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605816 </p>
+                            <p class="t">03-08 16:52</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605815 </p>
+                            <p class="t">03-08 16:47</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605814 </p>
+                            <p class="t">03-08 16:42</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605813 </p>
+                            <p class="t">03-08 16:37</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605812 </p>
+                            <p class="t">03-08 16:32</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605811 </p>
+                            <p class="t">03-08 16:27</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605810 </p>
+                            <p class="t">03-08 16:22</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605809 </p>
+                            <p class="t">03-08 16:17</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605808 </p>
+                            <p class="t">03-08 16:12</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605807 </p>
+                            <p class="t">03-08 16:07</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605806 </p>
+                            <p class="t">03-08 16:02</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605805 </p>
+                            <p class="t">03-08 15:57</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605804 </p>
+                            <p class="t">03-08 15:52</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605803 </p>
+                            <p class="t">03-08 15:47</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605802 </p>
+                            <p class="t">03-08 15:42</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605801 </p>
+                            <p class="t">03-08 15:37</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605800 </p>
+                            <p class="t">03-08 15:32</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605799 </p>
+                            <p class="t">03-08 15:27</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605798 </p>
+                            <p class="t">03-08 15:22</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605797 </p>
+                            <p class="t">03-08 15:17</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605796 </p>
+                            <p class="t">03-08 15:12</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605795 </p>
+                            <p class="t">03-08 15:07</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605794 </p>
+                            <p class="t">03-08 15:02</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605793 </p>
+                            <p class="t">03-08 14:57</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605792 </p>
+                            <p class="t">03-08 14:52</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605791 </p>
+                            <p class="t">03-08 14:47</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605790 </p>
+                            <p class="t">03-08 14:42</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605789 </p>
+                            <p class="t">03-08 14:37</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='even'>
+                        <td>
+                            <p class="p">605788 </p>
+                            <p class="t">03-08 14:32</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    <tr class='odd'>
+                        <td>
+                            <p class="p">605787 </p>
+                            <p class="t">03-08 14:27</p>
+                        </td>
+                        <td class="nums shade-num">
+                            <i class='pk-no4' name="num-4"></i>
+                            <i class='pk-no7' name="num-7"></i>
+                            <i class='pk-no6' name="num-6"></i>
+                            <i class='pk-no5' name="num-5"></i>
+                            <i class='pk-no3' name="num-3"></i>
+                            <i class='pk-no8' name="num-8"></i>
+                            <i class='pk-no2' name="num-2"></i>
+                            <i class='pk-no1' name="num-1"></i>
+                            <i class='pk-no9' name="num-9"></i>
+                            <i class='pk-no10' name="num-10"></i>
+                        </td>
+                        <td name="spj"></td>
+                        <td name="odd"></td>
+                        <td name="even"></td>
+                        <td name="big"></td>
+                        <td name="small"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+            <script type="text/javascript">
+                var chartLine = null;
+                function awardNewData() {
+                    $.get("/pk10/ajax", { ajaxHandler: 'GetNewestRecord', t: Math.random() }, function (data) {
+                        var numbers = data.numbers.split(',');
+                        var tr1 = $("#chart tr:first");
+                        var clsName = "odd";
+                        if (tr1) {
+                            clsName = tr1.attr("class") == "odd" ? "even" : "odd";
+                        }
+                        var html = '<tr class="' + clsName + '"><td><p class="p">' + data.period + '</p><p class="t">' + data.drawingTime;
+                        html += '</p></td><td class="nums shade-num">';
+                        for (var i = 0; i < numbers.length; i++) {
+                            html += '<i class="pk-no' + numbers[i] + '" name="num-' + numbers[i] + '"></i>';
+                        }
+                        html += '</td>';
+                        html += '<td name="spj"></td>';
+                        //html += '<td name="ch"></td>';
+                        //html += '<td name="zx"></td>';
+                        html += '<td name="odd"></td>';
+                        html += '<td name="even"></td>';
+                        html += '<td name="big"></td>';
+                        html += '<td name="small"></td>';
+                        html += '</tr>';
+                        tr1.before(html);
+                        $("#chart tr:last").remove();
+                        reloadData();
+                    }, 'json');
+
+                }
+                //更新图表
+                function reloadData() {
+                    var ball = $(".car-num .lot-number-omit .ball a.cur").attr("data-ball");
+                    var count = $("#selDate").val();
+                    $.get("/pk10/ballrulestat", { ball: ball, count: count, t: Math.random() }, function (data) {
+                        var chartDatas = [];
+                        if (data.success) {
+                            for (var i = 1; i < 11; i++) {
+                                chartDatas.push({ Name: "号码" + i, Value: data["num" + i] });
+                            }
+                            clearDraw();
+                            showSelectBall();
+                            var list = data.nums;
+                            var trs = $("#history tr[class!=head]");
+                            for (var i = 0; i < trs.length; i++) {
+                                var tr=$(trs[i]);
+                                if (i >= count) tr.hide();
+                                else {
+                                    tr.show();
+                                    var a = list[i], b = list[i + 1];
+                                    if (a > b) tr.find("[name=spj]").text("升").css("color", "#0000ff");//addClass("td_font_lightblue");
+                                    else if (a < b) tr.find("[name=spj]").text("降").css("color", "#00a200");//.addClass("td_draklightgreen");
+                                    else tr.find("[name=spj]").text("平").css("color", "#c3271d");//.addClass("td_red");
+                                    if (a % 2 != 0) tr.find("[name=odd]").text("单").css("color", "#c3271d");//.addClass("td_draklightgreen");
+                                    else tr.find("[name=even]").text("双").css("color", "#000");//.addClass("td_draklightgreen");
+                                    if (a > 5) tr.find("[name=big]").text("大").css("color", "#c3271d");//.addClass("td_lightblue");
+                                    else tr.find("[name=small]").text("小").css("color", "#000");//.addClass("td_lightblue");
+
+                                    if (a == ~~ball) {
+                                        tr.find("i[name=num-" + a + "]").removeClass("noshade-num").addClass("numsRed").attr("s", 1);
+                                    } else {
+                                        tr.find("i[name=num-" + a + "]").addClass("noshade-num");
+                                    }
+                                    tr.find("i[name=num-" + a + "]").addClass("numline");
+                                }
+                            }
+                            chartLine.reDraw();
+                            showColumn(" ", chartDatas, function () {
+                                return this.x + ':' + this.y + '(' + (Math.round(this.y / count * 10000) / 100.00) + '%)';
+                            });
+                        }
+                    }, 'json');
+                }
+
+                function showSelectBall() {
+                    var ball = $(".car-num .lot-number-omit .ball a.cur").attr("data-ball");
+                    if (ball == 0) return;
+                    var trs = $("#history tr[class!=head]");
+                    var show = false;
+                    if ($("#ckb-samepn b").hasClass("checked")) {
+                        show = true;
+                    }
+                    for (var i = 0; i < trs.length; i++) {
+                        var tr = $(trs[i]);
+
+                        if (show) {
+                            if (tr.find("i[name=num-" + ball + "]").attr("s") == 1) continue;
+                            tr.find("i[name=num-" + ball + "]").addClass("noshade-num");
+                        } else {
+                            tr.find("i[name=num-" + ball + "]").removeClass("noshade-num");
+                        }
+                    }
+                }
+                //清除所有
+                function clearDraw() {
+                    chartLine.clearLines();
+                    $("i").removeClass("noshade-num").removeClass("numsRed").removeClass("numline").attr("s", 0);
+
+                    $("#history td[name=even],#history td[name=odd],#history td[name=big],#history td[name=small]").text("");
+                    // $("#history td").removeClass("td_drakblue").removeClass("td_draklightgreen").removeClass("td_lightblue");
+                }
+
+                $(function () {
+                    $("#ckb-samepn").click(function () {
+                        var ball = $(".car-num .lot-number-omit .ball a.cur").attr("data-ball");
+                        if (ball == 0) return;
+                        var c = $("b", $(this)).attr("data-c");
+
+                        if ($("b", $(this)).attr("class") == "checkbox") {
+                            $("b", $(this)).addClass("checked");
+                        } else {
+                            $("b", $(this)).removeClass("checked");
+                        }
+                        showSelectBall();
+                    });
+                    $(" .lot-search .car-num .lot-number-omit .ball li a").on("click", function () {
+                        $(" .lot-search .car-num .lot-number-omit .ball li a").removeClass("cur");
+                        $(this).addClass("cur");
+                        var ball = $(this).attr("data-ball") - 1;
+                        //  changeData(ball, $("#dataType").val());
+                        reloadData();
+                    });
+                    $("#selDate").on("change", function () {
+                        reloadData();
+                    });
+                    require(['trendChart'], function (e) {
+                        chartLine = new e({ css: { noyl: "noyl", bline: "bline", lines: [".numline"] }, lineWidth: 2, lineColor: "#BB8569" });
+                        reloadData();
+                    });
+
+                });
+            </script>
+
+
+
+
+        </div>
+        <div id="caishijie_pk10_bottom" class="w980"></div>
+        <div id="caishijie_pk10_bottom_lr" class="ad_small_banner_s"></div>
+
+    </div>
+</div>
+<div id="caishijie_pk10_left"></div>
+<div id="caishijie_pk10_right"></div>
+
+
+<div class="clear" style="height: 0px; font-size: 0px;"></div>
+<div style="width: 1000px; margin: 0 auto;">
+    <div id="caishijie_bottom" class="business"></div>
+
+    <div class="ad_small_banner" id="caishijie_bottom_leftright"></div>
+    <div  class="web_winner"><span>敬告用户：</span>除皇家产品外，本站所刊登广告的网站和内容一概与本站无关，用户须自行判断广告网站的真实性，由此所产生的后果本公司概不负责！</div>
+</div>
+<!--底部 start-->
+<%= include ./src/view/common/footer.html =%>
+
+<div class="web370_online">
+    <a onclick="javascript:window.open('http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzkzODE3MTczOF8zNzU4NzBfNDAwNjU0OTIwMF8yXw', '_blank', 'height=502, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');" class="web370_online_qq"  href="javascript:void(0);" ></a>
+    <a class="web370_online_fb userfeedback" href="javascript:void(0);" id="online_feedback_unlogin"></a>
+    <a class="web370_online_fb" href="/home/feedback" target="_blank" id="online_feedback_login" style="display:none"></a>
+</div>
+
+<script type="text/javascript" src="../../script/service.js"></script>
+<script type="text/javascript">
+    //是否存在 广告横幅 分左右两块
+    var adsplit = "csj_lot_pk10_lotmenu_s_banner";
+    //左右漂浮广告
+    var leftright = "caishijie_pk10_left,caishijie_pk10_right";
+</script>
+<script  src="http://a.591dyd.com/service/adjs?codes=caishijie_lot_pk10,csj_lot_pk10_lotmenu_s_banner,caishijie_pk10_bottom,caishijie_bottom,caishijie_pk10_left,caishijie_pk10_right,caishijie_logo_right,caishijie_pk10_bottom_lr,caishijie_bottom_leftright&amp;format=html&amp;website=42&amp;jsoncallback=AddList"></script>
+
+
+<!--底部 end-->
+
+
+<script src="../../script/highchats/highcharts.js" type="text/javascript"></script><script src="../../script/jschart.js" type="text/javascript"></script><script src="../../script/require.js" type="text/javascript"></script><script src="../../script/trendChart.js" type="text/javascript"></script><script src="../../script/lot/lotcommon.js" type="text/javascript"></script><script src="../../script/lot/pk10/award.js" type="text/javascript"></script><script src="../../script/lot/warntime.js" type="text/javascript"></script>
+
+<div style="display: none;">
+    <script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODE3MTczOF8zNzY4MDNfNDAwNjU0OTIwMF8"></script>
+    <script src="http://s9.cnzz.com/stat.php?id=5418000&web_id=5418000&show=pic1" language="JavaScript"></script>
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?dad24abebba647625189f407f7103e48";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            if (top != self) {
+                $(".history_gg").show();
+            }
+            $(".top_warn .closeBtns").click(function () {
+                $(".top_warn").fadeOut(100);
+                $(".ydImg").css({ "top": "5px" });
+            })
+        });
+
+
+    </script>
+
+</div>
+<script type="text/javascript" src="../../script/fbloginframe.js?id=userfeedback&class=userfeedback"></script>
+
+</body>
+</html>

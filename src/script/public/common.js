@@ -1,10 +1,6 @@
 console.log('load common!');
 var HOST = 'http://120.76.188.66:8080';
 
-// $.ajaxSetup({
-//     headers: {"X-Requested-With":"XMLHttpRequest"}
-// });
-
 jQuery.extend({
     //HTTP get方法
     get: function (url, data, callback, type) {
@@ -17,7 +13,7 @@ jQuery.extend({
         return jQuery.ajax({
             type: "GET",
             url: HOST+url,
-            data: $.extend(data,{isa:true}),
+            data: $.extend({isa:true}, data),
             // headers: {
             //     // 'X-Requested-With': 'XMLHttpRequest',
             //     "Access-Control-Allow-Headers":"X-Requested-With"
