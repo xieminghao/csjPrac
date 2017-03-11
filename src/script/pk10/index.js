@@ -4,9 +4,7 @@ var pathname = location.pathname.replace('index.html','');
 console.log(host+pathname);
 
 var successFn = function(res){
-    console.log(res);
     $('#lot-content').html(res);
-
     $('.feedbackDiv').remove();
     $('li[data-tag="zh"]').remove();
     $('li[data-tag="tbm"]').remove();
