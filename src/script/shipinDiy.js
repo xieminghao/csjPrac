@@ -29,7 +29,11 @@ $.ajax({
 	datatype:'html',
 	type:'get',
 	success: function(res){
-		$('.lot-wrap').replaceWith(res);
+		$('.lot-wrap').append(res);
+
+        var iframeEle = $('<div style="padding:0px 10px 20px;clear:left;"><iframe width="1000" height="420" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="http://www.5188pk10.com/zhibo.html"></iframe><div>');
+        // iframeEle.attr('src','http://m.1399p.com/video/pk10');
+        $('#img-scroll').before(iframeEle);
 
 		$(function () {
             $('.btn_share_html').click(function () {
