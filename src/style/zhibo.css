@@ -1,0 +1,278 @@
+﻿@import "base.css";
+.body-content
+{
+    text-align:left;
+}
+/*开奖直播*/
+.zhibo-title {
+    border-bottom: solid 1px #888686;
+    height: 50px;
+    font-family: 微软雅黑;
+    margin-bottom:30px;
+}
+.zhibo-title .name {
+    background: url(../images/zhibo-logo.png) no-repeat;
+    padding-left: 50px;
+    font-size: 22px;
+    height: 38px;
+    color: #323132;
+    line-height: 38px;
+    float: left;
+}
+.zhibo-title .share {
+    float: right;
+    margin-top: 10px;
+}
+.zhibo-title .share a {
+    float: left;
+    margin-left: 6px;
+    width: 31px;
+    height: 32px;
+    display: block;
+}
+.zhibo-title .share div {
+    float: left;
+    color: #999999;
+    font-size: 12px;
+    line-height: 30px;
+    margin-right: 5px;
+}
+.zhibo-title .zhibo-weibo
+{
+    background: url(../images/zhibo-weibo.png) no-repeat;
+}
+.zhibo-title .zhibo-weibo:hover
+{
+    background:url(../images/zhibo-weibo-cur.png) no-repeat;
+}
+.zhibo-title .zhibo-qq
+{
+    background:url(../images/zhibo-qq.png) no-repeat;
+}
+.zhibo-title .zhibo-qq:hover
+{
+    background:url(../images/zhibo-qq-cur.png) no-repeat;
+}
+.zhibo-title .zhibo-qzone
+{
+    background:url(../images/zhibo-qzone.png) no-repeat;
+}
+.zhibo-title .zhibo-qzone:hover
+{
+    background:url(../images/zhibo-qzone-cur.png) no-repeat;
+}
+.zhibo-title .zhibo-renren
+{
+    background:url(../images/zhibo-renren.png) no-repeat;
+}
+.zhibo-title .zhibo-renren:hover
+{
+    background:url(../images/zhibo-renren-cur.png) no-repeat;
+}
+.zhibo-content
+{
+    padding:10px 17px;
+}
+.zhibo-content .lot
+{
+    background: url(../images/zhibo-bg.png) no-repeat;
+    float: left;
+    width: 471px;
+    height: 214px;
+    margin-bottom:20px;
+}
+.zhibo-content .lot .logo
+{
+    display: block;
+    width: 253px;
+    height: 179px;
+    float: left;    
+}
+.zhibo-content .mg20
+{
+    margin-left:22px;
+}
+.zhibo-content .lot .pk10
+{
+    float:left;
+    background: url(../images/zhibo-pk10.png) 30px 20px no-repeat;
+}
+.zhibo-content .lot .cqssc
+{    
+    float:left;
+    background: url(../images/zhibo-cqssc.png) 30px 20px no-repeat;
+}
+.zhibo-content .lot .jsk3
+{
+    float:left;
+    background: url(../images/zhibo-jsk3.png) 30px 20px no-repeat;
+}
+.zhibo-content .lot .xyft
+{    
+    float:left;
+    background: url(../images/zhibo-xyft.png) 30px 20px no-repeat;
+}
+.zhibo-content .lot .gdkl10
+{    
+    float:left;
+    background: url(../images/zhibo-gdkl10.png) 30px 20px no-repeat;
+}
+.zhibo-content .lot .xync
+{    
+    float:left;
+    background: url(../images/zhibo-xync.png) 30px 20px no-repeat;
+}
+.zhibo-content .lot .kl8
+{    
+    float:left;
+    background: url(../images/zhibo-kl8.png) 30px 30px no-repeat;
+}
+.zhibo-content .lot .jxssc
+{    
+    float:left;
+    background: url(../images/zhibo-jxssc.png) 30px 20px no-repeat;
+}
+.zhibo-content .lot .shssl
+{    
+    float:left;
+    background: url(../images/zhibo-shssl.png) 30px 20px no-repeat;
+}
+.zhibo-content .lot .syydj {
+  float: left;
+  background: url(../images/zhibo/zhibo-syydj.png) 30px 20px no-repeat;
+}
+.zhibo-content .lot .gd11x5 {
+  float: left;
+  background: url(../images/zhibo/zhibo-gd11x5.png) 30px 20px no-repeat;
+}
+.zhibo-content .lot .jx11x5 {
+  float: left;
+  background: url(../images/zhibo/zhibo-jx11x5.png) 30px 20px no-repeat;
+}
+.zhibo-content .lot .xjssc {
+  float: left;
+  background: url(../images/zhibo/zhibo-xjssc.png) 30px 20px no-repeat;
+}
+.zhibo-content .lot .tjssc {
+  float: left;
+  background: url(../images/zhibo/zhibo-tjssc.png) 30px 20px no-repeat;
+}
+.zhibo-content .lot .fc3d {
+  float: left;
+  background: url(../images/zhibo/zhibo-fc3d.png) 30px 20px no-repeat;
+}
+.zhibo-content .lot .pl3 {
+  float: left;
+  background: url(../images/zhibo/zhibo-pl3.png) 30px 20px no-repeat;
+}
+.zhibo-content .lot .coming
+{    
+    float:left;
+    background: url(../images/zhibo-coming.gif) 30px 20px no-repeat;
+}
+.zhibo-content .lot .detail
+{
+    padding-right:14px;
+    _padding-right:10px;
+    color: #979797;
+}
+.zhibo-content .lot .detail .time
+{
+    color:#e84147;
+    padding:0px 2px;
+}
+.zhibo-content .lot .detail .lot-name
+{
+    font-size: 19px;
+    font-family: 微软雅黑;
+    line-height: 42px;
+    display: block;
+    color: #323132;
+}
+.zhibo-content .lot .detail .synopsis
+{
+    line-height: 22px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.zhibo-content .lot .detail .play
+{
+    color: #323132;
+    margin-left: 25px;
+}
+.zhibo-content .lot .detail .lot-name:hover,
+.zhibo-content .lot .detail .play:hover
+{
+    color:#e84147;
+}
+.zhibo-collaborate
+{
+    background: url(../images/zhibo-collaborate.png) no-repeat;
+    width: 998px;
+    height: 195px;
+    margin:15px 0px;
+}
+.zhibo-collaborate .detail
+{
+    float: left;
+    margin-top: 70px;
+    width: 710px;
+}
+.zhibo-collaborate .detail .for
+{
+    color: #e9484e;
+    font-size: 14px;
+    padding-left: 30px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+.zhibo-collaborate .detail .info
+{
+    height: 26px;
+    color: #333333;
+    line-height: 40px;
+}
+.zhibo-collaborate .detail .info span {
+    color: #e9484e;
+}
+.zhibo-collaborate .business
+{
+    display: block;
+    background: url(../images/zhibo-pdf.png) no-repeat;
+    width: 250px;
+    margin-top: 70px;
+    height: 76px;
+    float: right;
+    margin-right: 20px;
+}
+.zhibo-virtue
+{
+     border:solid 1px #DDDDDD;   
+     width:1000px;
+     height:363px;
+     background:url(../images/zhibo-virtue.png) repeat-x;
+}
+.zhibo-virtue .title
+{
+    color: #979797;
+    font-family: 微软雅黑;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-left: 19px;
+}
+.zhibo-virtue .span1, .zhibo-virtue .span2 {
+    float: left;
+    margin-left: 230px;
+    margin-top: 100px;
+    color: #979797;
+    width: 200px;
+    line-height: 18px;
+}
+.zhibo-virtue .span3, .zhibo-virtue .span4 {
+    float: left;
+    margin-left: 230px;
+    margin-top: 90px;
+    color: #979797;
+    width: 200px;
+    line-height: 18px;
+}
