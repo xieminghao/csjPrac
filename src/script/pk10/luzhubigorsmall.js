@@ -6,6 +6,7 @@ var host = 'http://120.76.188.66:8080'
 var pathname = location.pathname.replace('index.html','');
 var lotMenu = 'pk10_memu';
 var vAjax = '';
+var lotteryId = 2; lotteryLuzhu = "pk10luzhu_bgoe"; lotteryLuzhu_bsoe = "pk10lz_bsoe";
 /*设置牌路*/
 function setPaiLu() {
     var isshow = getCookie("showPailu");

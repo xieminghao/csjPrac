@@ -6,6 +6,7 @@ var host = 'http://120.76.188.66:8080'
 var pathname = location.pathname.replace('index.html','');
 var lotMenu = 'pk10_memu';
 var chartLine = null;
+var lotteryLuzhu = "";
 function awardNewData() {
     $.get("/pk10/ajax", { ajaxHandler: 'GetNewestRecord', t: Math.random() }, function (data) {
         var numbers = data.numbers.split(',');

@@ -5,7 +5,7 @@
 var host = 'http://120.76.188.66:8080'
 var pathname = location.pathname.replace('index.html','');
 var lotMenu = 'pk10_memu';
-
+var lotteryLuzhu = "pk10luzhu_lh";
 $.ajax({
     url: host+pathname,
     data:{},
