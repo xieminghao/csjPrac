@@ -1,12 +1,13 @@
 /**
- * Created by liutongwang on 2017/3/11.
- */
-/**
  * Created by liutongwang on 2017/3/9.
  */
 // 每个页面值调用一次的请求根据页面的location来判断请求的接口
 var host = 'http://120.76.188.66:8080'
 var pathname = location.pathname.replace('index.html','');
+var lotMenu = 'pk10_memu';
+var lotteryLuzhu = "";
+var lotteryLuzhu = "";
+var lzCookieName = "luzhuPk10";
 
 function formatRoadmap(idx, roadmap, options) {
     var html = '<table class="roadmap-table mb-15"><tr valign="top">';
@@ -60,6 +61,217 @@ function formatRoadmap(idx, roadmap, options) {
     statformDiv += '<span class="cp_floatFont2">出现过<b>--</b>次</span>';
     statformDiv += '<span class="cp_closeBtn"></span>';
     $("#luzhuform_" + idx).html(statformDiv);
+
+
+}
+function updatePickdate(dp) {
+    var selDate = $("#dateData").val();
+    if (dp.cal.date.d == (new Date()).getDate()) {
+        reloadLuzhu(selDate, 0);
+    } else {
+        reloadLuzhu(selDate, 1);
+    }
+}
+function clearedDate() {
+    reloadLuzhu('', 0);
+}
+
+function reloadLuzhu(date, unload) {
+    var url = location.pathname;
+    var _container = $("#pageName").attr("container");
+    $.get(url, { t: Math.random(), date: date }, function (text) {
+        $('#' + _container).html(text);
+        $("#pageName").attr("unload", unload);
+    });
+}
+
+function gotoModeItem(mode, pos, type) {
+    $(".mode-type a").removeClass("cur");
+    $(".mode-type a[data-mode=" + mode + "]").addClass("cur");
+
+    if (mode == 1) {
+        $(".tiptool_info i.nda_checkbox[data-type=" + type + "]").addClass("nda_selected");
+        $(".tiptool_info i.nda_checkbox[data-pos=" + pos + "]").addClass("nda_selected");
+    }
+    else if (mode == 2) {
+        $(".dailyChangLongStatistics .dcls_tool1[filter-mode*=2] a").removeClass("cur");
+        $(".dcls_tool1[filter-mode*=2] a[data-type=" + type + "]").addClass("cur");
+        $(".tiptool_info[filter-mode*=2] i[data-pos=" + pos + "]").addClass("nda_selected");
+    } else if (mode == 3) {
+        $(".dailyChangLongStatistics .dcls_tool1[filter-mode*=3] a").removeClass("cur");
+        $(".dcls_tool1[filter-mode*=3] a[data-pos=" + pos + "]").addClass("cur");
+        $(".tiptool_info[filter-mode*=3] i[data-type=" + type + "]").addClass("nda_selected");
+    }
+    $(".dcls_tool1,.tiptool_info").hide();
+    $(".dcls_tool1[filter-mode*=" + mode + "]").show();
+    $(".tiptool_info[filter-mode*=" + mode + "]").show();
+
+    setTimeout(function () {
+        $("body,html").animate({ scrollTop: $(".luzhu[fg=" + pos + "][fi=" + type + "]").offset().top }, 100);
+    }, 500);
+
+}
+
+function loadModeCookie(cookieName, mode) {
+    $(".lot-number-omit2 .tiptool_info i[special!=1]").removeClass("nda_selected");
+    $(".dailyChangLongStatistics .dcls_tool1[filter-mode*=2] a").removeClass("cur");
+    $(".dailyChangLongStatistics .dcls_tool1[filter-mode*=3] a").removeClass("cur");
+
+    var modeData = $.cookie(cookieName, "mode" + mode);
+    var flag = false;
+    if (modeData) {
+        var datas = modeData.split(",");
+        if (datas.length == 2) {
+            var pos = datas[0].replace("p:", "").split("|");
+            var type = datas[1].replace("t:", "").split("|");
+            flag = true;
+            if (mode == 2 && type.length == 1) {
+                $(".dcls_tool1[filter-mode*=2] a[data-type=" + type[0] + "]").addClass("cur");
+                for (var p = pos.length - 1; p > -1; p--) {
+                    $(".tiptool_info[filter-mode*=2] i[data-pos=" + pos[p] + "]").addClass("nda_selected");
+                }
+            } else if (mode == 3 && pos.length == 1) {
+                $(".dcls_tool1[filter-mode*=3] a[data-pos=" + pos[0] + "]").addClass("cur");
+                for (var t = type.length - 1; t > -1; t--) {
+                    $(".tiptool_info[filter-mode*=3] i[data-type=" + type[t] + "]").addClass("nda_selected");
+                }
+            } else if (mode == 1) {
+                for (var t = type.length - 1; t > -1; t--) {
+                    $(".tiptool_info i.nda_checkbox[data-type=" + type[t] + "]").addClass("nda_selected");
+                }
+                for (var p = pos.length - 1; p > -1; p--) {
+                    $(".tiptool_info i.nda_checkbox[data-pos=" + pos[p] + "]").addClass("nda_selected");
+                }
+            }
+            else {
+                flag = false;
+            }
+        }
+    }
+
+    if (!flag) {
+        defaultSetting();
+    } else if (typeof specialSetting != 'undefined' && specialSetting instanceof Function) {
+        specialSetting(mode);
+    }
+
+    $(".dcls_tool1,.tiptool_info").hide();
+    $(".dcls_tool1[filter-mode*=" + mode + "]").show();
+    $(".tiptool_info[filter-mode*=" + mode + "]").show();
+}
+
+function loadLZCookie(cookieName) {
+    var mode = $.cookie(cookieName, "mode");
+    if (!mode) {
+        mode = 1;
+    }
+    $(".mode-type a[data-mode=" + mode + "]").addClass("cur");
+    loadModeCookie(cookieName, mode);
+}
+
+function userSelectLZ() {
+    $(".jsloading").hide();
+
+    var mode = $(".mode-type a.cur").attr("data-mode");
+    var userfilters = $(".tiptool_info[filter-mode*=" + mode + "] i[class*=nda_selected]");
+    var filterPos = [];
+    var filterTypes = [];
+    if (mode == 2) {
+        var ct = $(".dcls_tool1[filter-mode*=2] a[class=cur]");
+        filterTypes.push(ct.attr("data-type"));
+        checkChooseItem(ct);
+        for (var i = userfilters.length - 1; i > -1; i--) {
+            filterPos.push($(userfilters[i]).attr("data-pos"));
+        }
+    } else if (mode == 1) {
+        for (var i = userfilters.length - 1; i > -1; i--) {
+            var t = $(userfilters[i]).attr("data-type");
+            if (t) {
+                filterTypes.push(t);
+            } else {
+                filterPos.push($(userfilters[i]).attr("data-pos"));
+            }
+        }
+        $(".lot-number-omit2 .tiptool_info i[special!=1]").show();
+    } else if (mode == 3) {
+        var cp = $(".dcls_tool1[filter-mode*=3] a[class=cur]");
+        filterPos.push(cp.attr("data-pos"));
+        checkChooseItem(cp);
+        for (var i = userfilters.length - 1; i > -1; i--) {
+            filterTypes.push($(userfilters[i]).attr("data-type"));
+        }
+    }
+
+    $(".luzhu").hide();
+    if (filterPos.length > 0 && filterTypes.length > 0) {
+        for (var t = filterTypes.length - 1; t > -1; t--) {
+            for (var p = filterPos.length - 1; p > -1; p--) {
+                var lz = $(".luzhu[fg=" + filterPos[p] + "][fi=" + filterTypes[t] + "]");
+                lz.show();
+                lz.find(".luzhu_scroll").scrollLeft(lz.find(".roadmap-table").width());
+            }
+        }
+    }
+    var data = 'p:' + filterPos.join('|') + ',t:' + filterTypes.join('|');
+    var cookiedata = { mode: mode };
+    for (var c = 1; c <= 3; c++) {
+        if (c == mode) {
+            cookiedata['mode' + mode] = data;
+        } else {
+            var tmp = $.cookie(lzCookieName, "mode" + c);
+            if (tmp) {
+                cookiedata["mode" + c] = tmp;
+            }
+        }
+    }
+    $.cookie(lzCookieName, "", cookiedata, { expires: 3600 * 24 * 30, path: "/", secure: false });
+}
+
+function calc(all, luzhu) {
+    var idx = all.indexOf(luzhu);
+    if (idx < 0) return 0;
+    var count = 0;
+    while (idx > -1) {
+        count += 1;
+        all = all.substr(idx + luzhu.length - 2);
+        idx = all.indexOf(luzhu);
+    }
+    return count;
+}
+
+function defaultSetting() {
+    $(".lot-number-omit2 .tiptool_info i[class=nda_checkbox]").addClass("nda_selected");
+    $(".dailyChangLongStatistics .dcls_tool1[filter-mode*=2] a:first").addClass("cur");
+    $(".dailyChangLongStatistics .dcls_tool1[filter-mode*=3] a:first").addClass("cur");
+}
+
+function checkChooseItem(obj) {
+    var type = obj.attr("data-type");
+    if (type) {
+        if (type == "lh") {
+            $(".lot-number-omit2 .tiptool_info i[filter-type=lh]").hide();
+        } else {
+            $(".lot-number-omit2 .tiptool_info i[filter-type=lh]").show();
+        }
+    } else {
+        var pos = obj.attr("data-pos");
+        if (pos == "d6" || pos == "d7" || pos == "d8" || pos == "d9" || pos == "d10" || pos == "d11") {
+            $(".lot-number-omit2 .tiptool_info i[data-type=lh]").hide();
+        }
+        else $(".lot-number-omit2 .tiptool_info i").show();
+    }
+}
+
+function statLuzhuForm(luzhu,ball,type,day,container){
+    //console.log(luzhu,ball,type,day);
+    // container.text(" loading ");
+    $.get("/pk10/Luzhuform",{"ball":ball,"type":type,"days":day},function(d){
+        if(d&&d.luzhu){
+            var result=d.luzhu;
+            var len= calc(result,luzhu);
+            container.text(len);
+        }
+    },'json');
 }
 
 $.ajax({
@@ -70,182 +282,6 @@ $.ajax({
     success: function(res){
         $('.lot-wrap').replaceWith(res);
         $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/navdrag.js',type:'text/javascript'}).appendTo($('body'));
-        // 执行原来的js
-
-        function updatePickdate(dp) {
-            var selDate = $("#dateData").val();
-            if (dp.cal.date.d == (new Date()).getDate()) {
-                reloadLuzhu(selDate, 0);
-            } else {
-                reloadLuzhu(selDate, 1);
-            }
-        }
-        function clearedDate() {
-            reloadLuzhu('', 0);
-        }
-
-        function reloadLuzhu(date, unload) {
-            var url = location.pathname;
-            var _container = $("#pageName").attr("container");
-            $.get(url, { t: Math.random(), date: date }, function (text) {
-                $('#' + _container).html(text);
-                $("#pageName").attr("unload", unload);
-            });
-        }
-
-        function gotoModeItem(mode, pos, type) {
-            $(".mode-type a").removeClass("cur");
-            $(".mode-type a[data-mode=" + mode + "]").addClass("cur");
-
-            if (mode == 1) {
-                $(".tiptool_info i.nda_checkbox[data-type=" + type + "]").addClass("nda_selected");
-                $(".tiptool_info i.nda_checkbox[data-pos=" + pos + "]").addClass("nda_selected");
-            }
-            else if (mode == 2) {
-                $(".dailyChangLongStatistics .dcls_tool1[filter-mode*=2] a").removeClass("cur");
-                $(".dcls_tool1[filter-mode*=2] a[data-type=" + type + "]").addClass("cur");
-                $(".tiptool_info[filter-mode*=2] i[data-pos=" + pos + "]").addClass("nda_selected");
-            } else if (mode == 3) {
-                $(".dailyChangLongStatistics .dcls_tool1[filter-mode*=3] a").removeClass("cur");
-                $(".dcls_tool1[filter-mode*=3] a[data-pos=" + pos + "]").addClass("cur");
-                $(".tiptool_info[filter-mode*=3] i[data-type=" + type + "]").addClass("nda_selected");
-            }
-            $(".dcls_tool1,.tiptool_info").hide();
-            $(".dcls_tool1[filter-mode*=" + mode + "]").show();
-            $(".tiptool_info[filter-mode*=" + mode + "]").show();
-
-            setTimeout(function () {
-                $("body,html").animate({ scrollTop: $(".luzhu[fg=" + pos + "][fi=" + type + "]").offset().top }, 100);
-            }, 500);
-
-        }
-
-        function loadModeCookie(cookieName, mode) {
-            $(".lot-number-omit2 .tiptool_info i[special!=1]").removeClass("nda_selected");
-            $(".dailyChangLongStatistics .dcls_tool1[filter-mode*=2] a").removeClass("cur");
-            $(".dailyChangLongStatistics .dcls_tool1[filter-mode*=3] a").removeClass("cur");
-
-            var modeData = $.cookie(cookieName, "mode" + mode);
-            var flag = false;
-            if (modeData) {
-                var datas = modeData.split(",");
-                if (datas.length == 2) {
-                    var pos = datas[0].replace("p:", "").split("|");
-                    var type = datas[1].replace("t:", "").split("|");
-                    flag = true;
-                    if (mode == 2 && type.length == 1) {
-                        $(".dcls_tool1[filter-mode*=2] a[data-type=" + type[0] + "]").addClass("cur");
-                        for (var p = pos.length - 1; p > -1; p--) {
-                            $(".tiptool_info[filter-mode*=2] i[data-pos=" + pos[p] + "]").addClass("nda_selected");
-                        }
-                    } else if (mode == 3 && pos.length == 1) {
-                        $(".dcls_tool1[filter-mode*=3] a[data-pos=" + pos[0] + "]").addClass("cur");
-                        for (var t = type.length - 1; t > -1; t--) {
-                            $(".tiptool_info[filter-mode*=3] i[data-type=" + type[t] + "]").addClass("nda_selected");
-                        }
-                    } else if (mode == 1) {
-                        for (var t = type.length - 1; t > -1; t--) {
-                            $(".tiptool_info i.nda_checkbox[data-type=" + type[t] + "]").addClass("nda_selected");
-                        }
-                        for (var p = pos.length - 1; p > -1; p--) {
-                            $(".tiptool_info i.nda_checkbox[data-pos=" + pos[p] + "]").addClass("nda_selected");
-                        }
-                    }
-                    else {
-                        flag = false;
-                    }
-                }
-            }
-
-            if (!flag) {
-                defaultSetting();
-            } else if (typeof specialSetting != 'undefined' && specialSetting instanceof Function) {
-                specialSetting(mode);
-            }
-
-            $(".dcls_tool1,.tiptool_info").hide();
-            $(".dcls_tool1[filter-mode*=" + mode + "]").show();
-            $(".tiptool_info[filter-mode*=" + mode + "]").show();
-        }
-
-        function loadLZCookie(cookieName) {
-            var mode = $.cookie(cookieName, "mode");
-            if (!mode) {
-                mode = 1;
-            }
-            $(".mode-type a[data-mode=" + mode + "]").addClass("cur");
-            loadModeCookie(cookieName, mode);
-        }
-
-        function userSelectLZ() {
-            $(".jsloading").hide();
-
-            var mode = $(".mode-type a.cur").attr("data-mode");
-            var userfilters = $(".tiptool_info[filter-mode*=" + mode + "] i[class*=nda_selected]");
-            var filterPos = [];
-            var filterTypes = [];
-            if (mode == 2) {
-                var ct = $(".dcls_tool1[filter-mode*=2] a[class=cur]");
-                filterTypes.push(ct.attr("data-type"));
-                checkChooseItem(ct);
-                for (var i = userfilters.length - 1; i > -1; i--) {
-                    filterPos.push($(userfilters[i]).attr("data-pos"));
-                }
-            } else if (mode == 1) {
-                for (var i = userfilters.length - 1; i > -1; i--) {
-                    var t = $(userfilters[i]).attr("data-type");
-                    if (t) {
-                        filterTypes.push(t);
-                    } else {
-                        filterPos.push($(userfilters[i]).attr("data-pos"));
-                    }
-                }
-                $(".lot-number-omit2 .tiptool_info i[special!=1]").show();
-            } else if (mode == 3) {
-                var cp = $(".dcls_tool1[filter-mode*=3] a[class=cur]");
-                filterPos.push(cp.attr("data-pos"));
-                checkChooseItem(cp);
-                for (var i = userfilters.length - 1; i > -1; i--) {
-                    filterTypes.push($(userfilters[i]).attr("data-type"));
-                }
-            }
-
-            $(".luzhu").hide();
-            if (filterPos.length > 0 && filterTypes.length > 0) {
-                for (var t = filterTypes.length - 1; t > -1; t--) {
-                    for (var p = filterPos.length - 1; p > -1; p--) {
-                        var lz = $(".luzhu[fg=" + filterPos[p] + "][fi=" + filterTypes[t] + "]");
-                        lz.show();
-                        lz.find(".luzhu_scroll").scrollLeft(lz.find(".roadmap-table").width());
-                    }
-                }
-            }
-            var data = 'p:' + filterPos.join('|') + ',t:' + filterTypes.join('|');
-            var cookiedata = { mode: mode };
-            for (var c = 1; c <= 3; c++) {
-                if (c == mode) {
-                    cookiedata['mode' + mode] = data;
-                } else {
-                    var tmp = $.cookie(lzCookieName, "mode" + c);
-                    if (tmp) {
-                        cookiedata["mode" + c] = tmp;
-                    }
-                }
-            }
-            $.cookie(lzCookieName, "", cookiedata, { expires: 3600 * 24 * 30, path: "/", secure: false });
-        }
-
-        function calc(all, luzhu) {
-            var idx = all.indexOf(luzhu);
-            if (idx < 0) return 0;
-            var count = 0;
-            while (idx > -1) {
-                count += 1;
-                all = all.substr(idx + luzhu.length - 2);
-                idx = all.indexOf(luzhu);
-            }
-            return count;
-        }
 
         $(function () {
             $("#lot_content input[name='luzhusearch']").live("click", function () {
@@ -423,112 +459,36 @@ $.ajax({
                     $(this).removeAttr('style');
                 })
             })
-
-
         });
 
-        formatRoadmap('1', '|小|大大大大大大|小|大大|小小|大大|小小|大大|小小小|大|小|大|小|大大大大大大大|小|大大|小|大|小|大|小|大大大|小小|大|小小小小小|大大大大|小|大大|小|大|小|大大大大|小|大大大|小小小|大大|小小小|大|小小|大|小|大大大|小|大大大大|小|大大大|小小小小小小|大|小|大|小|大|小|大大大大|小|大大|小|大大|小小小|大大大大大|小小|大大大|小小|大|小|大|小小|大|小小小小小小|大|小|大大|小|大|小|大|小|大大大|小小|大|小小小小小小小小小小|大大大|小小小小小|大大|小小|大大大大|小|大|小小小小小|大|小|大大大大|小小|大大大大大|小|大|小小小|大|小|大大|小|大大大|小小|大大大|小|大|小小|大|小小小小小小|大大|小|大大|小小小小小小|大大大|小|大大|小小|大大|小|大|小|大|小小小小小|大|小小|大大|小小小小小小小|大大|小|大大大|小|大|小|大大大|小小', '大小')
-
-            formatRoadmap('2', '|双双双|单|双|单|双双|单单单|双双|单单|双|单单单单单单单|双|单单|双|单|双双双双|单单|双|单|双双双双|单|双|单单|双双|单|双双双|单单|双双双|单|双双|单|双|单|双双|单单|双双双双双双双双双双双|单单|双|单单|双|单单单|双双双双|单|双双双双|单单|双双双双|单单|双双双|单|双|单|双双|单单单|双双|单|双双|单单|双|单单单单单单|双双双|单|双|单单|双双|单|双双|单单单|双双双|单|双|单单|双双双|单|双|单|双|单|双|单单单|双双双|单单|双|单单单单|双双|单|双|单单单单单|双双双|单|双|单|双|单|双|单|双双|单单|双双|单|双|单|双|单|双|单单单|双|单单单单单单|双双|单|双双|单|双|单|双|单单|双|单|双双|单|双双|单单|双双|单单单单单|双|单单|双|单单单单单|双双|单单单单|双|单|双|单单|双双双|单单单|双双双双双', '单双')
-            formatRoadmap('3', '|虎虎|龍龍龍|虎|龍龍龍龍|虎虎|龍|虎|龍|虎|龍|虎|龍龍龍龍|虎|龍龍|虎|龍|虎虎|龍龍龍龍|虎虎虎虎虎|龍|虎|龍|虎|龍|虎虎虎|龍|虎虎虎|龍龍|虎虎虎|龍|虎虎|龍|虎|龍|虎虎虎虎|龍|虎|龍|虎|龍龍龍|虎虎虎|龍|虎虎|龍|虎|龍|虎|龍|虎|龍龍龍龍|虎|龍龍龍|虎|龍|虎虎虎|龍|虎|龍|虎|龍|虎虎|龍龍|虎虎虎|龍|虎|龍龍|虎|龍龍|虎虎虎虎虎|龍|虎|龍龍|虎|龍|虎虎虎虎|龍龍|虎|龍龍龍龍|虎虎|龍|虎虎虎虎|龍|虎虎|龍龍|虎虎虎虎虎虎虎虎虎|龍龍龍龍|虎虎虎虎虎虎|龍|虎|龍龍|虎|龍|虎|龍龍龍龍|虎|龍龍龍|虎|龍龍龍龍龍龍|虎虎虎虎虎虎|龍龍龍|虎|龍|虎虎|龍|虎虎|龍|虎虎虎|龍|虎虎|龍|虎虎虎虎虎虎虎|龍龍龍龍龍龍龍|虎虎|龍|虎|龍|虎|龍|虎|龍|虎|龍|虎|龍龍龍|虎|龍|虎虎虎虎虎虎虎|龍龍|虎|龍龍|虎虎|龍|虎|龍龍龍|虎虎', '龍虎')
-            formatRoadmap('4', '|小|大|小小小|大|小小|大|小|大大大大|小|大|小小小小小小小小|大大大|小小小|大大大|小小小小|大大|小小|大|小小|大|小小|大大大|小小|大|小小|大大|小|大|小小|大|小|大大大|小|大|小|大大大大大大大|小小|大大|小小小小小|大大大大大大大|小小|大|小|大|小|大大大大大|小|大|小|大|小|大大大大|小|大|小小小小小|大|小|大|小小小|大大大|小小小|大|小|大大|小|大大大|小|大|小小|大大大大大|小|大|小|大|小小小小小小小小|大|小小小小小|大|小|大|小|大|小|大|小|大大|小小小小小|大大|小小小|大|小小|大|小|大|小小|大|小小小|大|小|大大大大大|小小|大|小小小小小|大大|小|大大大大|小小小|大|小小|大大大|小小|大大大大|小小小小小|大|小小|大大|小|大大|小小小小|大大|小小小|大大大大|小|大|小|大|小|大大大大大大|小|大|小|大大大|小|大|小小小', '大小')
-            formatRoadmap('5', '|单单单|双双双双双|单单单单单|双|单单单|双双双|单单单单|双双|单|双双双|单单单|双双|单|双|单|双|单|双双双|单单单单单|双双|单|双|单|双双|单|双|单|双|单单单|双|单|双双|单单单单|双|单单|双|单单|双双双|单|双双双|单单|双|单|双|单|双双|单单单|双|单|双|单|双|单|双双双双双双双|单单|双|单单|双|单单单|双|单|双双|单单单单|双|单单单单|双双双双双|单单|双|单|双双|单|双双|单|双双|单单单单单|双|单单|双双双双|单|双双|单单单单|双双双|单单|双双|单|双|单|双双双|单单|双|单|双|单|双双双|单|双|单单|双双双双|单|双双|单单|双双|单单单单|双双双双双|单|双|单|双双|单|双双双|单|双|单单|双双双双|单单|双|单单|双双|单|双|单单单单单单单|双|单|双双双|单|双双双双|单单|双双|单单单单|双双双|单|双双双双|单|双双双|单单', '单双')
-            formatRoadmap('6', '|虎|龍|虎|龍龍|虎|龍|虎|龍龍龍|虎虎|龍龍龍|虎|龍龍|虎虎|龍|虎虎|龍|虎虎虎|龍龍龍龍龍龍龍|虎虎|龍|虎|龍|虎|龍龍|虎|龍龍|虎|龍|虎|龍|虎|龍龍|虎|龍|虎|龍龍|虎虎虎虎|龍|虎|龍龍|虎虎|龍龍龍|虎虎虎|龍|虎|龍|虎|龍|虎|龍|虎虎|龍|虎虎|龍龍龍龍龍|虎|龍|虎|龍龍|虎|龍|虎虎|龍|虎虎|龍|虎|龍|虎虎虎|龍|虎|龍|虎|龍|虎|龍龍龍龍龍|虎虎虎虎|龍|虎虎虎虎|龍|虎虎|龍|虎|龍|虎虎|龍|虎虎虎|龍|虎|龍|虎|龍龍|虎虎虎|龍|虎|龍|虎|龍|虎|龍龍|虎|龍龍|虎|龍|虎虎虎虎虎虎|龍|虎|龍|虎虎|龍|虎虎|龍|虎虎虎虎|龍龍|虎|龍龍|虎虎|龍龍龍|虎|龍龍龍龍龍|虎|龍龍|虎|龍龍|虎|龍|虎虎虎虎|龍|虎虎|龍龍|虎|龍|虎|龍龍龍|虎|龍|虎虎虎', '龍虎')
-            formatRoadmap('7', '|大大大|小|大大|小小|大|小小小|大大大大|小|大大|小小|大大|小|大大|小|大大大|小|大|小小|大大大大|小小小小小小小小小|大|小小小小小|大|小小小小小小|大大|小|大大|小小小|大|小小小|大大|小小|大|小|大|小|大大大大大|小|大大大大大大|小小小小小小小|大|小|大|小小|大大|小|大|小|大大|小小|大大|小|大|小|大大|小小|大大|小|大大|小|大|小小|大大大大|小小|大|小小|大|小小小|大|小|大大大|小|大|小|大大大大|小小|大大大大大大|小小小|大|小|大|小小|大|小|大大大大|小小小小小|大|小小小小|大|小小小|大|小小小|大大大大|小|大|小|大|小|大大|小小|大大|小小|大|小|大大|小小|大|小小小小|大大|小|大|小|大|小小|大大|小|大大|小|大大|小|大|小|大大大大大大大大大大大|小小小小小|大|小|大|小小|大大大|小|大大|小|大|小小小小|大', '大小')
-            formatRoadmap('8', '|单单单|双|单单单|双|单|双|单单|双|单|双|单单|双双|单|双|单|双|单单|双|单|双|单|双|单|双|单|双双双|单单单|双双双双双|单单单单单单|双双|单单|双|单|双双|单单单单单单单单|双|单|双|单|双|单单单单单|双双|单单单|双双双|单|双|单单单单|双双|单单|双|单|双双|单|双|单|双双双双双|单|双双双双|单|双|单|双双|单|双|单单|双|单单单单单|双双双双|单|双双双|单单|双|单单单单单|双|单单|双双双双|单单单|双双双双|单|双|单|双双双|单|双双双双|单单|双双|单单|双双双双双|单单单|双|单单单单|双|单|双|单单|双双双双双|单单单单单单|双|单|双双双|单|双双|单单单|双|单|双|单|双双双双|单|双双双|单单单单单单单|双双双双|单单单|双双|单|双双|单单|双双|单单单单单|双双双|单|双双双双双|单单|双双|单|双双双双|单|双|单单单单单单单|双双|单|双双双|单|双双|单单单单单单单', '单双')
-            formatRoadmap('9', '|龍龍龍|虎虎|龍龍|虎|龍龍|虎|龍龍龍龍|虎虎虎虎虎|龍|虎虎|龍|虎|龍龍龍|虎|龍龍|虎|龍龍|虎|龍龍龍龍龍|虎虎|龍龍龍龍龍|虎虎虎|龍|虎虎虎虎虎虎|龍龍龍|虎|龍|虎虎虎虎虎|龍龍龍|虎|龍龍龍|虎|龍龍|虎虎虎虎|龍|虎虎|龍|虎虎虎|龍龍龍|虎|龍|虎|龍|虎|龍龍龍龍|虎虎虎虎|龍|虎虎|龍|虎|龍|虎虎|龍|虎虎|龍龍龍龍|虎|龍龍龍|虎|龍龍龍|虎虎|龍龍龍|虎|龍龍|虎虎虎虎|龍|虎|龍龍|虎虎|龍|虎虎|龍龍|虎|龍龍|虎虎虎虎|龍龍|虎|龍龍龍龍|虎|龍龍龍龍龍龍|虎虎虎虎|龍|虎虎虎虎虎|龍龍龍龍|虎虎|龍|虎虎|龍龍|虎虎虎虎|龍|虎虎|龍龍|虎虎虎|龍龍龍龍|虎|龍龍龍|虎|龍|虎虎虎|龍龍龍龍龍|虎虎|龍|虎虎|龍|虎|龍龍龍龍龍|虎虎虎|龍|虎|龍龍|虎虎|龍龍|虎|龍龍|虎|龍|虎虎虎|龍|虎虎虎|龍|虎|龍龍龍龍|虎虎|龍|虎|龍龍|虎|龍|虎虎|龍龍|虎虎|龍|虎虎虎|龍|虎虎|龍', '龍虎')
-            formatRoadmap('10', '|小|大大|小|大大|小小小小|大大|小|大|小小|大大|小小|大大大|小小|大大大大大大大大大大|小|大|小|大大|小|大|小|大|小|大大|小小|大|小小|大大大|小小小|大|小|大|小小|大|小|大|小|大大|小|大|小小|大大|小小小|大|小|大|小|大大大|小小|大大大大|小小小|大|小|大|小|大大|小|大|小小|大|小小|大大|小小|大大大|小|大大|小|大|小小|大大大大大大|小|大|小|大大大大|小|大|小小小小|大|小|大大大大|小|大大大大大大大大大大大大大大|小小|大|小|大大|小小|大|小|大大|小|大|小小小|大大|小小|大|小|大|小小|大大大大|小小小|大大|小小小小小|大|小|大|小小小|大|小小|大大|小小|大|小|大|小小小|大大大大|小|大|小|大|小|大|小|大|小小|大|小小|大|小小小小小|大|小|大|小|大|小', '大小')
-            formatRoadmap('11', '|单|双双|单|双双|单|双|单|双双双双双双双|单单|双双|单单单|双|单|双|单|双双双|单单|双|单|双双|单单|双|单单单|双|单|双双双|单单单单|双|单|双双双双双|单单|双|单|双双|单单|双双双双双双|单|双|单单|双|单|双双双|单单|双|单单|双双双双双双双|单|双双|单单|双|单|双|单|双|单|双双|单单|双|单单单|双|单|双|单单单|双|单单|双双|单|双双|单|双双|单|双双双|单单|双双双|单|双|单|双|单单单|双|单|双双|单|双|单单单单|双双|单单|双双|单单单单|双双双双|单单|双|单|双双双双双|单|双双|单单|双双|单单单单单单|双双双|单单|双|单单|双|单|双双双双双双|单单单单单|双|单|双|单单|双|单|双双双|单|双双双双双双双双|单单|双|单|双|单单|双|单单单单单|双|单|双|单单单|双双双双双双|单|双双双|单单单单单|双双双|单单单|双|单', '单双')
-            formatRoadmap('12', '|虎|龍|虎|龍|虎|龍|虎|龍龍龍龍龍|虎虎虎虎虎|龍龍龍龍龍|虎|龍|虎虎虎虎虎|龍|虎虎虎虎虎虎虎虎|龍龍|虎|龍|虎虎|龍龍龍龍龍龍龍龍龍龍|虎|龍|虎|龍龍|虎|龍龍龍|虎|龍龍|虎|龍龍龍|虎|龍龍龍龍龍|虎|龍龍龍|虎虎|龍|虎|龍|虎|龍龍龍|虎虎|龍龍龍龍|虎虎虎虎虎虎|龍龍|虎虎虎|龍龍|虎|龍|虎虎|龍|虎|龍龍|虎|龍龍龍龍|虎虎|龍龍|虎虎|龍龍龍龍龍|虎|龍龍龍|虎虎|龍|虎|龍|虎虎虎|龍龍|虎虎虎|龍龍龍龍|虎|龍|虎虎虎虎|龍龍龍龍|虎|龍|虎|龍|虎|龍龍龍龍龍|虎|龍龍龍龍|虎|龍|虎虎|龍|虎|龍龍|虎|龍龍龍|虎|龍龍龍龍|虎虎|龍龍|虎虎|龍|虎|龍|虎|龍龍龍龍龍|虎|龍|虎虎|龍|虎|龍|虎|龍|虎|龍|虎|龍|虎|龍|虎虎虎|龍|虎|龍|虎|龍龍|虎|龍|虎|龍|虎虎|龍龍龍|虎虎虎|龍|虎虎虎虎虎虎|龍龍|虎|龍|虎虎虎虎虎虎虎|龍|虎|龍|虎', '龍虎')
-            formatRoadmap('13', '|大|小|大|小小小|大|小小|大大大|小|大|小小|大|小小|大|小|大大|小|大大|小|大大|小小|大|小|大|小小|大大大|小|大大|小小小小小小|大大大大|小|大大大大大大大大大大大大|小小|大大大|小小|大大|小小小|大大|小小小小小|大大大|小|大大|小小小|大大大|小|大|小小|大大|小小小|大大|小|大大|小小|大大|小|大大大大大|小|大大大大大大大大大大大大大大|小|大大大|小小|大|小小小小小|大大大大大|小|大|小|大|小小小小|大|小小|大大大大大|小小小小|大|小|大|小|大大大大大|小|大大|小小|大大|小小|大|小小小|大|小|大大|小小|大大|小小小小小|大大|小|大大|小小|大|小小|大|小小|大|小|大大大|小小小|大大大大大大|小|大|小|大大|小小|大|小|大大|小|大大大大大大|小|大|小小小小小小|大大大大大|小小小小小小小小小|大|小|大大|小小|大|小|大|小小|大|小|大|小小|大大|小小小|大大大大|小小小|大大大大大', '大小')
-            formatRoadmap('14', '|双双|单|双|单|双双双双双|单|双双双|单|双|单|双|单单单|双|单|双双|单|双|单|双|单|双|单单单|双|单单|双|单单单|双双|单单|双双双双|单单单单|双|单单单单|双双|单|双双|单单单单单|双双双|单单单单单|双双|单|双双双双双|单|双双|单|双双双双|单单|双|单单|双双|单|双双双|单|双|单|双双|单|双|单单单单|双|单|双|单单|双双|单|双|单单单|双双|单|双双双|单|双|单|双双双双双|单|双双双双|单|双双双双|单|双|单单|双双双|单|双|单单|双|单|双|单|双|单|双|单单单单单|双双|单单单单单单|双双双|单单|双双|单单单|双|单|双|单单单单单|双双|单|双|单|双双双|单|双双|单单单|双|单|双双双|单|双双双|单|双|单|双|单|双|单|双双|单单|双|单单单单|双|单单单|双|单单单单单|双|单单单单|双双双双|单|双双', '单双')
-            formatRoadmap('15', '|龍|虎虎|龍龍|虎|龍龍|虎|龍龍龍|虎|龍|虎|龍龍龍龍|虎|龍|虎虎|龍|虎虎虎|龍龍龍龍|虎|龍龍龍龍龍|虎虎虎虎|龍龍龍|虎虎|龍龍龍|虎|龍|虎|龍龍|虎虎|龍龍龍龍|虎虎虎|龍龍龍龍龍龍|虎虎虎|龍龍龍|虎|龍|虎虎|龍龍龍龍|虎|龍龍|虎|龍龍|虎虎|龍龍|虎|龍|虎|龍龍龍龍龍龍龍|虎|龍龍龍龍|虎|龍龍龍龍龍龍|虎|龍龍|虎|龍|虎虎虎虎|龍|虎虎|龍龍龍龍|虎|龍龍龍|虎虎虎虎虎虎|龍龍龍龍龍龍|虎虎|龍|虎|龍|虎|龍|虎|龍|虎|龍|虎|龍|虎|龍龍|虎虎|龍|虎虎虎|龍|虎虎虎虎虎|龍|虎|龍|虎虎虎虎虎虎|龍|虎|龍|虎虎|龍龍|虎虎虎虎虎|龍|虎虎|龍|虎虎|龍龍|虎虎|龍龍龍龍龍龍|虎虎虎|龍龍龍|虎虎|龍龍龍|虎|龍龍龍|虎|龍龍|虎虎|龍|虎虎虎|龍|虎虎虎虎|龍|虎|龍|虎虎虎虎虎虎虎虎虎虎虎|龍龍|虎虎|龍|虎|龍|虎虎|龍|虎|龍龍|虎|龍龍|虎虎|龍龍|虎虎|龍|虎|龍龍龍|虎虎|龍龍', '龍虎')
-            formatRoadmap('16', '|小|大|小小|大大大|小小小小小小小小小小|大大大大|小小|大|小|大大大|小|大|小|大|小小小|大|小小小小|大|小小|大|小小小小小|大大大|小小|大大大大大大|小小小|大大|小小小小|大|小小|大大大大|小小小小|大|小小|大|小小|大|小|大|小|大|小|大|小小|大|小小|大|小|大大|小|大|小|大大大|小小|大|小|大|小小|大大大大大大|小|大|小小|大大大大|小|大大|小|大|小小|大|小|大|小|大大|小|大大|小|大|小|大大大大|小|大大|小|大|小|大大大|小|大|小小小小|大大|小小|大|小|大大大大|小|大|小|大大|小小|大大|小小小|大|小小|大|小|大|小小小|大|小小小|大大|小小小|大大|小|大|小小小小|大|小|大大大大大大大大大大|小小|大大大大大大|小|大大大|小小小|大|小小|大|小小|大大|小|大大|小小|大大|小|大|小小小|大大大|小', '大小')
-            formatRoadmap('17', '|双|单单单单单|双双双|单|双|单|双双双双双|单单|双双双双双|单单|双|单|双|单|双双双双双|单单单单|双双双|单单|双|单|双双双双|单单单单|双双|单单|双|单|双双|单|双双|单单单|双|单|双双|单单单|双|单单|双双双|单单单单|双双|单单单|双|单单单单|双双|单|双|单单|双|单单单单|双双|单|双双双|单|双|单单单|双|单|双|单|双双|单单单单|双双|单|双双|单|双双|单|双|单单单|双双双|单|双双双|单单单单单|双双双双|单单|双|单单|双双|单单单单|双双|单|双双|单|双|单|双|单|双|单单|双|单|双|单单|双|单|双双|单单|双|单|双|单单|双|单单单|双|单单|双|单单单单|双|单|双|单|双|单|双|单|双双|单|双双双双双|单|双双|单|双|单|双|单单|双双双双双双双|单单单|双双双|单|双|单单单|双|单|双|单|双', '单双')
-            formatRoadmap('18', '|大|小小|大|小|大大大|小小|大|小小小|大|小|大大|小|大|小小小小|大大|小|大大大大|小|大大大大大|小|大大大|小|大大|小|大大|小小小小|大大|小|大|小|大大大|小小小|大|小小小小小小小小|大|小|大|小小小小小|大|小小小|大|小|大大|小小小|大|小|大|小小小小小|大大大|小|大大|小小|大大大大|小|大|小小|大|小|大|小|大大大|小小|大大大|小小|大大|小小小小小|大|小|大|小小|大|小|大大大大大大|小|大大|小|大|小小小小小小小|大大|小小小|大大|小|大|小|大|小小|大大|小|大|小小小|大大|小|大大大大|小|大大|小小小|大|小小小小|大大|小小|大|小小|大大大|小小小小|大大|小小|大大大|小|大|小|大|小|大|小小小小|大大|小|大|小|大|小|大|小小|大|小小|大大|小小|大大大|小|大大大大大|小小小|大|小小小小小|大大大|小小小|大', '大小')
-            formatRoadmap('19', '|双双双|单|双双双|单|双双|单单单|双|单单单单|双|单单单|双|单|双双|单|双|单单|双|单单单|双|单单单|双双|单|双|单单单|双双|单|双双双双|单|双双|单|双双|单|双双双|单单|双双|单单|双双双双|单单单单单|双|单单单单单|双|单单单单单单单单单单单单单单单|双双|单|双双|单|双|单|双|单单单|双|单单单单单单单|双双|单单|双双双|单|双|单|双双|单单|双双双|单单单|双双|单单|双双双双双|单单单单|双双双双双|单单|双|单|双双双双|单|双|单|双|单|双双|单单单单单|双|单|双双双|单单|双|单|双双|单单单单|双|单单|双|单|双|单单单|双双|单|双双双双双双|单单单单|双|单单单|双|单|双|单单单单单|双双双双双|单单|双双|单单单单单单|双|单单|双|单|双|单单单单单单|双双|单单单|双双双|单|双|单|双双|单|双双|单|双|单|双双双双|单单|双双|单单|双|单|双双双|单单|双|单|双', '单双')
-            formatRoadmap('20', '|大大大|小小小小|大|小小|大|小小|大|小小小小小小小小|大大|小小小|大大|小|大大大大大大|小小小|大大|小小|大大|小小小小|大|小小小|大|小小|大大|小|大|小|大大大大大|小小|大|小|大大大|小|大|小小|大|小小|大|小|大|小|大大大大|小小|大|小|大|小小小小小|大|小小|大大|小小小|大大|小|大|小小小|大|小|大大|小小|大|小小小|大|小|大大|小小|大|小小|大大大大|小小|大|小小小|大|小小小|大|小小小|大|小|大大大大大大|小|大|小|大大|小|大大|小小|大|小小小小|大|小小小小小小|大|小|大大|小|大|小|大大|小小|大|小|大|小|大大|小小小小小|大|小|大|小小|大|小小小小小小|大大|小小小|大大大|小|大大|小|大|小小|大大大|小|大大大大大大|小小小|大大|小|大|小小|大|小小|大|小小|大大|小|大大大|小|大|小|大', '大小')
-            formatRoadmap('21', '|单单|双双|单|双|单单单单|双|单|双|单|双|单单单|双|单|双|单单单|双|单|双|单|双|单|双双|单单|双|单单|双双双双|单单|双双双|单|双双|单|双双双|单|双双|单|双双双|单|双|单单单|双|单|双双|单单|双|单单单|双双|单单|双双|单单单单|双双双|单单|双双双双双|单单|双|单|双双双双|单|双|单单|双双|单单|双|单单单|双|单|双|单|双双|单单|双|单|双|单单|双|单单|双双|单单单单|双|单单单|双|单|双|单|双双双双双|单单单单单|双|单|双双|单|双双双双双|单|双|单|双双双双|单|双双双|单单|双|单|双|单单单单|双|单|双双双|单|双|单|双双双|单单单单单单单单|双双双双|单单|双|单|双|单|双双|单|双|单|双|单|双双双双|单|双|单单|双双双|单单|双|单单单|双双双|单单单|双双双|单单|双双双双双|单', '单双')
-            formatRoadmap('22', '|大|小小|大大大|小|大大大|小小|大大大|小小小|大|小|大大大大|小|大大|小小|大|小小小小|大|小|大大大大|小小|大|小|大大|小小|大大|小|大|小|大|小小|大大|小|大|小小小|大大|小小小小小小小小|大|小|大大|小|大|小|大|小小|大|小小|大大|小小|大大|小|大|小|大大|小|大大|小小小|大|小小小|大大大大大|小|大大|小|大|小|大大|小|大|小|大|小小小小|大大大大|小|大|小|大大|小小|大大大|小|大大大|小|大大大|小|大大|小小小小小|大大大|小|大|小小|大大大大|小小|大大|小小|大大大|小|大|小|大大|小|大|小小|大大|小|大|小|大|小小|大大大大|小|大大大大大大大大|小|大大大大大大大大大|小小小|大|小|大大大|小|大|小|大|小小|大|小小小小小|大|小|大大大大大大大|小|大大|小小|大|小小|大大|小|大|小|大大大', '大小')
-            formatRoadmap('23', '|双|单|双双|单单单单单|双|单单单|双|单单单|双双|单单|双双双双双双双双双|单单单|双|单|双双|单单单|双双|单|双双|单单单单|双|单单|双双双|单|双|单单单单单单|双双双|单|双双双双|单|双|单|双|单|双双|单|双|单单|双双|单|双|单|双双|单|双双|单单单单|双双双双双双|单单单单|双双双|单单|双双双双|单|双双双|单单|双双双双双|单单|双双|单|双双双|单单单单单|双双|单|双|单|双|单|双|单单|双|单单单单|双双双双|单单单|双|单|双双|单|双|单单单|双|单|双|单单单单|双双|单|双双双|单单单单单|双双|单|双|单|双|单|双双双双|单|双双双双|单|双|单|双双|单|双|单单|双双双双双双双双双|单单|双|单|双双双双|单|双|单单|双|单单|双|单|双|单单单单单单|双|单|双双双|单|双|单单单|双|单|双|单单|双|单|双|单|双双|单单|双|单|双双', '单双')
-            formatRoadmap('24', '|小小|大大|小小小小|大|小小小|大大|小小|大|小|大|小|大大|小小小小|大大大大大|小|大|小小小小|大大|小小小|大|小小小小小|大大大大大|小|大大大|小|大大大|小|大|小|大|小小小小小小|大|小小|大|小|大大大大大大|小|大大|小小|大|小|大|小|大大|小|大|小小小|大|小小小小小小小小|大|小小小|大|小|大|小|大|小|大大|小小|大|小|大|小|大|小小|大大|小小|大|小|大|小小小小小|大|小小|大大大|小小|大|小|大|小小|大|小小|大|小小小小|大大|小小小|大大大大大|小小|大|小小小小|大大大|小|大大|小小小小|大大大|小小|大大大|小小小|大|小小|大|小小小小|大大大大大大|小小|大|小|大|小|大大大|小小小|大|小|大大大大大大|小|大大大|小小小小小小小|大大|小|大|小小|大|小小小小|大|小小小|大|小小|大大|小小|大大大|小|大|小小|大大|小小小小小|大|小', '大小')
-            formatRoadmap('25', '|单单单|双双|单|双双|单单|双双|单单单|双|单|双|单单|双双双|单单|双双|单|双|单单单单单单单|双|单|双|单单|双双|单|双双双|单|双双双双双双|单单单单单单单单单单|双双|单单|双双双双双双|单|双双双双|单单|双双双|单单|双|单|双双双|单|双双双双双|单|双|单单单单单单单单单单|双|单|双|单|双双|单单单单|双|单单|双|单单|双|单单|双|单单单单单单单|双|单|双双|单单单|双|单|双双双双双双|单|双|单单|双|单单单单|双|单单|双|单单单单单单单单|双双双|单单|双|单单单单|双|单|双|单|双双双双|单|双|单单单|双|单单|双双双双双双双双双|单单|双双|单单|双|单|双|单单单|双|单|双|单单|双|单单|双|单|双双双双|单单|双双双双双双|单|双双|单|双|单|双|单|双|单|双|单单|双双|单单单单单|双|单单单|双双双双双双|单|双双|单单|双双|单|双|单单|双双双双双双双双|单|双|单单单单|双|单单单单单', '单双')
-            formatRoadmap('26', '|小|大大|小小|大|小|大|小|大|小小小|大大大大|小小小小小|大|小|大大|小小小小小小|大大|小|大|小小|大|小小小|大大大|小小小|大大|小|大|小|大|小|大|小小|大|小|大|小|大大大|小小|大大|小小|大|小|大|小|大|小|大大大|小小小|大|小|大大|小|大|小|大大|小小|大|小小小|大|小小小|大|小|大|小小|大大|小小小小小|大|小|大大|小小小|大|小|大大大|小小|大|小小小小小小小小小小小小|大|小小小|大|小|大|小|大|小|大大|小小小小小|大|小小小小|大|小小|大大|小小小|大|小|大|小|大|小|大|小|大大|小小小|大大|小小小小|大大大|小|大|小小小小小|大|小小小|大大|小小|大|小小小小小小小|大大|小小|大大|小|大大|小|大|小|大大大|小小小|大|小小|大|小小小小小小小|大大大大|小|大|小小|大大|小|大|小小小', '大小')
-            formatRoadmap('27', '|单单|双双|单|双|单|双|单|双双双双双双|单|双|单|双双|单单|双|单单|双双双|单单|双|单|双|单单|双双|单|双|单单单|双|单单单单|双双双双|单单|双双|单单|双双|单单|双双|单单|双|单单单|双|单单|双双双|单|双双|单|双|单单|双双双|单单单单单|双双双|单|双|单单单|双双双双|单|双|单|双|单|双双双|单单单|双|单|双|单|双|单单单|双|单|双双|单单单单|双|单单单单单单单|双|单单|双|单|双双|单单单单单|双|单|双双双双双|单单|双|单|双|单单|双|单单单单单单|双|单单|双|单|双双双|单|双|单单|双|单|双双|单单|双|单|双双双双双双双双双|单|双|单单|双|单单单单单|双|单单|双|单|双双双双|单|双双|单|双|单|双|单单单单单|双|单单|双|单单|双双双双|单单单单|双双|单单单单单单单单|双双|单|双双|单单单|双双|单单|双双双双|单单', '单双')
-            $(function () { loadLZCookie(lzCookieName); });
-        
-            $(function () { userSelectLZ(); });
-        
-        
-        var lzCookieName = "luzhuPk10";
-
-        function defaultSetting() {
-            $(".lot-number-omit2 .tiptool_info i[class=nda_checkbox]").addClass("nda_selected");
-            $(".dailyChangLongStatistics .dcls_tool1[filter-mode*=2] a:first").addClass("cur");
-            $(".dailyChangLongStatistics .dcls_tool1[filter-mode*=3] a:first").addClass("cur");
-        }
-
-        function checkChooseItem(obj) {
-            var type = obj.attr("data-type");
-            if (type) {
-                if (type == "lh") {
-                    $(".lot-number-omit2 .tiptool_info i[filter-type=lh]").hide();
-                } else {
-                    $(".lot-number-omit2 .tiptool_info i[filter-type=lh]").show();
-                }
-            } else {
-                var pos = obj.attr("data-pos");
-                if (pos == "d6" || pos == "d7" || pos == "d8" || pos == "d9" || pos == "d10" || pos == "d11") {
-                    $(".lot-number-omit2 .tiptool_info i[data-type=lh]").hide();
-                }
-                else $(".lot-number-omit2 .tiptool_info i").show();
-            }
-        }
-
-        function statLuzhuForm(luzhu,ball,type,day,container){
-            //console.log(luzhu,ball,type,day);
-            // container.text(" loading ");
-            $.get("/pk10/Luzhuform",{"ball":ball,"type":type,"days":day},function(d){
-                if(d&&d.luzhu){
-                    var result=d.luzhu;
-                    var len= calc(result,luzhu);
-                    container.text(len);
-                }
-            },'json');
-        }
-
-
-
-        $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/service.js',type:'text/javascript'}).appendTo($('body'));
-
-        //是否存在 广告横幅 分左右两块
-        var adsplit = "csj_lot_pk10_lotmenu_s_banner";
-        //左右漂浮广告
-        var leftright = "caishijie_pk10_left,caishijie_pk10_right";
-        $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'http://a.591dyd.com/service/adjs?codes=caishijie_lot_pk10,csj_lot_pk10_lotmenu_s_banner,caishijie_pk10_bottom,caishijie_bottom,caishijie_pk10_left,caishijie_pk10_right,caishijie_logo_right,caishijie_pk10_bottom_lr,caishijie_bottom_leftright&amp;format=html&amp;website=42&amp;jsoncallback=AddList',type:'text/javascript'}).appendTo($('body'));
-
-        $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/My97DatePicker/WdatePicker.js',type:'text/javascript'}).appendTo($('body'));
-        $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/lot/lotcommon.js',type:'text/javascript'}).appendTo($('body'));
-        $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/lot/pk10/award.js',type:'text/javascript'}).appendTo($('body'));
-        $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/lot/warntime.js',type:'text/javascript'}).appendTo($('body'));
-
-        $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODE3MTczOF8zNzY4MDNfNDAwNjU0OTIwMF8',type:'text/javascript'}).appendTo($('body'));
-        $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'http://s9.cnzz.com/stat.php?id=5418000&web_id=5418000&show=pic1',type:'text/javascript'}).appendTo($('body'));
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "//hm.baidu.com/hm.js?dad24abebba647625189f407f7103e48";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-        $(function () {
-            if (top != self) {
-                $(".history_gg").show();
-            }
-            $(".top_warn .closeBtns").click(function () {
-                $(".top_warn").fadeOut(100);
-                $(".ydImg").css({ "top": "5px" });
-            })
-        });
+        formatRoadmap('1', '|小|大大大大大大|小|大大|小小|大大|小小|大大|小小小|大|小|大|小|大大大大大大大|小|大大|小|大|小|大|小|大大大|小小|大|小小小小小|大大大大|小|大大|小|大|小|大大大大|小|大大大|小小小|大大|小小小|大|小小|大|小|大大大|小|大大大大|小|大大大|小小小小小小|大|小|大|小|大|小|大大大大|小|大大|小|大大|小小小|大大大大大|小小|大大大|小小|大|小|大|小小|大|小小小小小小|大|小|大大|小|大|小|大|小|大大大|小小|大|小小小小小小小小小小|大大大|小小小小小|大大|小小|大大大大|小|大|小小小小小|大|小|大大大大|小小|大大大大大|小|大|小小小|大|小|大大|小|大大大|小小|大大大|小|大|小小|大|小小小小小小|大大|小|大大|小小小小小小|大大大|小|大大|小小|大大|小|大|小|大|小小小小小|大|小小|大大|小小小小小小小|大大|小|大大大|小|大|小|大大大|小小', '大小');
+        formatRoadmap('2', '|双双双|单|双|单|双双|单单单|双双|单单|双|单单单单单单单|双|单单|双|单|双双双双|单单|双|单|双双双双|单|双|单单|双双|单|双双双|单单|双双双|单|双双|单|双|单|双双|单单|双双双双双双双双双双双|单单|双|单单|双|单单单|双双双双|单|双双双双|单单|双双双双|单单|双双双|单|双|单|双双|单单单|双双|单|双双|单单|双|单单单单单单|双双双|单|双|单单|双双|单|双双|单单单|双双双|单|双|单单|双双双|单|双|单|双|单|双|单单单|双双双|单单|双|单单单单|双双|单|双|单单单单单|双双双|单|双|单|双|单|双|单|双双|单单|双双|单|双|单|双|单|双|单单单|双|单单单单单单|双双|单|双双|单|双|单|双|单单|双|单|双双|单|双双|单单|双双|单单单单单|双|单单|双|单单单单单|双双|单单单单|双|单|双|单单|双双双|单单单|双双双双双', '单双');
+        formatRoadmap('3', '|虎虎|龍龍龍|虎|龍龍龍龍|虎虎|龍|虎|龍|虎|龍|虎|龍龍龍龍|虎|龍龍|虎|龍|虎虎|龍龍龍龍|虎虎虎虎虎|龍|虎|龍|虎|龍|虎虎虎|龍|虎虎虎|龍龍|虎虎虎|龍|虎虎|龍|虎|龍|虎虎虎虎|龍|虎|龍|虎|龍龍龍|虎虎虎|龍|虎虎|龍|虎|龍|虎|龍|虎|龍龍龍龍|虎|龍龍龍|虎|龍|虎虎虎|龍|虎|龍|虎|龍|虎虎|龍龍|虎虎虎|龍|虎|龍龍|虎|龍龍|虎虎虎虎虎|龍|虎|龍龍|虎|龍|虎虎虎虎|龍龍|虎|龍龍龍龍|虎虎|龍|虎虎虎虎|龍|虎虎|龍龍|虎虎虎虎虎虎虎虎虎|龍龍龍龍|虎虎虎虎虎虎|龍|虎|龍龍|虎|龍|虎|龍龍龍龍|虎|龍龍龍|虎|龍龍龍龍龍龍|虎虎虎虎虎虎|龍龍龍|虎|龍|虎虎|龍|虎虎|龍|虎虎虎|龍|虎虎|龍|虎虎虎虎虎虎虎|龍龍龍龍龍龍龍|虎虎|龍|虎|龍|虎|龍|虎|龍|虎|龍|虎|龍龍龍|虎|龍|虎虎虎虎虎虎虎|龍龍|虎|龍龍|虎虎|龍|虎|龍龍龍|虎虎', '龍虎');
+        formatRoadmap('4', '|小|大|小小小|大|小小|大|小|大大大大|小|大|小小小小小小小小|大大大|小小小|大大大|小小小小|大大|小小|大|小小|大|小小|大大大|小小|大|小小|大大|小|大|小小|大|小|大大大|小|大|小|大大大大大大大|小小|大大|小小小小小|大大大大大大大|小小|大|小|大|小|大大大大大|小|大|小|大|小|大大大大|小|大|小小小小小|大|小|大|小小小|大大大|小小小|大|小|大大|小|大大大|小|大|小小|大大大大大|小|大|小|大|小小小小小小小小|大|小小小小小|大|小|大|小|大|小|大|小|大大|小小小小小|大大|小小小|大|小小|大|小|大|小小|大|小小小|大|小|大大大大大|小小|大|小小小小小|大大|小|大大大大|小小小|大|小小|大大大|小小|大大大大|小小小小小|大|小小|大大|小|大大|小小小小|大大|小小小|大大大大|小|大|小|大|小|大大大大大大|小|大|小|大大大|小|大|小小小', '大小');
+        formatRoadmap('5', '|单单单|双双双双双|单单单单单|双|单单单|双双双|单单单单|双双|单|双双双|单单单|双双|单|双|单|双|单|双双双|单单单单单|双双|单|双|单|双双|单|双|单|双|单单单|双|单|双双|单单单单|双|单单|双|单单|双双双|单|双双双|单单|双|单|双|单|双双|单单单|双|单|双|单|双|单|双双双双双双双|单单|双|单单|双|单单单|双|单|双双|单单单单|双|单单单单|双双双双双|单单|双|单|双双|单|双双|单|双双|单单单单单|双|单单|双双双双|单|双双|单单单单|双双双|单单|双双|单|双|单|双双双|单单|双|单|双|单|双双双|单|双|单单|双双双双|单|双双|单单|双双|单单单单|双双双双双|单|双|单|双双|单|双双双|单|双|单单|双双双双|单单|双|单单|双双|单|双|单单单单单单单|双|单|双双双|单|双双双双|单单|双双|单单单单|双双双|单|双双双双|单|双双双|单单', '单双');
+        formatRoadmap('6', '|虎|龍|虎|龍龍|虎|龍|虎|龍龍龍|虎虎|龍龍龍|虎|龍龍|虎虎|龍|虎虎|龍|虎虎虎|龍龍龍龍龍龍龍|虎虎|龍|虎|龍|虎|龍龍|虎|龍龍|虎|龍|虎|龍|虎|龍龍|虎|龍|虎|龍龍|虎虎虎虎|龍|虎|龍龍|虎虎|龍龍龍|虎虎虎|龍|虎|龍|虎|龍|虎|龍|虎虎|龍|虎虎|龍龍龍龍龍|虎|龍|虎|龍龍|虎|龍|虎虎|龍|虎虎|龍|虎|龍|虎虎虎|龍|虎|龍|虎|龍|虎|龍龍龍龍龍|虎虎虎虎|龍|虎虎虎虎|龍|虎虎|龍|虎|龍|虎虎|龍|虎虎虎|龍|虎|龍|虎|龍龍|虎虎虎|龍|虎|龍|虎|龍|虎|龍龍|虎|龍龍|虎|龍|虎虎虎虎虎虎|龍|虎|龍|虎虎|龍|虎虎|龍|虎虎虎虎|龍龍|虎|龍龍|虎虎|龍龍龍|虎|龍龍龍龍龍|虎|龍龍|虎|龍龍|虎|龍|虎虎虎虎|龍|虎虎|龍龍|虎|龍|虎|龍龍龍|虎|龍|虎虎虎', '龍虎')
+        formatRoadmap('7', '|大大大|小|大大|小小|大|小小小|大大大大|小|大大|小小|大大|小|大大|小|大大大|小|大|小小|大大大大|小小小小小小小小小|大|小小小小小|大|小小小小小小|大大|小|大大|小小小|大|小小小|大大|小小|大|小|大|小|大大大大大|小|大大大大大大|小小小小小小小|大|小|大|小小|大大|小|大|小|大大|小小|大大|小|大|小|大大|小小|大大|小|大大|小|大|小小|大大大大|小小|大|小小|大|小小小|大|小|大大大|小|大|小|大大大大|小小|大大大大大大|小小小|大|小|大|小小|大|小|大大大大|小小小小小|大|小小小小|大|小小小|大|小小小|大大大大|小|大|小|大|小|大大|小小|大大|小小|大|小|大大|小小|大|小小小小|大大|小|大|小|大|小小|大大|小|大大|小|大大|小|大|小|大大大大大大大大大大大|小小小小小|大|小|大|小小|大大大|小|大大|小|大|小小小小|大', '大小');
+        formatRoadmap('8', '|单单单|双|单单单|双|单|双|单单|双|单|双|单单|双双|单|双|单|双|单单|双|单|双|单|双|单|双|单|双双双|单单单|双双双双双|单单单单单单|双双|单单|双|单|双双|单单单单单单单单|双|单|双|单|双|单单单单单|双双|单单单|双双双|单|双|单单单单|双双|单单|双|单|双双|单|双|单|双双双双双|单|双双双双|单|双|单|双双|单|双|单单|双|单单单单单|双双双双|单|双双双|单单|双|单单单单单|双|单单|双双双双|单单单|双双双双|单|双|单|双双双|单|双双双双|单单|双双|单单|双双双双双|单单单|双|单单单单|双|单|双|单单|双双双双双|单单单单单单|双|单|双双双|单|双双|单单单|双|单|双|单|双双双双|单|双双双|单单单单单单单|双双双双|单单单|双双|单|双双|单单|双双|单单单单单|双双双|单|双双双双双|单单|双双|单|双双双双|单|双|单单单单单单单|双双|单|双双双|单|双双|单单单单单单单', '单双');
+        formatRoadmap('9', '|龍龍龍|虎虎|龍龍|虎|龍龍|虎|龍龍龍龍|虎虎虎虎虎|龍|虎虎|龍|虎|龍龍龍|虎|龍龍|虎|龍龍|虎|龍龍龍龍龍|虎虎|龍龍龍龍龍|虎虎虎|龍|虎虎虎虎虎虎|龍龍龍|虎|龍|虎虎虎虎虎|龍龍龍|虎|龍龍龍|虎|龍龍|虎虎虎虎|龍|虎虎|龍|虎虎虎|龍龍龍|虎|龍|虎|龍|虎|龍龍龍龍|虎虎虎虎|龍|虎虎|龍|虎|龍|虎虎|龍|虎虎|龍龍龍龍|虎|龍龍龍|虎|龍龍龍|虎虎|龍龍龍|虎|龍龍|虎虎虎虎|龍|虎|龍龍|虎虎|龍|虎虎|龍龍|虎|龍龍|虎虎虎虎|龍龍|虎|龍龍龍龍|虎|龍龍龍龍龍龍|虎虎虎虎|龍|虎虎虎虎虎|龍龍龍龍|虎虎|龍|虎虎|龍龍|虎虎虎虎|龍|虎虎|龍龍|虎虎虎|龍龍龍龍|虎|龍龍龍|虎|龍|虎虎虎|龍龍龍龍龍|虎虎|龍|虎虎|龍|虎|龍龍龍龍龍|虎虎虎|龍|虎|龍龍|虎虎|龍龍|虎|龍龍|虎|龍|虎虎虎|龍|虎虎虎|龍|虎|龍龍龍龍|虎虎|龍|虎|龍龍|虎|龍|虎虎|龍龍|虎虎|龍|虎虎虎|龍|虎虎|龍', '龍虎');
+        formatRoadmap('10', '|小|大大|小|大大|小小小小|大大|小|大|小小|大大|小小|大大大|小小|大大大大大大大大大大|小|大|小|大大|小|大|小|大|小|大大|小小|大|小小|大大大|小小小|大|小|大|小小|大|小|大|小|大大|小|大|小小|大大|小小小|大|小|大|小|大大大|小小|大大大大|小小小|大|小|大|小|大大|小|大|小小|大|小小|大大|小小|大大大|小|大大|小|大|小小|大大大大大大|小|大|小|大大大大|小|大|小小小小|大|小|大大大大|小|大大大大大大大大大大大大大大|小小|大|小|大大|小小|大|小|大大|小|大|小小小|大大|小小|大|小|大|小小|大大大大|小小小|大大|小小小小小|大|小|大|小小小|大|小小|大大|小小|大|小|大|小小小|大大大大|小|大|小|大|小|大|小|大|小小|大|小小|大|小小小小小|大|小|大|小|大|小', '大小');
+        formatRoadmap('11', '|单|双双|单|双双|单|双|单|双双双双双双双|单单|双双|单单单|双|单|双|单|双双双|单单|双|单|双双|单单|双|单单单|双|单|双双双|单单单单|双|单|双双双双双|单单|双|单|双双|单单|双双双双双双|单|双|单单|双|单|双双双|单单|双|单单|双双双双双双双|单|双双|单单|双|单|双|单|双|单|双双|单单|双|单单单|双|单|双|单单单|双|单单|双双|单|双双|单|双双|单|双双双|单单|双双双|单|双|单|双|单单单|双|单|双双|单|双|单单单单|双双|单单|双双|单单单单|双双双双|单单|双|单|双双双双双|单|双双|单单|双双|单单单单单单|双双双|单单|双|单单|双|单|双双双双双双|单单单单单|双|单|双|单单|双|单|双双双|单|双双双双双双双双|单单|双|单|双|单单|双|单单单单单|双|单|双|单单单|双双双双双双|单|双双双|单单单单单|双双双|单单单|双|单', '单双');
+        formatRoadmap('12', '|虎|龍|虎|龍|虎|龍|虎|龍龍龍龍龍|虎虎虎虎虎|龍龍龍龍龍|虎|龍|虎虎虎虎虎|龍|虎虎虎虎虎虎虎虎|龍龍|虎|龍|虎虎|龍龍龍龍龍龍龍龍龍龍|虎|龍|虎|龍龍|虎|龍龍龍|虎|龍龍|虎|龍龍龍|虎|龍龍龍龍龍|虎|龍龍龍|虎虎|龍|虎|龍|虎|龍龍龍|虎虎|龍龍龍龍|虎虎虎虎虎虎|龍龍|虎虎虎|龍龍|虎|龍|虎虎|龍|虎|龍龍|虎|龍龍龍龍|虎虎|龍龍|虎虎|龍龍龍龍龍|虎|龍龍龍|虎虎|龍|虎|龍|虎虎虎|龍龍|虎虎虎|龍龍龍龍|虎|龍|虎虎虎虎|龍龍龍龍|虎|龍|虎|龍|虎|龍龍龍龍龍|虎|龍龍龍龍|虎|龍|虎虎|龍|虎|龍龍|虎|龍龍龍|虎|龍龍龍龍|虎虎|龍龍|虎虎|龍|虎|龍|虎|龍龍龍龍龍|虎|龍|虎虎|龍|虎|龍|虎|龍|虎|龍|虎|龍|虎|龍|虎虎虎|龍|虎|龍|虎|龍龍|虎|龍|虎|龍|虎虎|龍龍龍|虎虎虎|龍|虎虎虎虎虎虎|龍龍|虎|龍|虎虎虎虎虎虎虎|龍|虎|龍|虎', '龍虎');
+        formatRoadmap('13', '|大|小|大|小小小|大|小小|大大大|小|大|小小|大|小小|大|小|大大|小|大大|小|大大|小小|大|小|大|小小|大大大|小|大大|小小小小小小|大大大大|小|大大大大大大大大大大大大|小小|大大大|小小|大大|小小小|大大|小小小小小|大大大|小|大大|小小小|大大大|小|大|小小|大大|小小小|大大|小|大大|小小|大大|小|大大大大大|小|大大大大大大大大大大大大大大|小|大大大|小小|大|小小小小小|大大大大大|小|大|小|大|小小小小|大|小小|大大大大大|小小小小|大|小|大|小|大大大大大|小|大大|小小|大大|小小|大|小小小|大|小|大大|小小|大大|小小小小小|大大|小|大大|小小|大|小小|大|小小|大|小|大大大|小小小|大大大大大大|小|大|小|大大|小小|大|小|大大|小|大大大大大大|小|大|小小小小小小|大大大大大|小小小小小小小小小|大|小|大大|小小|大|小|大|小小|大|小|大|小小|大大|小小小|大大大大|小小小|大大大大大', '大小');
+        formatRoadmap('14', '|双双|单|双|单|双双双双双|单|双双双|单|双|单|双|单单单|双|单|双双|单|双|单|双|单|双|单单单|双|单单|双|单单单|双双|单单|双双双双|单单单单|双|单单单单|双双|单|双双|单单单单单|双双双|单单单单单|双双|单|双双双双双|单|双双|单|双双双双|单单|双|单单|双双|单|双双双|单|双|单|双双|单|双|单单单单|双|单|双|单单|双双|单|双|单单单|双双|单|双双双|单|双|单|双双双双双|单|双双双双|单|双双双双|单|双|单单|双双双|单|双|单单|双|单|双|单|双|单|双|单单单单单|双双|单单单单单单|双双双|单单|双双|单单单|双|单|双|单单单单单|双双|单|双|单|双双双|单|双双|单单单|双|单|双双双|单|双双双|单|双|单|双|单|双|单|双双|单单|双|单单单单|双|单单单|双|单单单单单|双|单单单单|双双双双|单|双双', '单双');
+        formatRoadmap('15', '|龍|虎虎|龍龍|虎|龍龍|虎|龍龍龍|虎|龍|虎|龍龍龍龍|虎|龍|虎虎|龍|虎虎虎|龍龍龍龍|虎|龍龍龍龍龍|虎虎虎虎|龍龍龍|虎虎|龍龍龍|虎|龍|虎|龍龍|虎虎|龍龍龍龍|虎虎虎|龍龍龍龍龍龍|虎虎虎|龍龍龍|虎|龍|虎虎|龍龍龍龍|虎|龍龍|虎|龍龍|虎虎|龍龍|虎|龍|虎|龍龍龍龍龍龍龍|虎|龍龍龍龍|虎|龍龍龍龍龍龍|虎|龍龍|虎|龍|虎虎虎虎|龍|虎虎|龍龍龍龍|虎|龍龍龍|虎虎虎虎虎虎|龍龍龍龍龍龍|虎虎|龍|虎|龍|虎|龍|虎|龍|虎|龍|虎|龍|虎|龍龍|虎虎|龍|虎虎虎|龍|虎虎虎虎虎|龍|虎|龍|虎虎虎虎虎虎|龍|虎|龍|虎虎|龍龍|虎虎虎虎虎|龍|虎虎|龍|虎虎|龍龍|虎虎|龍龍龍龍龍龍|虎虎虎|龍龍龍|虎虎|龍龍龍|虎|龍龍龍|虎|龍龍|虎虎|龍|虎虎虎|龍|虎虎虎虎|龍|虎|龍|虎虎虎虎虎虎虎虎虎虎虎|龍龍|虎虎|龍|虎|龍|虎虎|龍|虎|龍龍|虎|龍龍|虎虎|龍龍|虎虎|龍|虎|龍龍龍|虎虎|龍龍', '龍虎');
+        formatRoadmap('16', '|小|大|小小|大大大|小小小小小小小小小小|大大大大|小小|大|小|大大大|小|大|小|大|小小小|大|小小小小|大|小小|大|小小小小小|大大大|小小|大大大大大大|小小小|大大|小小小小|大|小小|大大大大|小小小小|大|小小|大|小小|大|小|大|小|大|小|大|小小|大|小小|大|小|大大|小|大|小|大大大|小小|大|小|大|小小|大大大大大大|小|大|小小|大大大大|小|大大|小|大|小小|大|小|大|小|大大|小|大大|小|大|小|大大大大|小|大大|小|大|小|大大大|小|大|小小小小|大大|小小|大|小|大大大大|小|大|小|大大|小小|大大|小小小|大|小小|大|小|大|小小小|大|小小小|大大|小小小|大大|小|大|小小小小|大|小|大大大大大大大大大大|小小|大大大大大大|小|大大大|小小小|大|小小|大|小小|大大|小|大大|小小|大大|小|大|小小小|大大大|小', '大小');
+        formatRoadmap('17', '|双|单单单单单|双双双|单|双|单|双双双双双|单单|双双双双双|单单|双|单|双|单|双双双双双|单单单单|双双双|单单|双|单|双双双双|单单单单|双双|单单|双|单|双双|单|双双|单单单|双|单|双双|单单单|双|单单|双双双|单单单单|双双|单单单|双|单单单单|双双|单|双|单单|双|单单单单|双双|单|双双双|单|双|单单单|双|单|双|单|双双|单单单单|双双|单|双双|单|双双|单|双|单单单|双双双|单|双双双|单单单单单|双双双双|单单|双|单单|双双|单单单单|双双|单|双双|单|双|单|双|单|双|单单|双|单|双|单单|双|单|双双|单单|双|单|双|单单|双|单单单|双|单单|双|单单单单|双|单|双|单|双|单|双|单|双双|单|双双双双双|单|双双|单|双|单|双|单单|双双双双双双双|单单单|双双双|单|双|单单单|双|单|双|单|双', '单双');
+        formatRoadmap('18', '|大|小小|大|小|大大大|小小|大|小小小|大|小|大大|小|大|小小小小|大大|小|大大大大|小|大大大大大|小|大大大|小|大大|小|大大|小小小小|大大|小|大|小|大大大|小小小|大|小小小小小小小小|大|小|大|小小小小小|大|小小小|大|小|大大|小小小|大|小|大|小小小小小|大大大|小|大大|小小|大大大大|小|大|小小|大|小|大|小|大大大|小小|大大大|小小|大大|小小小小小|大|小|大|小小|大|小|大大大大大大|小|大大|小|大|小小小小小小小|大大|小小小|大大|小|大|小|大|小小|大大|小|大|小小小|大大|小|大大大大|小|大大|小小小|大|小小小小|大大|小小|大|小小|大大大|小小小小|大大|小小|大大大|小|大|小|大|小|大|小小小小|大大|小|大|小|大|小|大|小小|大|小小|大大|小小|大大大|小|大大大大大|小小小|大|小小小小小|大大大|小小小|大', '大小');
+        formatRoadmap('19', '|双双双|单|双双双|单|双双|单单单|双|单单单单|双|单单单|双|单|双双|单|双|单单|双|单单单|双|单单单|双双|单|双|单单单|双双|单|双双双双|单|双双|单|双双|单|双双双|单单|双双|单单|双双双双|单单单单单|双|单单单单单|双|单单单单单单单单单单单单单单单|双双|单|双双|单|双|单|双|单单单|双|单单单单单单单|双双|单单|双双双|单|双|单|双双|单单|双双双|单单单|双双|单单|双双双双双|单单单单|双双双双双|单单|双|单|双双双双|单|双|单|双|单|双双|单单单单单|双|单|双双双|单单|双|单|双双|单单单单|双|单单|双|单|双|单单单|双双|单|双双双双双双|单单单单|双|单单单|双|单|双|单单单单单|双双双双双|单单|双双|单单单单单单|双|单单|双|单|双|单单单单单单|双双|单单单|双双双|单|双|单|双双|单|双双|单|双|单|双双双双|单单|双双|单单|双|单|双双双|单单|双|单|双', '单双');
+        formatRoadmap('20', '|大大大|小小小小|大|小小|大|小小|大|小小小小小小小小|大大|小小小|大大|小|大大大大大大|小小小|大大|小小|大大|小小小小|大|小小小|大|小小|大大|小|大|小|大大大大大|小小|大|小|大大大|小|大|小小|大|小小|大|小|大|小|大大大大|小小|大|小|大|小小小小小|大|小小|大大|小小小|大大|小|大|小小小|大|小|大大|小小|大|小小小|大|小|大大|小小|大|小小|大大大大|小小|大|小小小|大|小小小|大|小小小|大|小|大大大大大大|小|大|小|大大|小|大大|小小|大|小小小小|大|小小小小小小|大|小|大大|小|大|小|大大|小小|大|小|大|小|大大|小小小小小|大|小|大|小小|大|小小小小小小|大大|小小小|大大大|小|大大|小|大|小小|大大大|小|大大大大大大|小小小|大大|小|大|小小|大|小小|大|小小|大大|小|大大大|小|大|小|大', '大小');
+        formatRoadmap('21', '|单单|双双|单|双|单单单单|双|单|双|单|双|单单单|双|单|双|单单单|双|单|双|单|双|单|双双|单单|双|单单|双双双双|单单|双双双|单|双双|单|双双双|单|双双|单|双双双|单|双|单单单|双|单|双双|单单|双|单单单|双双|单单|双双|单单单单|双双双|单单|双双双双双|单单|双|单|双双双双|单|双|单单|双双|单单|双|单单单|双|单|双|单|双双|单单|双|单|双|单单|双|单单|双双|单单单单|双|单单单|双|单|双|单|双双双双双|单单单单单|双|单|双双|单|双双双双双|单|双|单|双双双双|单|双双双|单单|双|单|双|单单单单|双|单|双双双|单|双|单|双双双|单单单单单单单单|双双双双|单单|双|单|双|单|双双|单|双|单|双|单|双双双双|单|双|单单|双双双|单单|双|单单单|双双双|单单单|双双双|单单|双双双双双|单', '单双');
+        formatRoadmap('22', '|大|小小|大大大|小|大大大|小小|大大大|小小小|大|小|大大大大|小|大大|小小|大|小小小小|大|小|大大大大|小小|大|小|大大|小小|大大|小|大|小|大|小小|大大|小|大|小小小|大大|小小小小小小小小|大|小|大大|小|大|小|大|小小|大|小小|大大|小小|大大|小|大|小|大大|小|大大|小小小|大|小小小|大大大大大|小|大大|小|大|小|大大|小|大|小|大|小小小小|大大大大|小|大|小|大大|小小|大大大|小|大大大|小|大大大|小|大大|小小小小小|大大大|小|大|小小|大大大大|小小|大大|小小|大大大|小|大|小|大大|小|大|小小|大大|小|大|小|大|小小|大大大大|小|大大大大大大大大|小|大大大大大大大大大|小小小|大|小|大大大|小|大|小|大|小小|大|小小小小小|大|小|大大大大大大大|小|大大|小小|大|小小|大大|小|大|小|大大大', '大小');
+        formatRoadmap('23', '|双|单|双双|单单单单单|双|单单单|双|单单单|双双|单单|双双双双双双双双双|单单单|双|单|双双|单单单|双双|单|双双|单单单单|双|单单|双双双|单|双|单单单单单单|双双双|单|双双双双|单|双|单|双|单|双双|单|双|单单|双双|单|双|单|双双|单|双双|单单单单|双双双双双双|单单单单|双双双|单单|双双双双|单|双双双|单单|双双双双双|单单|双双|单|双双双|单单单单单|双双|单|双|单|双|单|双|单单|双|单单单单|双双双双|单单单|双|单|双双|单|双|单单单|双|单|双|单单单单|双双|单|双双双|单单单单单|双双|单|双|单|双|单|双双双双|单|双双双双|单|双|单|双双|单|双|单单|双双双双双双双双双|单单|双|单|双双双双|单|双|单单|双|单单|双|单|双|单单单单单单|双|单|双双双|单|双|单单单|双|单|双|单单|双|单|双|单|双双|单单|双|单|双双', '单双');
+        formatRoadmap('24', '|小小|大大|小小小小|大|小小小|大大|小小|大|小|大|小|大大|小小小小|大大大大大|小|大|小小小小|大大|小小小|大|小小小小小|大大大大大|小|大大大|小|大大大|小|大|小|大|小小小小小小|大|小小|大|小|大大大大大大|小|大大|小小|大|小|大|小|大大|小|大|小小小|大|小小小小小小小小|大|小小小|大|小|大|小|大|小|大大|小小|大|小|大|小|大|小小|大大|小小|大|小|大|小小小小小|大|小小|大大大|小小|大|小|大|小小|大|小小|大|小小小小|大大|小小小|大大大大大|小小|大|小小小小|大大大|小|大大|小小小小|大大大|小小|大大大|小小小|大|小小|大|小小小小|大大大大大大|小小|大|小|大|小|大大大|小小小|大|小|大大大大大大|小|大大大|小小小小小小小|大大|小|大|小小|大|小小小小|大|小小小|大|小小|大大|小小|大大大|小|大|小小|大大|小小小小小|大|小', '大小');
+        formatRoadmap('25', '|单单单|双双|单|双双|单单|双双|单单单|双|单|双|单单|双双双|单单|双双|单|双|单单单单单单单|双|单|双|单单|双双|单|双双双|单|双双双双双双|单单单单单单单单单单|双双|单单|双双双双双双|单|双双双双|单单|双双双|单单|双|单|双双双|单|双双双双双|单|双|单单单单单单单单单单|双|单|双|单|双双|单单单单|双|单单|双|单单|双|单单|双|单单单单单单单|双|单|双双|单单单|双|单|双双双双双双|单|双|单单|双|单单单单|双|单单|双|单单单单单单单单|双双双|单单|双|单单单单|双|单|双|单|双双双双|单|双|单单单|双|单单|双双双双双双双双双|单单|双双|单单|双|单|双|单单单|双|单|双|单单|双|单单|双|单|双双双双|单单|双双双双双双|单|双双|单|双|单|双|单|双|单|双|单单|双双|单单单单单|双|单单单|双双双双双双|单|双双|单单|双双|单|双|单单|双双双双双双双双|单|双|单单单单|双|单单单单单', '单双');
+        formatRoadmap('26', '|小|大大|小小|大|小|大|小|大|小小小|大大大大|小小小小小|大|小|大大|小小小小小小|大大|小|大|小小|大|小小小|大大大|小小小|大大|小|大|小|大|小|大|小小|大|小|大|小|大大大|小小|大大|小小|大|小|大|小|大|小|大大大|小小小|大|小|大大|小|大|小|大大|小小|大|小小小|大|小小小|大|小|大|小小|大大|小小小小小|大|小|大大|小小小|大|小|大大大|小小|大|小小小小小小小小小小小小|大|小小小|大|小|大|小|大|小|大大|小小小小小|大|小小小小|大|小小|大大|小小小|大|小|大|小|大|小|大|小|大大|小小小|大大|小小小小|大大大|小|大|小小小小小|大|小小小|大大|小小|大|小小小小小小小|大大|小小|大大|小|大大|小|大|小|大大大|小小小|大|小小|大|小小小小小小小|大大大大|小|大|小小|大大|小|大|小小小', '大小');
+        formatRoadmap('27', '|单单|双双|单|双|单|双|单|双双双双双双|单|双|单|双双|单单|双|单单|双双双|单单|双|单|双|单单|双双|单|双|单单单|双|单单单单|双双双双|单单|双双|单单|双双|单单|双双|单单|双|单单单|双|单单|双双双|单|双双|单|双|单单|双双双|单单单单单|双双双|单|双|单单单|双双双双|单|双|单|双|单|双双双|单单单|双|单|双|单|双|单单单|双|单|双双|单单单单|双|单单单单单单单|双|单单|双|单|双双|单单单单单|双|单|双双双双双|单单|双|单|双|单单|双|单单单单单单|双|单单|双|单|双双双|单|双|单单|双|单|双双|单单|双|单|双双双双双双双双双|单|双|单单|双|单单单单单|双|单单|双|单|双双双双|单|双双|单|双|单|双|单单单单单|双|单单|双|单单|双双双双|单单单单|双双|单单单单单单单单|双双|单|双双|单单单|双双|单单|双双双双|单单', '单双');
+        $(function () { loadLZCookie(lzCookieName);});
+        $(function () { userSelectLZ(); });
     }
 });

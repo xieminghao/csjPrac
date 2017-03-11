@@ -138,6 +138,8 @@ $.ajax({
         $(function () {
             $("#dateData").val("");
         })
+        $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/lot/lotcommon.js',type:'text/javascript'}).appendTo($('body'));
+        $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/lot/pk10/award.js',type:'text/javascript'}).appendTo($('body'));
         $(function () {
             changeLuZhuBall();
             setLuzhuScroll();
