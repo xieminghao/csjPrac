@@ -28,6 +28,7 @@ function LuzhuDate(selDate, unload) {
 }
 /*异步load路珠*/
 function reloadLuzhu(url, date, unload) {
+    url = url.replace(location.protocol+'//'+location.host, '');
     var _container = $("#pageName").attr("container");
     _container = _container ? _container : "lot-wrap";
     $('#' + _container).css({ "width": "100%" });
