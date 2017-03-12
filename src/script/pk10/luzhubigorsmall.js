@@ -55,14 +55,17 @@ function updatePickdate(dp) {
 
     } else {
         if (dp.cal.date.d == (new Date()).getDate()) {
-            reloadLuzhu(location.href, selDate, 0);
+            //reloadLuzhu(location.href, selDate, 0);
+            reloadLuzhu('/pk10/luzhubigorsmall/', selDate, 0);
         } else {
-            reloadLuzhu(location.href, selDate, 1);
+            //reloadLuzhu(location.href, selDate, 1);
+            reloadLuzhu('/pk10/luzhubigorsmall/', selDate, 1);
         }
     }
 }
 function clearedDate() {
-    reloadLuzhu(location.href, '', 0);
+    //reloadLuzhu(location.href, '', 0);
+    reloadLuzhu('/pk10/luzhubigorsmall/', '', 0);
 }
 
 function getPRData_1(){
@@ -145,7 +148,8 @@ $.ajax({
             $("#ckb_pailu").bind("click", function () {
                 var check = $(this).hasClass("checked") ? false : true;
                 var selDate = $("#dateData").val();
-                var url = location.href;
+                // var url = location.href;
+                var url = '/pk10/luzhubigorsmall/';
                 $.post("/home/pailusetting", { enable: check }, function (result) {
                     //location.reload();
 

@@ -1,0 +1,1170 @@
+<!DOCTYPE HTML>
+<html xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+    <title>【重庆时时彩路珠分析】-皇家彩世界</title>
+    <meta name="keywords" content="重庆时时彩路珠分析" />
+    <meta name="description" content="重庆时时彩路珠分析频道专门为重庆时时彩的玩家提供专业的重庆时时彩路珠分析.这里有专业的开奖数据统计、开奖直播视频以及独家的免费推荐、淘宝模式,不必担心因为没有技巧而产生困扰,为您一站解决购彩的烦恼！" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="baidu-site-verification" content="EDEMDIk3AI" />
+
+    <%= include ./src/view/common/link.html =%>
+    <link href="../../style/luzhuanalysis.css" rel="stylesheet" type="text/css" />
+    <link href="../../style/lot/cqssc.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+<!--头部 start-->
+<%= include ./src/view/common/header.html =%>
+<%= include ./src/view/common/navMenu.html =%>
+
+<div class="body-content">
+    <%= include ./src/view/common/shishicai/shishicaicontentHeader.html =%>
+    <div class="lot-wrap">
+        <div class="feedbackDiv">
+            <span class="fk_span"><a href="/home/feedback/" target="_blank" class="fk_spanLink">反馈意见</a></span>
+    <span class="fk_span px_span" id="menu_drag_span">
+        <a href="javascript:enableMenuDrag();" class="fk_spanLink">自定义排序(会员功能)</a>
+    </span>
+
+    <span class="pd_span" style="display: none;" id="menu_drag_tip_span">
+        <span class="fk_span unlock_span fk_spanLink">已开启拖放排序功能</span>
+        <a href="javascript:disableMenuDrag(1);" class="leftBtn">确定</a>
+        <a href="javascript:disableMenuDrag(0);" class="rightBtn">取消</a>
+    </span>
+
+    <span class="pd_span" style="display: none;" id="menu_drag_unlogin_tip">
+        <span class="fk_span  noIcon">您需要登陆才可以使用该功能</span>
+        <a href="/sso/login/" class="leftBtn" id="login_a_btn">登录</a>
+        <a href="/sso/register/" class="leftBtn">注册</a>
+    </span>
+        </div>
+        <script type="text/javascript">
+            var lotMenu = 'cqssc_memu';
+        </script>
+        <script type="text/javascript" src="../../script/navdrag.js"></script>
+
+        <div class="web_listOP">
+            <ul id="menu_ul" style="position: relative;">
+                <li  data-tag="idx">
+                    <a href="/shishicai/">重庆时时彩</a>
+                </li>
+                <li  data-tag="kj">
+                    <a href="/shishicai/kaijiang/">历史开奖号码</a>
+                </li>
+                <li class=hover data-tag="lza">
+                    <a href="/shishicai/luzhuanalysis/">综合路珠分析</a>
+                    <span class="wen_newIcon"></span>
+                </li>
+                <li  data-tag="zh">
+                    <a href="/shishicai/merge/">综合版面</a>
+                </li>
+                <li   data-tag="yl">
+                    <a href="/shishicai/yilou/">号码遗漏统计</a>
+                </li>
+                <li   data-tag="sls">
+                    <a href="/shishicai/numbertooutput/">上期历史</a>
+                </li>
+                <li   data-tag="hml">
+                    <a href="/shishicai/luzhunumber/">号码路珠</a>
+                </li>
+                <li   data-tag="lhl">
+                    <a href="/shishicai/luzhulonghu/">龙虎路珠</a>
+                </li>
+                <li  data-tag="dsl">
+                    <a href="/shishicai/luzhubigorsmall/">单双大小路珠</a>
+                </li>
+                <li   data-tag="zhl">
+                    <a href="/shishicai/luzhutotal/">总和路珠</a>
+                </li>
+                <li   data-tag="dsls">
+                    <a href="/shishicai/ballstat/">单双大小历史</a>
+                </li>
+                <li   data-tag="lst">
+                    <a href="/shishicai/numberstat/">历史号码统计</a>
+                </li>
+                <li   data-tag="jrt">
+                    <a href="/shishicai/opencodeanalysis/">今日号码统计</a>
+                    <span class="wen_newIcon"></span>
+                </li>
+                <li   data-tag="mrcl">
+                    <a href="/shishicai/changlongdaystat">每日长龙统计</a>
+                    <span class="wen_newIcon"></span>
+                </li>
+                <li   data-tag="hzs">
+                    <a href="/shishicai/zoushitu/">横版走势图</a>
+                </li>
+                <li  data-tag="lhm">
+                    <a href="/shishicai/longhubetmode/">龙虎模式</a>
+                </li>
+                <li   data-tag="tbm">
+                    <a href="/shishicai/betmode/">淘宝模式</a>
+                </li>
+                <li  data-tag="mfc">
+                    <a href="/shishicai/betgame/">免费参考</a>
+                </li>
+                <li  data-tag="fxm">
+                    <a href="/shishicai/experience/">分享模式</a>
+                </li>
+                <li  data-tag="kjs">
+                    <a href="/shishicai/shipin/" class="redColor">开奖视频</a>
+                </li>
+                <li   data-tag="jq">
+                    <a href="/jiqiao/shishicai/">时时彩技巧</a>
+                </li>
+                <li   data-tag="lmt">
+                    <a href="/shishicai/twosidedstat/">两面数据统计</a>
+                </li>
+                <li  data-tag="yld">
+                    <a href="/shishicai/omitdata/">遗漏大数据</a>
+
+                </li>
+                <li    data-tag="tsxts">
+                    <a href="/shishicai/specialformdata/">特殊形态统计</a>
+                    <span class="wen_newIcon"></span>
+                </li>
+                <li  data-tag="dsz">
+                    <a href="/shishicai/bsoetrend/">单双大小走势图</a>
+                </li>
+                <li   data-tag="lrf">
+                    <a href="/shishicai/coldhotnumber/">冷热码分析</a>
+                </li>
+
+                <li  data-tag="sjyy" >
+                    <a href="http://www.1396app.com/promotiontopic?code=shishicai" target="_blank" class="sjyy" rel="nofollow">手机应用</a>
+                </li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+
+
+        <div style="clear: left; width: 100%; float: left;">
+        </div>
+
+        <script type="text/javascript">    var lotteryLuzhu = "";</script>
+
+
+        <div id="lot-wrap">
+
+
+
+            <script type="text/javascript" >
+                function formatRoadmap(idx, roadmap, options) {
+                    var html = '<table class="roadmap-table mb-15"><tr valign="top">';
+                    var roads = roadmap.split("|");
+                    for (var i = 0; i < roads.length; i++) {
+                        if (roads[i].length > 0) {
+                            var td = '<td class="' + (i % 2 == 0 ? 'even' : 'odd') + '">';
+                            for (var j = 0; j < roads[i].length; j++) {
+                                var r = roads[i].charAt(j);
+                                if (r == '单' || r == '大' || r == '龍' || r == '质')
+                                    td += '<span>' + r + '</span>';
+                                else if (r == "和")
+                                    td += '<p>' + r + '</p>';
+                                else
+                                    td += '<label>' + r + '</label>';
+                            }
+                            html += td;
+                        }
+                    }
+                    if (roads.length < 45) {
+                        for (var j = roads.length; j <= 45; j++) {
+                            html += '<td><span></span></td>';
+                        }
+                    }
+                    html += '</tr></table>';
+                    $("#tblist" + idx).html(html);
+
+                    var search = ' <span>搜索：连续出现</span><span><input type="text" maxlength="3" id="txtCount' + idx;
+                    search += '" onkeyup="this.value=this.value.replace(/\D/g,\'\')"';
+                    search += ' onafterpaste="this.value=this.value.replace(/\D/g,\'\')"';
+                    search += ' onpaste="return false" ondragenter="return false"';
+                    search += ' oncontextmenu="return false;" style="ime-mode: disabled"/></span><span>次</span>';
+                    search += '  <span><select id="sel' + idx + '"><option>' + options.charAt(0) + '</option><option>' + options.charAt(1) + '</option>';
+                    if (options.length > 2) {
+                        search += '<option>' + options.charAt(2) + '</option>';
+                    }
+                    search += '</select></span>';
+                    search += '<span><input id="btn' + idx + '" name="luzhusearch" type="button" value="确定" data-index="' + idx + '" class="luzhusearch" /></span>';
+                    search += '<span><label>出现的次数为：<b>0</b></label> </span>';
+                    $("#searchtd" + idx).html(search);
+
+
+                    var statformDiv = '<span class="cp_floatFont">设置形态</span><input type="hidden" class="h_luzhu_type" value="' + options + '"/>';
+                    statformDiv += '<span class="cp_numBlock cp_numIcon1 lzitem" opt-class="red">' + options.charAt(0) + '</span>';
+                    statformDiv += '<span class="cp_numBlock cp_numIcon2 lzitem" opt-class="blue">' + options.charAt(1) + '</span>';
+                    statformDiv += '<span class="cp_numBlock cp_numIcon3 lzrepeal"></span><span class="cp_numBlock cp_numIcon4 lzremove"></span>';
+                    statformDiv += '<span class="cp_borderWhite" ><b>最少需设置6个路珠</b></span>';
+                    statformDiv += '<span class="cp_selectBlock">';
+                    statformDiv += '<select><option value="1">今天</option><option value="2">最近2天</option><option value="3">最近3天</option></select></span>';
+                    statformDiv += '<span class="cp_tongjiBtn cp_tongjiBtn_disable" >统计</span>';
+                    statformDiv += '<span class="cp_floatFont2">出现过<b>--</b>次</span>';
+                    statformDiv += '<span class="cp_closeBtn"></span>';
+                    $("#luzhuform_" + idx).html(statformDiv);
+
+
+                }
+                function updatePickdate(dp) {
+                    var selDate = $("#dateData").val();
+                    if (dp.cal.date.d == (new Date()).getDate()) {
+                        reloadLuzhu(selDate, 0);
+                    } else {
+                        reloadLuzhu(selDate, 1);
+                    }
+                }
+                function clearedDate() {
+                    reloadLuzhu('', 0);
+                }
+
+                function reloadLuzhu(date, unload) {
+                    var url = location.pathname;
+                    var _container = $("#pageName").attr("container");
+                    $.get(url, { t: Math.random(), date: date }, function (text) {
+                        $('#' + _container).html(text);
+                        $("#pageName").attr("unload", unload);
+                    });
+                }
+
+                function gotoModeItem(mode, pos, type) {
+                    $(".mode-type a").removeClass("cur");
+                    $(".mode-type a[data-mode=" + mode + "]").addClass("cur");
+
+                    if (mode == 1) {
+                        $(".tiptool_info i.nda_checkbox[data-type=" + type + "]").addClass("nda_selected");
+                        $(".tiptool_info i.nda_checkbox[data-pos=" + pos + "]").addClass("nda_selected");
+                    }
+                    else if (mode == 2) {
+                        $(".dailyChangLongStatistics .dcls_tool1[filter-mode*=2] a").removeClass("cur");
+                        $(".dcls_tool1[filter-mode*=2] a[data-type=" + type + "]").addClass("cur");
+                        $(".tiptool_info[filter-mode*=2] i[data-pos=" + pos + "]").addClass("nda_selected");
+                    } else if (mode == 3) {
+                        $(".dailyChangLongStatistics .dcls_tool1[filter-mode*=3] a").removeClass("cur");
+                        $(".dcls_tool1[filter-mode*=3] a[data-pos=" + pos + "]").addClass("cur");
+                        $(".tiptool_info[filter-mode*=3] i[data-type=" + type + "]").addClass("nda_selected");
+                    }
+                    $(".dcls_tool1,.tiptool_info").hide();
+                    $(".dcls_tool1[filter-mode*=" + mode + "]").show();
+                    $(".tiptool_info[filter-mode*=" + mode + "]").show();
+
+                    setTimeout(function () {
+                        $("body,html").animate({ scrollTop: $(".luzhu[fg=" + pos + "][fi=" + type + "]").offset().top }, 100);
+                    }, 500);
+
+                }
+
+                function loadModeCookie(cookieName, mode) {
+                    $(".lot-number-omit2 .tiptool_info i[special!=1]").removeClass("nda_selected");
+                    $(".dailyChangLongStatistics .dcls_tool1[filter-mode*=2] a").removeClass("cur");
+                    $(".dailyChangLongStatistics .dcls_tool1[filter-mode*=3] a").removeClass("cur");
+
+                    var modeData = $.cookie(cookieName, "mode" + mode);
+                    var flag = false;
+                    if (modeData) {
+                        var datas = modeData.split(",");
+                        if (datas.length == 2) {
+                            var pos = datas[0].replace("p:", "").split("|");
+                            var type = datas[1].replace("t:", "").split("|");
+                            flag = true;
+                            if (mode == 2 && type.length == 1) {
+                                $(".dcls_tool1[filter-mode*=2] a[data-type=" + type[0] + "]").addClass("cur");
+                                for (var p = pos.length - 1; p > -1; p--) {
+                                    $(".tiptool_info[filter-mode*=2] i[data-pos=" + pos[p] + "]").addClass("nda_selected");
+                                }
+                            } else if (mode == 3 && pos.length == 1) {
+                                $(".dcls_tool1[filter-mode*=3] a[data-pos=" + pos[0] + "]").addClass("cur");
+                                for (var t = type.length - 1; t > -1; t--) {
+                                    $(".tiptool_info[filter-mode*=3] i[data-type=" + type[t] + "]").addClass("nda_selected");
+                                }
+                            } else if (mode == 1) {
+                                for (var t = type.length - 1; t > -1; t--) {
+                                    $(".tiptool_info i.nda_checkbox[data-type=" + type[t] + "]").addClass("nda_selected");
+                                }
+                                for (var p = pos.length - 1; p > -1; p--) {
+                                    $(".tiptool_info i.nda_checkbox[data-pos=" + pos[p] + "]").addClass("nda_selected");
+                                }
+                            }
+                            else {
+                                flag = false;
+                            }
+                        }
+                    }
+
+                    if (!flag) {
+                        defaultSetting();
+                    } else if (typeof specialSetting != 'undefined' && specialSetting instanceof Function) {
+                        specialSetting(mode);
+                    }
+
+                    $(".dcls_tool1,.tiptool_info").hide();
+                    $(".dcls_tool1[filter-mode*=" + mode + "]").show();
+                    $(".tiptool_info[filter-mode*=" + mode + "]").show();
+                }
+
+                function loadLZCookie(cookieName) {
+                    var mode = $.cookie(cookieName, "mode");
+                    if (!mode) {
+                        mode = 1;
+                    }
+                    $(".mode-type a[data-mode=" + mode + "]").addClass("cur");
+                    loadModeCookie(cookieName, mode);
+                }
+
+                function userSelectLZ() {
+                    $(".jsloading").hide();
+
+                    var mode = $(".mode-type a.cur").attr("data-mode");
+                    var userfilters = $(".tiptool_info[filter-mode*=" + mode + "] i[class*=nda_selected]");
+                    var filterPos = [];
+                    var filterTypes = [];
+                    if (mode == 2) {
+                        var ct = $(".dcls_tool1[filter-mode*=2] a[class=cur]");
+                        filterTypes.push(ct.attr("data-type"));
+                        checkChooseItem(ct);
+                        for (var i = userfilters.length - 1; i > -1; i--) {
+                            filterPos.push($(userfilters[i]).attr("data-pos"));
+                        }
+                    } else if (mode == 1) {
+                        for (var i = userfilters.length - 1; i > -1; i--) {
+                            var t = $(userfilters[i]).attr("data-type");
+                            if (t) {
+                                filterTypes.push(t);
+                            } else {
+                                filterPos.push($(userfilters[i]).attr("data-pos"));
+                            }
+                        }
+                        $(".lot-number-omit2 .tiptool_info i[special!=1]").show();
+                    } else if (mode == 3) {
+                        var cp = $(".dcls_tool1[filter-mode*=3] a[class=cur]");
+                        filterPos.push(cp.attr("data-pos"));
+                        checkChooseItem(cp);
+                        for (var i = userfilters.length - 1; i > -1; i--) {
+                            filterTypes.push($(userfilters[i]).attr("data-type"));
+                        }
+                    }
+
+                    $(".luzhu").hide();
+                    if (filterPos.length > 0 && filterTypes.length > 0) {
+                        for (var t = filterTypes.length - 1; t > -1; t--) {
+                            for (var p = filterPos.length - 1; p > -1; p--) {
+                                var lz = $(".luzhu[fg=" + filterPos[p] + "][fi=" + filterTypes[t] + "]");
+                                lz.show();
+                                lz.find(".luzhu_scroll").scrollLeft(lz.find(".roadmap-table").width());
+                            }
+                        }
+                    }
+                    var data = 'p:' + filterPos.join('|') + ',t:' + filterTypes.join('|');
+                    var cookiedata = { mode: mode };
+                    for (var c = 1; c <= 3; c++) {
+                        if (c == mode) {
+                            cookiedata['mode' + mode] = data;
+                        } else {
+                            var tmp = $.cookie(lzCookieName, "mode" + c);
+                            if (tmp) {
+                                cookiedata["mode" + c] = tmp;
+                            }
+                        }
+                    }
+                    $.cookie(lzCookieName, "", cookiedata, { expires: 3600 * 24 * 30, path: "/", secure: false });
+                }
+
+                function calc(all, luzhu) {
+                    var idx = all.indexOf(luzhu);
+                    if (idx < 0) return 0;
+                    var count = 0;
+                    while (idx > -1) {
+                        count += 1;
+                        all = all.substr(idx + luzhu.length - 2);
+                        idx = all.indexOf(luzhu);
+                    }
+                    return count;
+                }
+
+                $(function () {
+                    $("#lot_content input[name='luzhusearch']").live("click", function () {
+                        var index = $(this).attr("data-index");
+                        var count = $("#txtCount" + index).val();
+                        var sel = $("#sel" + index + " option:selected").text();
+                        if (count.length <= 0) {
+                            return;
+                        }
+                        $("#tblist" + index + " td").removeClass("searchbg");
+
+                        var _this = $(this);
+                        var child = null;
+                        var outcount = 0;
+                        $("#tblist" + index + " td").each(function () {
+                            child = $(this).children();
+                            if (child.length >= count && $(child.eq(0)).text() == sel) {
+                                $(this).addClass("searchbg");
+                                outcount++;
+                            }
+                        });
+                        _this.parent().parent().find("b").text(outcount);
+                    });
+
+                    $(".lot-number-omit2 .tiptool_info i").click(function () {
+                        if ($(this).attr("class").indexOf("nda_selected") > -1) {
+                            $(this).removeClass("nda_selected");
+                        } else {
+                            $(this).addClass("nda_selected");
+                        }
+                        if ($(this).attr("special")) {
+                            chooseSpecial($(this));
+                        } else
+                            userSelectLZ();
+                    });
+
+
+                    $(".dailyChangLongStatistics .dcls_tool1 a").click(function () {
+                        $(this).parent().find("a").removeClass("cur");
+                        $(this).addClass("cur");
+                        checkChooseItem($(this));
+                        userSelectLZ();
+                    });
+
+
+                    $(".clearAll").click(function () {
+                        $(this).parent().find("i[special!=1]").removeClass("nda_selected");
+                        userSelectLZ();
+                    });
+                    $(".selectAll").click(function () {
+                        $(this).parent().find("i[special!=1]").addClass("nda_selected");
+                        userSelectLZ();
+                    });
+
+                    $(".mode-type a").click(function () {
+                        $(".mode-type a").removeClass("cur");
+                        $(this).addClass("cur");
+                        var mode = $(this).attr("data-mode");
+
+                        loadModeCookie(lzCookieName, mode);
+                        userSelectLZ();
+                    });
+
+                    $(".iconHelp").live("mouseenter", function () {
+                        $(".helpWindow").fadeIn(400);
+                    });
+
+                    $(".iconHelp").live("mouseleave", function () {
+                        $(".helpWindow").fadeOut(400);
+                    });
+
+                    $(".formstatbtn").live("click", function () {
+                        var idx = $(this).attr("data-index");
+                        var lzform = $("#luzhuform_" + idx);
+                        if (lzform.is(":hidden"))
+                            lzform.show();
+                        else
+                            lzform.hide();
+                    });
+
+                    $(".cp_closeBtn").live("click", function () {
+                        $(this).parent().hide();
+                    });
+
+                    $(".lzitem").live("click", function () {
+                        var container = $(this).parent().find(".cp_borderWhite");
+                        container.find('b').remove();
+                        var len = $(container).find("i").length;
+                        if (len >= 27) return;
+                        var txt = $(this).text();
+                        var types = $(this).parent().find(".h_luzhu_type").val();
+                        var type = types.charAt(0);
+                        if (types.charAt(0) == txt) {
+                            type = types.charAt(1);
+                        }
+                        if (len == 0) {
+                            container.append("<i>" + type + "</i>");
+                        } else {
+                            container.find("i:last").remove();
+                        }
+                        container.append("<i class=" + $(this).attr("opt-class") + ">" + txt + "</i><i>" + type + "</i>");
+                        setBtnState($(container).find("i").length, $(this).parent());
+                    });
+
+                    $(".lzrepeal").live("click", function () {
+                        var container = $(this).parent().find(".cp_borderWhite");
+                        var len = $(container).find("i").length;
+                        if (len <= 0) return;
+                        if (len <=3) {
+                            container.find("i").remove();
+                            container.html("<b>最少需设置6个路珠</b>");
+                        }
+                        else {
+                            container.find("i:last").remove();
+                            container.find("i:last").remove();
+                            var txt = container.find("i:last").text();
+                            var types = $(this).parent().find(".h_luzhu_type").val();
+                            var type = types.charAt(0);
+                            if (types.charAt(0) == txt) {
+                                type = types.charAt(1);
+                            }
+                            container.append("<i>" + type + "</i>");
+                        }
+                        setBtnState($(container).find("i").length, $(this).parent());
+                    });
+
+
+                    $(".lzremove").live("click", function () {
+                        var container = $(this).parent().find(".cp_borderWhite");
+                        container.find("i").remove();
+                        container.html("<b>最少需设置6个路珠</b>");
+                        setBtnState(0, $(this).parent());
+                    });
+
+                    $(".cp_tongjiBtn").live("click", function () {
+                        if ($(this).attr("class").indexOf("cp_tongjiBtn_disable") > 0) return;
+
+                        var ilist = $(this).parent().find(".cp_borderWhite").find("i");
+                        var txts = "";
+                        for (var i = 0; i < ilist.length; i++) {
+                            txts += $(ilist[i]).text();
+                        }
+
+                        var parentDiv= $(this).parent().parent();
+                        var ball =parentDiv.attr("fg").replace("d","");
+                        var type = parentDiv.attr("fi");
+                        var day = $(this).parent().find("select").val();
+
+                        statLuzhuForm(txts, ball, type, day, $(this).next().find("b"));
+                        // $(this).next().find("b").text(" 统计中 ");
+                    });
+
+
+                    function setBtnState(count,obj) {
+                        if (count >= 8) {
+                            obj.find(".cp_tongjiBtn").removeClass("cp_tongjiBtn_disable");
+                        } else {
+                            obj.find(".cp_tongjiBtn").addClass("cp_tongjiBtn_disable");
+                        }
+                    }
+
+                    var helpWin = '<span class="helpWindow" style="display:none">';
+                    helpWin += '<span class="triangleBorder"  style="left:8px;"></span>';
+                    helpWin += '<span class="triangleBg" style="left:8px;"></span>';
+                    helpWin += '<span class="cons">统计您设置的<lable style="color:red;">路珠形态</lable>在选定的<lable style="color:red;">时间</lable>内出现的<lable style="color:red;">次数</lable></span></span>';
+                    $(helpWin).appendTo('body');
+                    $(document).on("mouseover", '.cp_helpIconButton', function () {
+                        var thisX = $(this).offset().left;
+                        var thisY = $(this).offset().top;
+                        $(".helpWindow").css({ "left": (thisX - 10) + "px", "top": (thisY - 50) + "px", "height": "40px" }).fadeIn(300);
+                    })
+
+                    $(document).on("mouseout", '.cp_helpIconButton', function () {
+                        $(".helpWindow").fadeOut(300, function () {
+                            $(this).removeAttr('style');
+                        })
+                    })
+
+
+                });
+            </script>
+            <div class="mode-type" id="modeLuzhu">
+                <a href="javascript:void(0);" data-mode="1">综合模式</a>
+                <a href="javascript:void(0);" data-mode="2">玩法模式</a>
+                <a href="javascript:void(0);" data-mode="3">位置模式</a>
+                <div class="show-bjl" style="margin-right: 10px;">
+                    选择日期:
+                    <input name="dateData" type="text" id="dateData" class="Wdate" value='' onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',skin:'twoer',maxDate:'%y-%M-%d',minDate:'%y-%M-{%d-6}',onpicked:updatePickdate,oncleared:clearedDate})" readonly="readonly" />
+                </div>
+
+            </div>
+            <br />
+            <div class="dailyChangLongStatistics" id="choose_type">
+                <div class="dcls_tool1" filter-mode="2">
+                    <a data-type="bs" href="javascript:void(0);">大小</a>
+                    <a data-type="oe" href="javascript:void(0);">单双</a>
+                    <a data-type="lh" href="javascript:void(0);">龍虎</a>
+                    <a data-type="zh" href="javascript:void(0);">质合</a>
+                    <div style="clear: both"></div>
+                </div>
+                <div class="dcls_tool1" filter-mode="3" style="display: none">
+                    <a data-pos="d1" href="javascript:void(0);">第一球</a>
+                    <a data-pos="d2" href="javascript:void(0);">第二球</a>
+                    <a data-pos="d3" href="javascript:void(0);">第三球</a>
+                    <a data-pos="d4" href="javascript:void(0);">第四球</a>
+                    <a data-pos="d5" href="javascript:void(0);">第五球</a>
+                    <a data-pos="d6" href="javascript:void(0);">总和</a>
+                    <div style="clear: both"></div>
+                </div>
+
+                <div class="lot-number-omit2">
+                    <div class="tiptool_info ball" filter-mode="1 3" style="display: none">
+                        <span>玩法排序：</span>
+                        <i class="nda_checkbox " data-type="bs">大小</i>
+                        <i class="nda_checkbox " data-type="oe">单双</i>
+                        <i class="nda_checkbox " data-type="lh">龍虎</i>
+                        <i class="nda_checkbox " data-type="zh">质合</i>
+                        <a href="javascript:void(0);" class="selectAll hover">全选</a>
+
+                    </div>
+                    <div class="tiptool_info " filter-mode="1 2">
+                        <span>位置排序：</span>
+                        <i class="nda_checkbox " data-pos="d1">第一球</i>
+                        <i class="nda_checkbox " data-pos="d2" filter-type="lh">第二球</i>
+                        <i class="nda_checkbox " data-pos="d3" filter-type="lh">第三名</i>
+                        <i class="nda_checkbox " data-pos="d4" filter-type="lh">第四球</i>
+                        <i class="nda_checkbox " data-pos="d5" filter-type="lh">第五球</i>
+                        <i class="nda_checkbox " data-pos="d6" filter-type="zh lh">总和</i>
+                        <a href="javascript:void(0);" class="selectAll hover">全选</a>
+                        <a href="javascript:void(0);" class="clearAll">清空</a>
+
+                    </div>
+
+                </div>
+            </div>
+            <div id='lot_content'>
+                <div class="clear"></div>
+                <div class ="jsloading"></div>
+
+                <input type="hidden" id="pageName" value="luzhuanalysis"  container="lot_content" />
+                <div class="luzhu t_1" fg="d1" fi="bs"  style="width:980px;overflow-x:auto;display:none">
+                    <div class="cp_xsdbBlock " id="luzhuform_1" style="display:none"></div>
+                    <table class="roadmap-table-caption">
+                        <tr>
+                            <td class="search search_luzhu" id="searchtd1">
+                            </td>
+                            <td class="cp_alignCenter">
+                                <input type="button"  onclick="javasript:void(0);" class="formstatbtn luzhusearch" data-index="1" value="自定义形态统计">
+                                <i class="cp_helpIconButton"></i>
+                            </td>
+                            <td >
+                    <span>
+今日累计：<span class="count"> 大（45） 小（41）
+                      </span>
+                    </span>
+                                第一球大小
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="width:980px; overflow-x:auto;overflow-y:hidden;" class="luzhu_scroll" id="tblist1">
+
+                        <script type="text/javascript">formatRoadmap('1', '|大大|小|大|小小|大大大|小|大|小|大|小小小|大|小|大|小小小小小小|大大大|小|大|小小|大大|小小|大|小小小小|大|小|大|小|大|小小|大大大|小|大大大大|小|大|小|大|小小|大大|小|大|小小小小小小|大大|小小|大大大大大大大大|小|大|小|大大大大大|小小小|大|小|大|小|大|小小小小|大|小|大大|小小小小小小|大大大|小小|大大大|小小|大|小小小|大|小|大大|小|大|小|大|小|大大大大大|小小小|大|小|大大大|小小小|大大|小小|大大大大|小小小小小小|大大大|小|大大|小小|大大|小小|大大|小|大|小小|大大大|小小|大大大|小小|大|小小|大大大|小|大|小|大|小|大大|小小|大大|小|大大|小|大大|小小小|大|小小|大大大大|小|大|小|大|小小小|大大|小|大大|小小小小|大|小|大|小|大大大大|小|大大大|小小小小|大|小小|大', '大小')</script>
+                    </div>
+                </div>
+                <div class="luzhu t_2" fg="d1" fi="oe"  style="width:980px;overflow-x:auto;display:none">
+                    <div class="cp_xsdbBlock " id="luzhuform_2" style="display:none"></div>
+                    <table class="roadmap-table-caption">
+                        <tr>
+                            <td class="search search_luzhu" id="searchtd2">
+                            </td>
+                            <td class="cp_alignCenter">
+                                <input type="button"  onclick="javasript:void(0);" class="formstatbtn luzhusearch" data-index="2" value="自定义形态统计">
+                                <i class="cp_helpIconButton"></i>
+                            </td>
+                            <td >
+                    <span>
+今日累计：<span class="count"> 单（40） 双（46）
+                      </span>
+                    </span>
+                                第一球单双
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="width:980px; overflow-x:auto;overflow-y:hidden;" class="luzhu_scroll" id="tblist2">
+
+                        <script type="text/javascript">formatRoadmap('2', '|双双双|单|双|单单单单|双|单单单单|双|单单|双|单|双双|单|双双|单单|双|单单单|双双双双双双|单|双|单|双|单|双双双双双|单|双双|单|双|单|双双双双双|单|双双|单|双双|单|双|单单|双双|单|双双|单|双|单单单单|双双|单单|双双|单单单单|双双双双|单单单单|双双双|单单|双|单|双|单|双|单|双双双|单单单|双双|单单单|双|单|双|单单|双|单单|双双|单|双|单单单|双|单单单|双|单单|双双|单|双|单单|双双双双双|单|双双|单单单单|双|单|双双双|单单单|双双|单单单|双|单单|双|单|双双双|单|双|单单单单单|双双双|单|双双|单|双双|单|双|单|双|单单|双双|单单单单单|双双双双|单|双双双双双|单|双|单单|双|单单|双|单|双|单|双双|单单|双双双双双|单|双|单单|双|单|双双|单单单单单单|双双|单|双|单|双双双双', '单双')</script>
+                    </div>
+                </div>
+                <div class="luzhu t_3" fg="d1" fi="lh"  style="width:980px;overflow-x:auto;display:none">
+                    <div class="cp_xsdbBlock " id="luzhuform_3" style="display:none"></div>
+                    <table class="roadmap-table-caption">
+                        <tr>
+                            <td class="search search_luzhu" id="searchtd3">
+                            </td>
+                            <td class="cp_alignCenter">
+                            </td>
+                            <td >
+                    <span>
+今日累计：<span class="count"> 龍（36） 虎（42）
+和（8）                      </span>
+                    </span>
+                                龍虎
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="width:980px; overflow-x:auto;overflow-y:hidden;" class="luzhu_scroll" id="tblist3">
+
+                        <script type="text/javascript">formatRoadmap('3', '|和|虎虎|龍|虎虎|龍|虎虎|和|龍龍|虎|龍|虎|和|龍|虎虎虎虎|和|虎虎虎虎虎|和|龍龍龍|虎|龍|虎虎|龍|虎虎虎|龍|虎虎虎虎|龍|虎|龍|虎|龍龍|虎|龍龍龍|虎|龍|虎虎|龍|虎虎虎虎虎虎|龍龍|虎|龍|虎虎虎虎虎|龍龍龍|虎虎|龍龍|虎虎|龍龍龍龍|虎|和|虎|龍龍龍龍龍|虎虎|和和|虎|龍龍龍|虎虎虎|龍龍|虎|龍|虎虎|龍龍龍|虎虎虎|龍|虎虎虎|龍龍龍龍龍龍龍|虎虎虎虎虎|龍|虎虎虎虎虎|龍龍龍龍|虎虎虎虎|龍|虎|龍龍龍|虎虎虎|龍|虎虎虎|龍龍龍龍|虎虎|和|虎虎虎|龍龍龍龍龍龍|虎虎|龍龍|虎虎|龍龍|虎|龍|虎虎虎虎虎虎虎虎|龍龍龍|虎|和|虎虎|龍龍|虎虎|龍|和|龍龍龍龍|虎虎|龍|虎|龍龍龍|虎|龍龍|虎虎|和|龍|虎虎|龍|和|虎|和|虎|龍|虎|龍|虎虎虎|龍|虎|龍龍龍|虎|龍|虎|龍龍|虎|龍|虎|龍|和|龍|和|虎|龍龍|虎虎虎虎虎|和|虎虎|龍', '龍虎和')</script>
+                    </div>
+                </div>
+                <div class="luzhu t_4" fg="d1" fi="zh"  style="width:980px;overflow-x:auto;display:none">
+                    <div class="cp_xsdbBlock " id="luzhuform_4" style="display:none"></div>
+                    <table class="roadmap-table-caption">
+                        <tr>
+                            <td class="search search_luzhu" id="searchtd4">
+                            </td>
+                            <td class="cp_alignCenter">
+                                <input type="button"  onclick="javasript:void(0);" class="formstatbtn luzhusearch" data-index="4" value="自定义形态统计">
+                                <i class="cp_helpIconButton"></i>
+                            </td>
+                            <td >
+                    <span>
+今日累计：<span class="count"> 质（39） 合（47）
+                      </span>
+                    </span>
+                                第一球质合
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="width:980px; overflow-x:auto;overflow-y:hidden;" class="luzhu_scroll" id="tblist4">
+
+                        <script type="text/javascript">formatRoadmap('4', '|合|质质|合合合合合合合|质质|合合|质|合|质质质质|合|质|合合|质质|合|质质|合合|质质|合合合合合|质质质|合|质|合合合合合合|质质质|合|质质质质|合|质质质质质|合|质|合合|质质|合|质质|合合合合合合合|质质质质质|合合|质|合合|质|合合合合|质|合合合|质|合|质质|合合合合|质质质质|合|质质|合合|质|合|质质质质|合合|质质|合合合合合合合合合合|质质质质|合合合|质质|合|质|合|质|合|质质|合合|质质质|合合|质质质|合|质质质质|合|质质|合合合合|质质质|合|质质质|合|质质|合|质质质质|合合|质|合|质|合|质|合合|质质质|合合|质|合合合|质|合|质|合合|质质质质质质|合|质|合合|质质|合|质质质质质|合合合合合|质质质|合合合|质|合合|质|合合|质质质质质|合合合合|质|合合合合|质质质质质|合|质质质|合合合合合|质质|合|质|合合合|质|合|质|合合合合合|质|合合|质质质|合合|质|合|质|合|质|合合', '质合')</script>
+                    </div>
+                </div>
+                <div class="luzhu t_5" fg="d2" fi="bs"  style="width:980px;overflow-x:auto;display:none">
+                    <div class="cp_xsdbBlock " id="luzhuform_5" style="display:none"></div>
+                    <table class="roadmap-table-caption">
+                        <tr>
+                            <td class="search search_luzhu" id="searchtd5">
+                            </td>
+                            <td class="cp_alignCenter">
+                                <input type="button"  onclick="javasript:void(0);" class="formstatbtn luzhusearch" data-index="5" value="自定义形态统计">
+                                <i class="cp_helpIconButton"></i>
+                            </td>
+                            <td >
+                    <span>
+今日累计：<span class="count"> 大（45） 小（41）
+                      </span>
+                    </span>
+                                第二球大小
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="width:980px; overflow-x:auto;overflow-y:hidden;" class="luzhu_scroll" id="tblist5">
+
+                        <script type="text/javascript">formatRoadmap('5', '|小|大|小|大大|小|大大|小小小|大|小|大|小|大|小小|大|小|大大大|小|大大|小|大|小|大大|小|大|小|大|小小小|大|小|大|小小|大大|小|大|小|大大大大|小小小小|大大|小小小小|大|小小|大大大|小小|大|小小小小小小小小小小|大大大|小|大|小|大|小小|大|小小小|大大大|小|大大大大|小|大大|小小小小小|大|小|大大|小小|大|小|大大|小小|大大大大|小|大|小|大大大|小|大大大|小|大|小小小|大大|小小|大大|小|大|小小小小小|大|小小小小小小|大大|小|大大大|小小|大|小小小|大|小|大大大|小|大|小|大|小小|大大|小小小小|大大大大|小|大大大大|小|大大大|小|大大|小小小|大大大|小小|大大|小|大大|小小小|大|小|大大大|小小小|大大|小小小|大|小|大|小|大|小小|大大大大大|小|大大大大|小小小|大大大|小小|大大|小小小小小小小', '大小')</script>
+                    </div>
+                </div>
+                <div class="luzhu t_6" fg="d2" fi="oe"  style="width:980px;overflow-x:auto;display:none">
+                    <div class="cp_xsdbBlock " id="luzhuform_6" style="display:none"></div>
+                    <table class="roadmap-table-caption">
+                        <tr>
+                            <td class="search search_luzhu" id="searchtd6">
+                            </td>
+                            <td class="cp_alignCenter">
+                                <input type="button"  onclick="javasript:void(0);" class="formstatbtn luzhusearch" data-index="6" value="自定义形态统计">
+                                <i class="cp_helpIconButton"></i>
+                            </td>
+                            <td >
+                    <span>
+今日累计：<span class="count"> 单（34） 双（52）
+                      </span>
+                    </span>
+                                第二球单双
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="width:980px; overflow-x:auto;overflow-y:hidden;" class="luzhu_scroll" id="tblist6">
+
+                        <script type="text/javascript">formatRoadmap('6', '|双双|单单单|双|单单单|双|单单单单|双双|单单单单单|双|单|双|单单|双|单单单|双双|单|双双|单|双双|单|双双双双双双|单单|双|单|双|单单单单单|双|单|双双双双|单|双双双双|单单单|双双|单|双双双|单单单单|双双双|单|双|单单|双|单单单|双|单单|双|单单单|双|单单|双双双双双|单单|双|单|双|单单|双|单|双双双|单|双|单|双双|单单单单|双双双|单|双双|单单单|双双双双双双双|单单|双双双双双双|单单单单|双双|单|双双双双|单|双|单单单|双|单|双双双双|单|双|单|双|单|双双|单|双双双双|单单|双双|单单|双|单|双双双双双|单单|双|单单|双双|单单|双双|单|双双|单单|双双|单|双|单|双|单|双|单单|双|单|双双双|单|双双|单单|双双双双双|单|双双双|单|双双|单单|双双双双双双双|单单单|双|单|双|单单|双双双|单|双双双|单单|双双双双|单单单|双', '单双')</script>
+                    </div>
+                </div>
+                <div class="luzhu t_7" fg="d2" fi="zh"  style="width:980px;overflow-x:auto;display:none">
+                    <div class="cp_xsdbBlock " id="luzhuform_7" style="display:none"></div>
+                    <table class="roadmap-table-caption">
+                        <tr>
+                            <td class="search search_luzhu" id="searchtd7">
+                            </td>
+                            <td class="cp_alignCenter">
+                                <input type="button"  onclick="javasript:void(0);" class="formstatbtn luzhusearch" data-index="7" value="自定义形态统计">
+                                <i class="cp_helpIconButton"></i>
+                            </td>
+                            <td >
+                    <span>
+今日累计：<span class="count"> 质（36） 合（50）
+                      </span>
+                    </span>
+                                第二球质合
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="width:980px; overflow-x:auto;overflow-y:hidden;" class="luzhu_scroll" id="tblist7">
+
+                        <script type="text/javascript">formatRoadmap('7', '|合合|质质|合|质质质质|合|质|合|质质|合合|质质质质质|合|质|合|质质|合|质|合|质|合合合合合|质|合合|质|合合合合|质|合|质质|合|质|合|质质质质质|合|质质|合合合合|质|合合合合合|质|合|质质|合合合合|质质质|合合合|质|合|质质|合|质质质|合|质|合合|质质质|合|质质|合合|质|合合合|质质|合合合合合|质|合|质|合|质质质|合|质|合合|质质|合|质|合|质|合|质|合合合合合合合合合合|质质|合合合合合合|质|合|质质质|合|质质|合合|质质质质质质|合|质|合合|质|合|质|合合合|质质|合|质|合合合合|质质|合合|质|合合|质质质|合合|质质质|合|质|合合合|质质|合合|质|合合|质质|合合合合|质质|合合|质质质|合合合合|质质|合|质|合合合合合合|质|合合合|质|合|质质质|合合合合|质|合合|质质质质质|合|质|合合合合合合合合|质|合合|质质|合|质质质|合', '质合')</script>
+                    </div>
+                </div>
+                <div class="luzhu t_8" fg="d3" fi="bs"  style="width:980px;overflow-x:auto;display:none">
+                    <div class="cp_xsdbBlock " id="luzhuform_8" style="display:none"></div>
+                    <table class="roadmap-table-caption">
+                        <tr>
+                            <td class="search search_luzhu" id="searchtd8">
+                            </td>
+                            <td class="cp_alignCenter">
+                                <input type="button"  onclick="javasript:void(0);" class="formstatbtn luzhusearch" data-index="8" value="自定义形态统计">
+                                <i class="cp_helpIconButton"></i>
+                            </td>
+                            <td >
+                    <span>
+今日累计：<span class="count"> 大（51） 小（35）
+                      </span>
+                    </span>
+                                第三球大小
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="width:980px; overflow-x:auto;overflow-y:hidden;" class="luzhu_scroll" id="tblist8">
+
+                        <script type="text/javascript">formatRoadmap('8', '|小|大大|小|大大|小小小小小|大|小|大|小小小小小|大大大大|小|大大大大大大大|小小小小小小|大|小|大|小小小|大|小小小|大大|小|大大|小小|大大|小|大大|小|大大|小|大|小|大大|小|大大|小|大|小小小|大|小小小|大|小|大大大大|小|大|小小|大大|小|大|小|大大|小|大大|小|大大大|小小小|大大大|小小小|大|小小小小小小|大大大大大|小小|大|小|大大|小|大大大大|小|大大|小|大大大大大|小|大大大|小|大|小|大大|小小小|大|小小|大大|小|大大|小|大|小|大大|小|大大|小|大大大大|小小|大大大|小|大大|小小|大|小|大|小|大大|小小|大大大大大大大大大|小|大|小小|大大|小|大大大|小|大大大|小|大大大|小小|大大大大大大大|小小小|大大大大大大大|小小小|大|小|大大大|小|大|小小|大大|小|大大|小|大|小小小小小|大|小小小小|大大|小|大|小小小', '大小')</script>
+                    </div>
+                </div>
+                <div class="luzhu t_9" fg="d3" fi="oe"  style="width:980px;overflow-x:auto;display:none">
+                    <div class="cp_xsdbBlock " id="luzhuform_9" style="display:none"></div>
+                    <table class="roadmap-table-caption">
+                        <tr>
+                            <td class="search search_luzhu" id="searchtd9">
+                            </td>
+                            <td class="cp_alignCenter">
+                                <input type="button"  onclick="javasript:void(0);" class="formstatbtn luzhusearch" data-index="9" value="自定义形态统计">
+                                <i class="cp_helpIconButton"></i>
+                            </td>
+                            <td >
+                    <span>
+今日累计：<span class="count"> 单（43） 双（43）
+                      </span>
+                    </span>
+                                第三球单双
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="width:980px; overflow-x:auto;overflow-y:hidden;" class="luzhu_scroll" id="tblist9">
+
+                        <script type="text/javascript">formatRoadmap('9', '|双双|单单单单|双|单|双双|单|双双|单单单|双|单单单|双双双双双|单|双|单单|双双|单单单|双|单单单|双双双|单单单|双双双双|单单|双双|单|双|单单单单单单|双双双|单单单|双|单|双|单单|双双|单单|双|单|双双双|单单|双双双|单|双|单单单单|双|单单单单单|双|单|双双|单|双|单|双双双|单|双|单单|双双双双双|单|双双双双双双双|单单单单|双|单|双双|单|双|单单单|双|单单单单单单|双|单单|双|单单单单单|双|单单单|双|单单|双双|单单|双|单单|双|单单单单|双|单单|双|单单|双|单单单单|双双|单|双|单单|双双双双|单|双|单单单|双双|单|双双双双|单|双|单单|双双双双双|单单|双|单|双|单|双双双|单单单单单单|双双双|单单|双|单单|双双|单单单单单单|双|单单单单单|双|单单|双|单单单|双双|单|双|单|双双|单|双双双双双双|单|双|单|双双|单|双|单单|双双', '单双')</script>
+                    </div>
+                </div>
+                <div class="luzhu t_10" fg="d3" fi="zh"  style="width:980px;overflow-x:auto;display:none">
+                    <div class="cp_xsdbBlock " id="luzhuform_10" style="display:none"></div>
+                    <table class="roadmap-table-caption">
+                        <tr>
+                            <td class="search search_luzhu" id="searchtd10">
+                            </td>
+                            <td class="cp_alignCenter">
+                                <input type="button"  onclick="javasript:void(0);" class="formstatbtn luzhusearch" data-index="10" value="自定义形态统计">
+                                <i class="cp_helpIconButton"></i>
+                            </td>
+                            <td >
+                    <span>
+今日累计：<span class="count"> 质（42） 合（44）
+                      </span>
+                    </span>
+                                第三球质合
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="width:980px; overflow-x:auto;overflow-y:hidden;" class="luzhu_scroll" id="tblist10">
+
+                        <script type="text/javascript">formatRoadmap('10', '|合合|质质|合|质质|合|质质质|合|质质质|合合合|质质质质质|合合|质|合|质质质质|合|质质|合|质质|合合|质质|合|质|合合合|质质|合合|质质质|合合合|质质质|合合|质|合|质质质|合|质|合|质质|合|质质质|合合合|质质质|合合合|质质|合合|质|合合|质|合合合|质质|合合|质质质质|合|质质|合|质质质质|合|质质|合合合合|质|合合合合合|质质|合合合合|质质|合合合|质|合|质质质质|合|质|合合合合合合合合|质|合|质质质质|合合|质质质|合合|质质质质|合|质|合|质|合|质质|合|质质质|合|质|合合|质质质|合合合|质|合|质质|合合合合|质质质质|合|质质|合合合|质质|合|质质质|合|质质|合合合合|质|合|质质|合|质|合合合合合合|质|合|质质|合合合|质质|合|质质质|合合合合合|质质|合合|质质|合合|质质|合|质质质质质质质|合合|质质质|合合|质质质|合|质质|合合合合合合|质质质质|合合合|质质|合合', '质合')</script>
+                    </div>
+                </div>
+                <div class="luzhu t_11" fg="d4" fi="bs"  style="width:980px;overflow-x:auto;display:none">
+                    <div class="cp_xsdbBlock " id="luzhuform_11" style="display:none"></div>
+                    <table class="roadmap-table-caption">
+                        <tr>
+                            <td class="search search_luzhu" id="searchtd11">
+                            </td>
+                            <td class="cp_alignCenter">
+                                <input type="button"  onclick="javasript:void(0);" class="formstatbtn luzhusearch" data-index="11" value="自定义形态统计">
+                                <i class="cp_helpIconButton"></i>
+                            </td>
+                            <td >
+                    <span>
+今日累计：<span class="count"> 大（50） 小（36）
+                      </span>
+                    </span>
+                                第四球大小
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="width:980px; overflow-x:auto;overflow-y:hidden;" class="luzhu_scroll" id="tblist11">
+
+                        <script type="text/javascript">formatRoadmap('11', '|大大大|小小|大大大大|小小|大|小|大|小|大|小小|大|小小|大大大大|小小小|大大|小小小|大|小|大大|小小小|大大|小|大|小|大大大|小|大大|小小|大|小小|大|小|大|小小|大大大大大|小小|大大大大大|小|大|小|大大大大|小|大大|小|大大|小小|大|小|大|小小小|大|小|大大大大|小|大大|小小|大|小小小|大|小小小|大|小小小|大大大|小小小|大大大|小|大大大大大|小小小小小|大大|小|大|小小小小|大大大大|小|大大|小小|大大大大|小|大大|小小小小|大|小小|大|小|大大大|小|大|小小小小小|大|小|大大大|小小小|大大大|小小|大大大|小|大大大大|小|大大大|小|大|小|大|小小小|大大大|小|大|小小|大|小小小小|大大大大大|小|大大大|小|大大大大|小|大|小|大大|小小小|大大|小小小|大大大大大大|小|大大|小小小小|大|小|大大|小|大大|小小|大|小|大', '大小')</script>
+                    </div>
+                </div>
+                <div class="luzhu t_12" fg="d4" fi="oe"  style="width:980px;overflow-x:auto;display:none">
+                    <div class="cp_xsdbBlock " id="luzhuform_12" style="display:none"></div>
+                    <table class="roadmap-table-caption">
+                        <tr>
+                            <td class="search search_luzhu" id="searchtd12">
+                            </td>
+                            <td class="cp_alignCenter">
+                                <input type="button"  onclick="javasript:void(0);" class="formstatbtn luzhusearch" data-index="12" value="自定义形态统计">
+                                <i class="cp_helpIconButton"></i>
+                            </td>
+                            <td >
+                    <span>
+今日累计：<span class="count"> 单（42） 双（44）
+                      </span>
+                    </span>
+                                第四球单双
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="width:980px; overflow-x:auto;overflow-y:hidden;" class="luzhu_scroll" id="tblist12">
+
+                        <script type="text/javascript">formatRoadmap('12', '|单|双双双|单|双|单单单|双|单|双双|单单单单|双双双双双|单单|双|单|双|单单单单单|双双双|单|双双|单单|双|单单单|双双双|单|双双双|单单单|双|单单|双|单单单单单单|双双双|单|双双|单单|双双双|单|双|单单单|双|单单单|双双双|单单|双|单|双|单|双|单|双双双双双|单单单|双|单|双双双双|单|双|单|双|单单|双|单单单|双|单|双双双双双|单单单|双双双|单单单单|双|单|双|单单|双双双|单单|双|单|双双双双双|单单|双|单单|双|单单单|双|单|双|单单单|双|单|双|单单单单单|双|单|双双|单|双双|单单|双|单|双|单|双双双双双双|单单单单|双|单|双双双双双|单单单单|双|单|双|单|双|单|双双|单|双|单单单单单单单|双双双双|单|双|单单单|双|单|双|单|双|单|双双双|单单单单|双双|单|双双|单单|双双|单|双双双|单|双|单', '单双')</script>
+                    </div>
+                </div>
+                <div class="luzhu t_13" fg="d4" fi="zh"  style="width:980px;overflow-x:auto;display:none">
+                    <div class="cp_xsdbBlock " id="luzhuform_13" style="display:none"></div>
+                    <table class="roadmap-table-caption">
+                        <tr>
+                            <td class="search search_luzhu" id="searchtd13">
+                            </td>
+                            <td class="cp_alignCenter">
+                                <input type="button"  onclick="javasript:void(0);" class="formstatbtn luzhusearch" data-index="13" value="自定义形态统计">
+                                <i class="cp_helpIconButton"></i>
+                            </td>
+                            <td >
+                    <span>
+今日累计：<span class="count"> 质（37） 合（49）
+                      </span>
+                    </span>
+                                第四球质合
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="width:980px; overflow-x:auto;overflow-y:hidden;" class="luzhu_scroll" id="tblist13">
+
+                        <script type="text/javascript">formatRoadmap('13', '|质|合合|质质质质|合合合合|质质质|合合合|质质|合|质质|合合合|质|合|质|合合合|质|合|质|合合|质|合合|质|合|质|合合合|质质|合合|质质质质质质|合合合合合|质质|合合合|质|合合|质质质质质|合合合合|质|合合|质|合|质|合|质|合合合合合|质质质|合|质质|合合合|质|合|质|合|质|合|质|合|质质|合|质|合合合合|质|合|质质|合合合|质质质|合合合合|质质|合合合合|质|合|质|合合合合合|质质|合|质质|合合合|质|合|质|合|质质质质质质|合|质质质质|合|质|合合|质|合合|质质|合|质|合|质|合合合合合合合|质|合|质|合|质|合合合合合|质质|合|质|合|质|合|质|合|质|合合|质|合|质质质|合合|质质|合合合合|质|合|质质质|合|质|合|质|合|质|合合合|质质质|合合合|质|合合|质|合合合|质|合|质|合|质质质', '质合')</script>
+                    </div>
+                </div>
+                <div class="luzhu t_14" fg="d5" fi="bs"  style="width:980px;overflow-x:auto;display:none">
+                    <div class="cp_xsdbBlock " id="luzhuform_14" style="display:none"></div>
+                    <table class="roadmap-table-caption">
+                        <tr>
+                            <td class="search search_luzhu" id="searchtd14">
+                            </td>
+                            <td class="cp_alignCenter">
+                                <input type="button"  onclick="javasript:void(0);" class="formstatbtn luzhusearch" data-index="14" value="自定义形态统计">
+                                <i class="cp_helpIconButton"></i>
+                            </td>
+                            <td >
+                    <span>
+今日累计：<span class="count"> 大（47） 小（39）
+                      </span>
+                    </span>
+                                第五球大小
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="width:980px; overflow-x:auto;overflow-y:hidden;" class="luzhu_scroll" id="tblist14">
+
+                        <script type="text/javascript">formatRoadmap('14', '|小小|大|小小|大大|小小|大|小小|大大|小小小小|大大|小小|大大|小|大|小小|大大|小|大|小|大大大大|小|大大|小小小|大|小|大大大|小小|大大大大|小|大大大|小小小|大大|小|大|小小小小小|大大|小|大大大大大大大大|小小|大|小|大大|小小小|大大大|小小|大大|小|大|小小|大大大|小|大大|小小|大|小小|大大|小小小小小小小小|大大大大|小小小|大大大|小|大|小|大大大大|小小小小|大大大大大|小小|大|小|大大|小|大|小|大大大大大|小|大|小|大大大大大|小|大大大|小小小小小|大|小|大大大|小小小小小|大大大|小小|大大|小小|大|小小|大大大大大|小|大大大|小小|大大|小|大|小|大|小小小|大|小小小小|大|小|大|小小|大大|小小|大|小小小|大|小小|大大大大大大|小|大大大|小|大|小小小|大|小|大|小|大大|小|大|小|大大大|小|大|小|大大大大|小|大大大|小', '大小')</script>
+                    </div>
+                </div>
+                <div class="luzhu t_15" fg="d5" fi="oe"  style="width:980px;overflow-x:auto;display:none">
+                    <div class="cp_xsdbBlock " id="luzhuform_15" style="display:none"></div>
+                    <table class="roadmap-table-caption">
+                        <tr>
+                            <td class="search search_luzhu" id="searchtd15">
+                            </td>
+                            <td class="cp_alignCenter">
+                                <input type="button"  onclick="javasript:void(0);" class="formstatbtn luzhusearch" data-index="15" value="自定义形态统计">
+                                <i class="cp_helpIconButton"></i>
+                            </td>
+                            <td >
+                    <span>
+今日累计：<span class="count"> 单（48） 双（38）
+                      </span>
+                    </span>
+                                第五球单双
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="width:980px; overflow-x:auto;overflow-y:hidden;" class="luzhu_scroll" id="tblist15">
+
+                        <script type="text/javascript">formatRoadmap('15', '|双双|单单|双|单单|双|单|双|单单单|双|单单|双双双|单单|双|单单|双|单单|双|单单|双|单单|双|单|双|单|双|单单|双|单单单|双双|单|双|单|双|单|双双双|单单|双双双|单|双双|单|双双|单|双|单单|双双|单|双|单单|双|单单单|双|单|双双双|单|双|单单|双|单|双双双|单|双双|单单单|双双|单单单单|双双双双双|单|双|单单|双双|单单单|双|单单|双双|单|双双双双|单|双|单|双双|单|双双双|单单|双|单单单|双|单单|双双双双双双双|单单|双|单|双双|单单|双双双|单单|双|单单单|双双|单单单单单|双|单|双双双双|单单单|双|单|双|单|双|单单|双双|单|双|单单单|双|单|双双双双双|单单单单|双双|单单|双|单|双|单单单|双双|单|双|单|双|单|双|单单单|双双|单单单单单|双双|单单|双', '单双')</script>
+                    </div>
+                </div>
+                <div class="luzhu t_16" fg="d5" fi="zh"  style="width:980px;overflow-x:auto;display:none">
+                    <div class="cp_xsdbBlock " id="luzhuform_16" style="display:none"></div>
+                    <table class="roadmap-table-caption">
+                        <tr>
+                            <td class="search search_luzhu" id="searchtd16">
+                            </td>
+                            <td class="cp_alignCenter">
+                                <input type="button"  onclick="javasript:void(0);" class="formstatbtn luzhusearch" data-index="16" value="自定义形态统计">
+                                <i class="cp_helpIconButton"></i>
+                            </td>
+                            <td >
+                    <span>
+今日累计：<span class="count"> 质（43） 合（43）
+                      </span>
+                    </span>
+                                第五球质合
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="width:980px; overflow-x:auto;overflow-y:hidden;" class="luzhu_scroll" id="tblist16">
+
+                        <script type="text/javascript">formatRoadmap('16', '|合合合|质质|合合合合|质|合|质质|合合合|质质质质|合|质|合|质质质|合合|质|合合|质|合|质|合|质质质质质|合|质质质质质|合合合|质|合合|质|合合合|质|合合|质|合|质|合|质质|合合|质质|合合|质|合合|质质|合|质质|合|质质|合合|质|合合|质|合|质|合|质|合|质|合|质质质质质质|合合|质|合合合合合|质|合|质|合合|质质质质|合合合合合|质|合|质质|合合|质质质|合|质质|合合合合合合合|质|合|质|合合|质|合合合|质质|合|质质质|合合|质|合|质质|合合合合合|质|合|质|合合|质质|合合|质质|合合合|质质|合合|质质质质质|合|质质|合|质|合|质质质|合|质质|合合|质质|合合|质|合|质质质质质|合合合合合|质质质|合|质|合合合合合合|质质|合|质|合|质|合|质|合合合|质质|合合合|质|合|质质|合|质|合|质|合合', '质合')</script>
+                    </div>
+                </div>
+                <div class="luzhu t_17" fg="d6" fi="bs"  style="width:980px;overflow-x:auto;display:none">
+                    <div class="cp_xsdbBlock " id="luzhuform_17" style="display:none"></div>
+                    <table class="roadmap-table-caption">
+                        <tr>
+                            <td class="search search_luzhu" id="searchtd17">
+                            </td>
+                            <td class="cp_alignCenter">
+                                <input type="button"  onclick="javasript:void(0);" class="formstatbtn luzhusearch" data-index="17" value="自定义形态统计">
+                                <i class="cp_helpIconButton"></i>
+                            </td>
+                            <td >
+                    <span>
+今日累计：<span class="count"> 大（49） 小（37）
+                      </span>
+                    </span>
+                                总和大小
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="width:980px; overflow-x:auto;overflow-y:hidden;" class="luzhu_scroll" id="tblist17">
+
+                        <script type="text/javascript">formatRoadmap('17', '|小|大|小小|大|小|大|小小小小|大|小|大|小|大大大|小小|大大大|小小小小小小|大|小小小小|大|小小小|大大大|小|大大|小小|大|小小|大大大|小|大大大|小|大大|小小|大大大大大|小|大大|小小|大|小小|大|小小小|大|小小|大大大大|小|大大|小|大大|小|大大大大|小小|大|小|大大|小小|大|小小小小小|大大大大|小小小|大大|小|大大|小|大大大大|小小小小|大|小|大大大|小小|大大大大|小|大|小小|大|小|大|小小小|大大大|小小|大|小小小|大|小|大大大|小|大|小小小小小|大|小|大大大|小|大|小|大|小|大大大|小|大|小小|大大大大|小|大大大|小小|大大|小|大大大|小|大|小|大|小|大大|小小小|大大大大|小|大大|小小小|大大大|小|大大大|小|大|小小|大大大|小小小小|大大大|小|大大|小|大|小小|大大大大|小小|大|小|大大|小小小小小', '大小')</script>
+                    </div>
+                </div>
+                <div class="luzhu t_18" fg="d6" fi="oe"  style="width:980px;overflow-x:auto;display:none">
+                    <div class="cp_xsdbBlock " id="luzhuform_18" style="display:none"></div>
+                    <table class="roadmap-table-caption">
+                        <tr>
+                            <td class="search search_luzhu" id="searchtd18">
+                            </td>
+                            <td class="cp_alignCenter">
+                                <input type="button"  onclick="javasript:void(0);" class="formstatbtn luzhusearch" data-index="18" value="自定义形态统计">
+                                <i class="cp_helpIconButton"></i>
+                            </td>
+                            <td >
+                    <span>
+今日累计：<span class="count"> 单（37） 双（49）
+                      </span>
+                    </span>
+                                总和单双
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="width:980px; overflow-x:auto;overflow-y:hidden;" class="luzhu_scroll" id="tblist18">
+
+                        <script type="text/javascript">formatRoadmap('18', '|单|双|单|双|单|双|单|双|单单单单|双双|单单单单单|双双双双双双|单单单|双双|单单|双双|单|双双双|单单单单|双双|单|双|单单单单单单|双双|单单单|双|单单单单单|双双双|单|双双双双双|单|双双|单单|双|单单|双|单|双|单单单单|双|单|双双双双双|单单|双双|单单单|双|单|双双|单|双|单单单单|双双双双双|单|双双双|单单单|双|单单单|双双|单单|双|单单单|双|单|双双|单|双双|单|双双|单|双双双|单|双|单|双双双双双双双|单|双|单单|双双双双|单|双双双|单单|双|单单|双|单|双|单单单|双双双|单|双双|单|双|单|双|单单|双|单单单|双双双双双双|单单单|双双|单单单|双双双|单单单单单|双双双双双双双|单单单|双双双|单单|双|单单|双双|单|双双双双双双|单|双双双双双|单|双|单|双双|单|双|单单单|双|单单单单|双|单单|双双双|单|双双双双双双|单单|双|单单单|双|单|双双双|单', '单双')</script>
+                    </div>
+                </div>
+
+                <script type="text/javascript"> $(function () { loadLZCookie(lzCookieName);
+                });</script>
+                <script type="text/javascript">
+                    $(function () { userSelectLZ(); });
+                </script>
+            </div>        <script type="text/javascript">
+            var lzCookieName = "luzhuCqssc";
+
+            function defaultSetting() {
+                $(".lot-number-omit2 .tiptool_info i.nda_checkbox").addClass("nda_selected");
+                $(".dailyChangLongStatistics .dcls_tool1[filter-mode*=2] a:first").addClass("cur");
+                $(".dailyChangLongStatistics .dcls_tool1[filter-mode*=3] a:first").addClass("cur");
+            }
+
+            function checkChooseItem(obj) {
+                var type = obj.attr("data-type");
+                $(".lot-number-omit2 .tiptool_info i.nda_checkbox").show()
+                if (type) {
+                    if (type == "zh") {
+                        $(".lot-number-omit2 .tiptool_info i[filter-type*=zh]").hide();
+                    }
+                    if(type=="lh"){
+                        $(".lot-number-omit2 .tiptool_info i[filter-type*=lh]").hide();
+                    }
+                } else {
+                    var pos = obj.attr("data-pos");
+                    if(pos == "d6"||pos == "d5"||pos == "d4"||pos == "d3"||pos == "d2"){
+                        $(".lot-number-omit2 .tiptool_info i[data-type=lh]").hide();
+                        if (pos == "d6") {
+                            $(".lot-number-omit2 .tiptool_info i[data-type=zh]").hide();
+                        }
+                    }
+                }
+            }
+
+            function statLuzhuForm(luzhu,ball,type,day,container){
+
+                $.get("/shishicai/Luzhuform",{"ball":ball,"type":type,"days":day},function(d){
+                    if(d&&d.luzhu){
+                        var result=d.luzhu;
+                        var len= calc(result,luzhu);
+                        container.text(len);
+                    }
+                },'json');
+            }
+
+        </script>
+
+        </div>
+        <div id="caishijie_cqssc_bottom" class="w980"></div>
+        <div id="caishijie_cqssc_bottom_lr" class="ad_small_banner_s"></div>
+
+    </div>
+</div>
+<div id="caishijie_pk10_left"></div>
+<div id="caishijie_pk10_right"></div>
+
+<div class="clear" style="height: 0px; font-size: 0px;"></div>
+<div style="width: 1000px; margin: 0 auto;">
+    <div id="caishijie_bottom" class="business"></div>
+
+    <div class="ad_small_banner" id="caishijie_bottom_leftright"></div>
+    <!--<div  class="web_winner"><span>敬告用户：</span>除皇家产品外，本站所刊登广告的网站和内容一概与本站无关，用户须自行判断广告网站的真实性，由此所产生的后果本公司概不负责！</div>-->
+</div>
+<!--底部 start-->
+<%= include ./src/view/common/footer.html =%>
+
+<!--<div class="web370_online">-->
+    <!--<a onclick="javascript:window.open('http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzkzODE3MTczOF8zNzU4NzBfNDAwNjU0OTIwMF8yXw', '_blank', 'height=502, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');" class="web370_online_qq"  href="javascript:void(0);" ></a>-->
+    <!--<a class="web370_online_fb userfeedback" href="javascript:void(0);" id="online_feedback_unlogin"></a>-->
+    <!--<a class="web370_online_fb" href="/home/feedback" target="_blank" id="online_feedback_login" style="display:none"></a>-->
+<!--</div>-->
+
+<script type="text/javascript" src="../../script/service.js"></script>
+<script type="text/javascript">
+    //是否存在 广告横幅 分左右两块
+    var adsplit = "csj_lot_cqssc_lotmenu_s_banner";
+    //左右漂浮广告
+    var leftright = "caishijie_pk10_left,caishijie_pk10_right";
+</script>
+<script  src="http://a.591dyd.com/service/adjs?codes=caishijie_lot_cqssc,csj_lot_cqssc_lotmenu_s_banner,caishijie_cqssc_bottom,caishijie_pk10_left,caishijie_pk10_right,caishijie_bottom,caishijie_logo_right,caishijie_cqssc_bottom_lr,caishijie_bottom_leftright&amp;format=html&amp;website=42&amp;jsoncallback=AddList"></script>
+
+
+<!--底部 end-->
+
+
+<script src="../../script/My97DatePicker/WdatePicker.js" type="text/javascript"></script><script src="../../script/lot/lotcommon.js" type="text/javascript"></script><script src="../../script/lot/warntime.js" type="text/javascript"></script><script src="../../script/lot/cqssc/award.js" type="text/javascript"></script>
+
+<div style="display: none;">
+    <script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODE3MTczOF8zNzY4MDNfNDAwNjU0OTIwMF8"></script>
+    <script src="http://s9.cnzz.com/stat.php?id=5418000&web_id=5418000&show=pic1" language="JavaScript"></script>
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?dad24abebba647625189f407f7103e48";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            if (top != self) {
+                $(".history_gg").show();
+            }
+            $(".top_warn .closeBtns").click(function () {
+                $(".top_warn").fadeOut(100);
+                $(".ydImg").css({ "top": "5px" });
+            })
+        });
+
+
+    </script>
+
+</div>
+<script type="text/javascript" src="../../script/fbloginframe.js?id=userfeedback&class=userfeedback"></script>
+
+</body>
+</html>

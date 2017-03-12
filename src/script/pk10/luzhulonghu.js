@@ -55,14 +55,17 @@ function updatePickdate(dp) {
 
     } else {
         if (dp.cal.date.d == (new Date()).getDate()) {
-            reloadLuzhu(location.href, selDate, 0);
+            //reloadLuzhu(location.href, selDate, 0);
+            reloadLuzhu('/pk10/luzhulonghu/', selDate, 0);
         } else {
-            reloadLuzhu(location.href, selDate, 1);
+            //reloadLuzhu(location.href, selDate, 1);
+            reloadLuzhu('/pk10/luzhulonghu/', selDate, 1);
         }
     }
 }
 function clearedDate() {
-    reloadLuzhu(location.href, '', 0);
+    //reloadLuzhu(location.href, '', 0);
+    reloadLuzhu('/pk10/luzhulonghu/', '', 0);
 }
 function getPRData_1(){
     return ["龍","虎","2,2,1,1,1,2,2,2,2,1,2,2,2,1,2,1,2,1,2,2,2,1,2,1,1,1,2,1,1,2,1,1,1,2,1,1,1,1,2,1,2,2,2,1,2,1,2,1,1,2,2,1,2,1,1,2,1,1,2,2,1,2,2,1,2,1,1,2,1,1,2,1,2,2"];
@@ -95,7 +98,8 @@ $.ajax({
             $("#ckb_pailu").bind("click", function () {
                 var check = $(this).hasClass("checked") ? false : true;
                 var selDate = $("#dateData").val();
-                var url = location.href;
+                // var url = location.href;
+                var url = '/pk10/luzhulonghu/';
                 $.post("/home/pailusetting", { enable: check }, function (result) {
                     //location.reload();
 
