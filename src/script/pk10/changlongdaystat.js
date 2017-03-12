@@ -3,7 +3,7 @@
  */
 // 每个页面值调用一次的请求根据页面的location来判断请求的接口
 var host = 'http://120.76.188.66:8080'
-var pathname = location.pathname.replace('index.html','');
+var pathname = '/pk10/changlongdaystat';
 var lotMenu = 'pk10_memu';
 var lotteryLuzhu = "";
 function changeSelect() {
@@ -12,7 +12,7 @@ function changeSelect() {
     $("#type").html($("#choose_type .cur").attr("data-text"));
     var _container = $("#callFun").attr("container");
     _container = _container ? _container : "lot-wrap";
-    $.get(location.pathname, { t: Math.random(), type: type, pos: pos }, function (text) {
+    $.get(pathname, { t: Math.random(), type: type, pos: pos }, function (text) {
         $('#' + _container).html(text);
     });
 }
