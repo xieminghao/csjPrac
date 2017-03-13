@@ -1,0 +1,631 @@
+
+<!DOCTYPE HTML>
+<html xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+    <title>【重庆时时彩每日长龙统计】-皇家彩世界</title>
+    <meta name="keywords" content="重庆时时彩每日长龙统计" />
+    <meta name="description" content="重庆时时彩每日长龙统计专栏专门为重庆时时彩的玩家提供专业的长龙统计数据,这里有专业的开奖数据统计、开奖直播视频以及独家的免费参考、淘宝模式,不必担心因为没有时时彩技巧而产生困扰,为您一站解决购彩的烦恼" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="baidu-site-verification" content="EDEMDIk3AI" />
+
+    <%= include ./src/view/common/link.html =%>
+    <link href="../../style/lot/cqssc.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+<!--头部 start-->
+<%= include ./src/view/common/header.html =%>
+<%= include ./src/view/common/navMenu.html =%>
+
+<div class="body-content">
+    <%= include ./src/view/common/shishicai/shishicaicontentHeader.html =%>
+    <div class="lot-wrap">
+        <div class="feedbackDiv">
+            <span class="fk_span"><a href="/home/feedback/" target="_blank" class="fk_spanLink">反馈意见</a></span>
+    <span class="fk_span px_span" id="menu_drag_span">
+        <a href="javascript:enableMenuDrag();" class="fk_spanLink">自定义排序(会员功能)</a>
+    </span>
+
+    <span class="pd_span" style="display: none;" id="menu_drag_tip_span">
+        <span class="fk_span unlock_span fk_spanLink">已开启拖放排序功能</span>
+        <a href="javascript:disableMenuDrag(1);" class="leftBtn">确定</a>
+        <a href="javascript:disableMenuDrag(0);" class="rightBtn">取消</a>
+    </span>
+
+    <span class="pd_span" style="display: none;" id="menu_drag_unlogin_tip">
+        <span class="fk_span  noIcon">您需要登陆才可以使用该功能</span>
+        <a href="/sso/login/" class="leftBtn" id="login_a_btn">登录</a>
+        <a href="/sso/register/" class="leftBtn">注册</a>
+    </span>
+        </div>
+        <script type="text/javascript">
+            var lotMenu = 'cqssc_memu';
+        </script>
+        <script type="text/javascript" src="../../script/navdrag.js"></script>
+
+        <div class="web_listOP">
+            <ul id="menu_ul" style="position: relative;">
+                <li  data-tag="idx">
+                    <a href="/shishicai/">重庆时时彩</a>
+                </li>
+                <li  data-tag="kj">
+                    <a href="/shishicai/kaijiang/">历史开奖号码</a>
+                </li>
+                <li  data-tag="lza">
+                    <a href="/shishicai/luzhuanalysis/">综合路珠分析</a>
+                    <span class="wen_newIcon"></span>
+                </li>
+                <li  data-tag="zh">
+                    <a href="/shishicai/merge/">综合版面</a>
+                </li>
+                <li   data-tag="yl">
+                    <a href="/shishicai/yilou/">号码遗漏统计</a>
+                </li>
+                <li   data-tag="sls">
+                    <a href="/shishicai/numbertooutput/">上期历史</a>
+                </li>
+                <li   data-tag="hml">
+                    <a href="/shishicai/luzhunumber/">号码路珠</a>
+                </li>
+                <li   data-tag="lhl">
+                    <a href="/shishicai/luzhulonghu/">龙虎路珠</a>
+                </li>
+                <li  data-tag="dsl">
+                    <a href="/shishicai/luzhubigorsmall/">单双大小路珠</a>
+                </li>
+                <li   data-tag="zhl">
+                    <a href="/shishicai/luzhutotal/">总和路珠</a>
+                </li>
+                <li   data-tag="dsls">
+                    <a href="/shishicai/ballstat/">单双大小历史</a>
+                </li>
+                <li   data-tag="lst">
+                    <a href="/shishicai/numberstat/">历史号码统计</a>
+                </li>
+                <li   data-tag="jrt">
+                    <a href="/shishicai/opencodeanalysis/">今日号码统计</a>
+                    <span class="wen_newIcon"></span>
+                </li>
+                <li class=hover  data-tag="mrcl">
+                    <a href="/shishicai/changlongdaystat">每日长龙统计</a>
+                    <span class="wen_newIcon"></span>
+                </li>
+                <li   data-tag="hzs">
+                    <a href="/shishicai/zoushitu/">横版走势图</a>
+                </li>
+                <li  data-tag="lhm">
+                    <a href="/shishicai/longhubetmode/">龙虎模式</a>
+                </li>
+                <li   data-tag="tbm">
+                    <a href="/shishicai/betmode/">淘宝模式</a>
+                </li>
+                <li  data-tag="mfc">
+                    <a href="/shishicai/betgame/">免费参考</a>
+                </li>
+                <li  data-tag="fxm">
+                    <a href="/shishicai/experience/">分享模式</a>
+                </li>
+                <li  data-tag="kjs">
+                    <a href="/shishicai/shipin/" class="redColor">开奖视频</a>
+                </li>
+                <li   data-tag="jq">
+                    <a href="/jiqiao/shishicai/">时时彩技巧</a>
+                </li>
+                <li   data-tag="lmt">
+                    <a href="/shishicai/twosidedstat/">两面数据统计</a>
+                </li>
+                <li  data-tag="yld">
+                    <a href="/shishicai/omitdata/">遗漏大数据</a>
+
+                </li>
+                <li    data-tag="tsxts">
+                    <a href="/shishicai/specialformdata/">特殊形态统计</a>
+                    <span class="wen_newIcon"></span>
+                </li>
+                <li  data-tag="dsz">
+                    <a href="/shishicai/bsoetrend/">单双大小走势图</a>
+                </li>
+                <li   data-tag="lrf">
+                    <a href="/shishicai/coldhotnumber/">冷热码分析</a>
+                </li>
+
+                <li  data-tag="sjyy" >
+                    <a href="http://www.1396app.com/promotiontopic?code=shishicai" target="_blank" class="sjyy" rel="nofollow">手机应用</a>
+                </li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+
+
+        <div style="clear: left; width: 100%; float: left;">
+        </div>
+
+        <script type="text/javascript">    var lotteryLuzhu = "";</script>
+
+
+        <div id="lot-wrap">
+
+
+            <a name="clsplit" id="clsplit" ></a>
+            <input type="hidden" id="callFun" value="changeSelect" container="changlongdiv" time="10000" />
+            <div class='dailyChangLongStatistics'>    <div class="dcls_tool1" id="choose_type">
+                <a style="width: 87px;" data-type="1" class="cur" data-text="大">大长龙</a>
+                <a data-type="2" data-text="小">小长龙</a>
+                <a data-type="3" data-text="单">单长龙</a>
+                <a data-type="4" data-text="双">双长龙</a>
+                <a data-type="5" data-text="质">质长龙</a>
+                <a data-type="6" data-text="合">合长龙</a>
+                <a data-type="7" data-text="龙">龙长龙</a>
+                <a data-type="8" data-text="虎">虎长龙</a>
+                <div style="clear: both"></div>
+            </div>
+                <div class="dcls_explanation">
+                    该页面统计长龙每天出现的条数，例如某日连续开出5期长龙（该形态）共出现10次
+                </div>
+                <ul class="lot-number-omit">
+                    <li class="ball" id="choose_pos">
+                        <ul>
+                            <li filter="nolonghu"><a href="javascript:void(0);" data-pos="1" class="cur">第一球</a></li>
+                            <li filter="nolonghu"> | <a href="javascript:void(0);" data-pos="2">第二球</a></li>
+                            <li filter="nolonghu"> | <a href="javascript:void(0);" data-pos="3">第三球</a></li>
+                            <li filter="nolonghu"> | <a href="javascript:void(0);" data-pos="4">第四球</a></li>
+                            <li filter="nolonghu"> | <a href="javascript:void(0);" data-pos="5">第五球</a></li>
+                            <li filter="nolonghu nozhihe"> | <a href="javascript:void(0);" data-pos="-1">总和</a> </li>
+                            <li><a href="javascript:void(0);" data-pos="0"></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div id='changlongdiv'><table class="lot-table">
+                    <tr>
+                        <td rowspan="2" class="dcls_firstTd"><span class="span1">长龙</span><span>日期</span></td>
+                        <td colspan="11" class="dcls_title1">开“<span id="type"></span>”长龙出现条数 <a class="dcls_tabA" id="refresh">刷新</a></td>
+                    </tr>
+                    <tr class="dcls_title2">
+                        <td>2期</td>
+                        <td>3期</td>
+                        <td>4期</td>
+                        <td>5期</td>
+                        <td>6期</td>
+                        <td>7期</td>
+                        <td>8期</td>
+                        <td>9期</td>
+                        <td>10期</td>
+                        <td>11期</td>
+                        <td>12期</td>
+                    </tr>
+                    <tr>
+                        <td>03月13日</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td></td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>03月12日</td>
+                        <td>9</td>
+                        <td>4</td>
+                        <td>3</td>
+                        <td></td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>03月11日</td>
+                        <td>7</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>03月10日</td>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>03月09日</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>03月08日</td>
+                        <td>8</td>
+                        <td>2</td>
+                        <td></td>
+                        <td>1</td>
+                        <td></td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>03月07日</td>
+                        <td>7</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td></td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>03月06日</td>
+                        <td>12</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>03月05日</td>
+                        <td>8</td>
+                        <td>6</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>03月04日</td>
+                        <td>9</td>
+                        <td>4</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>03月03日</td>
+                        <td>8</td>
+                        <td>5</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>03月02日</td>
+                        <td>13</td>
+                        <td>1</td>
+                        <td></td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>03月01日</td>
+                        <td>8</td>
+                        <td>5</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td></td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>02月28日</td>
+                        <td>8</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>02月27日</td>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td></td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>02月26日</td>
+                        <td>5</td>
+                        <td>7</td>
+                        <td>3</td>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>02月25日</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>02月24日</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>02月23日</td>
+                        <td>7</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>02月22日</td>
+                        <td>5</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>02月21日</td>
+                        <td>6</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>2</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                    <script type="text/javascript">  $("#type").html($("#choose_type .cur").attr("data-text"));</script>
+
+                    <script type="text/ecmascript">
+                        $(function () {
+                            $("#choose_type a").removeClass("cur");
+                            $("#choose_pos a").removeClass("cur");
+                            $("#choose_type a[data-type=1]").addClass("cur");
+                            $("#choose_pos a[data-pos=1]").addClass("cur");
+                            $("#type").html($("#choose_type .cur").attr("data-text"));
+                            setTimeout(function () {
+                                chooseItems();
+                            }, 100);
+                            $("#refresh").live("click", function () {
+                                changeSelect();
+                            });
+                            $("#choose_pos a ").on("click", function () {
+                                $("#choose_pos a").removeClass("cur");
+                                $(this).addClass("cur");
+                                changeSelect();
+                            });
+                        });
+                        function changeSelect() {
+                            var type = $("#choose_type .cur").attr("data-type");
+                            var pos = $("#choose_pos .cur").attr("data-pos");
+                            $("#type").html($("#choose_type .cur").attr("data-text"));
+                            var _container = $("#callFun").attr("container");
+                            _container = _container ? _container : "lot-wrap";
+                            $.get(location.pathname, { t: Math.random(), type: type, pos: pos }, function (text) {
+                                $('#' + _container).html(text);
+                            });
+                        }
+                    </script>
+
+
+
+
+                </div></div>    <script type="text/javascript">
+            function chooseItems() {
+                var type = $("#choose_type .cur").attr("data-type");
+                $("#choose_pos li").show();
+                var pos = ~~$("#choose_pos .cur").attr("data-pos");
+                if (type == 7 || type == 8) {
+                    $("#choose_pos li[filter*=nolonghu]").hide();
+                    $("#choose_pos a").removeClass("cur");
+                    $("#choose_pos a:last").addClass("cur");
+                } else if (type == 5 || type == 6) {
+                    $("#choose_pos li[filter*=nozhihe]").hide();
+                    if (pos == -1) {
+                        $("#choose_pos a").removeClass("cur");
+                        $("#choose_pos a:first").addClass("cur");
+                    }
+                }
+                if (pos == 0 && type < 7) {
+                    $("#choose_pos a").removeClass("cur");
+                    $("#choose_pos a:first").addClass("cur");
+                }
+            }
+            $(function () {
+
+                $("#choose_type a ").on("click", function () {
+                    $("#choose_type a").removeClass("cur");
+                    $(this).addClass("cur");
+                    chooseItems();
+                    changeSelect();
+                });
+
+            });
+        </script>
+
+        </div>
+        <div id="caishijie_cqssc_bottom" class="w980"></div>
+        <div id="caishijie_cqssc_bottom_lr" class="ad_small_banner_s"></div>
+
+    </div>
+</div>
+<div id="caishijie_pk10_left"></div>
+<div id="caishijie_pk10_right"></div>
+
+<div class="clear" style="height: 0px; font-size: 0px;"></div>
+<div style="width: 1000px; margin: 0 auto;">
+    <div id="caishijie_bottom" class="business"></div>
+
+    <div class="ad_small_banner" id="caishijie_bottom_leftright"></div>
+    <!--<div  class="web_winner"><span>敬告用户：</span>除皇家产品外，本站所刊登广告的网站和内容一概与本站无关，用户须自行判断广告网站的真实性，由此所产生的后果本公司概不负责！</div>-->
+</div>
+<!--底部 start-->
+<%= include ./src/view/common/footer.html =%>
+
+<!--<div class="web370_online">-->
+    <!--<a onclick="javascript:window.open('http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzkzODE3MTczOF8zNzU4NzBfNDAwNjU0OTIwMF8yXw', '_blank', 'height=502, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');" class="web370_online_qq"  href="javascript:void(0);" ></a>-->
+    <!--<a class="web370_online_fb userfeedback" href="javascript:void(0);" id="online_feedback_unlogin"></a>-->
+    <!--<a class="web370_online_fb" href="/home/feedback" target="_blank" id="online_feedback_login" style="display:none"></a>-->
+<!--</div>-->
+
+<script type="text/javascript" src="../../script/service.js"></script>
+<script type="text/javascript">
+    //是否存在 广告横幅 分左右两块
+    var adsplit = "csj_lot_cqssc_lotmenu_s_banner";
+    //左右漂浮广告
+    var leftright = "caishijie_pk10_left,caishijie_pk10_right";
+</script>
+<script  src="http://a.591dyd.com/service/adjs?codes=caishijie_lot_cqssc,csj_lot_cqssc_lotmenu_s_banner,caishijie_cqssc_bottom,caishijie_pk10_left,caishijie_pk10_right,caishijie_bottom,caishijie_logo_right,caishijie_cqssc_bottom_lr,caishijie_bottom_leftright&amp;format=html&amp;website=42&amp;jsoncallback=AddList"></script>
+
+
+<!--底部 end-->
+
+
+<script src="../../script/lot/lotcommon.js" type="text/javascript"></script><script src="../../script/lot/warntime.js" type="text/javascript"></script><script src="../../script/lot/cqssc/award.js" type="text/javascript"></script>
+
+<div style="display: none;">
+    <script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODE3MTczOF8zNzY4MDNfNDAwNjU0OTIwMF8"></script>
+    <script src="http://s9.cnzz.com/stat.php?id=5418000&web_id=5418000&show=pic1" language="JavaScript"></script>
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?dad24abebba647625189f407f7103e48";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            if (top != self) {
+                $(".history_gg").show();
+            }
+            $(".top_warn .closeBtns").click(function () {
+                $(".top_warn").fadeOut(100);
+                $(".ydImg").css({ "top": "5px" });
+            })
+        });
+
+
+    </script>
+
+</div>
+<script type="text/javascript" src="../../script/fbloginframe.js?id=userfeedback&class=userfeedback"></script>
+
+</body>
+</html>

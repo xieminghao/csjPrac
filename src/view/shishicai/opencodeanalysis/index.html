@@ -1,0 +1,963 @@
+<!DOCTYPE HTML>
+<html xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+    <title>【重庆时时彩今日号码统计】-皇家彩世界</title>
+    <meta name="keywords" content="重庆时时彩今日号码统计" />
+    <meta name="description" content="重庆时时彩今日号码统计为重庆时时彩的玩家提供专业的重庆时时彩今日号码统计,预测分析这里有专业的开奖数据统计、开奖直播视频以及独家的免费参考,不必担心因为没有重庆时时彩技巧而产生困扰,为您一站解决购彩的烦恼" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="baidu-site-verification" content="EDEMDIk3AI" />
+
+    <%= include ./src/view/common/link.html =%>
+    <link href="../../style/blue.css" rel="stylesheet" type="text/css" />
+    <link href="../../style/lot/cqssc.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+<!--头部 start-->
+<%= include ./src/view/common/header.html =%>
+<%= include ./src/view/common/navMenu.html =%>
+
+<div class="body-content">
+    <%= include ./src/view/common/shishicai/shishicaicontentHeader.html =%>
+    <div class="lot-wrap">
+        <div class="feedbackDiv">
+            <span class="fk_span"><a href="/home/feedback/" target="_blank" class="fk_spanLink">反馈意见</a></span>
+    <span class="fk_span px_span" id="menu_drag_span">
+        <a href="javascript:enableMenuDrag();" class="fk_spanLink">自定义排序(会员功能)</a>
+    </span>
+
+    <span class="pd_span" style="display: none;" id="menu_drag_tip_span">
+        <span class="fk_span unlock_span fk_spanLink">已开启拖放排序功能</span>
+        <a href="javascript:disableMenuDrag(1);" class="leftBtn">确定</a>
+        <a href="javascript:disableMenuDrag(0);" class="rightBtn">取消</a>
+    </span>
+
+    <span class="pd_span" style="display: none;" id="menu_drag_unlogin_tip">
+        <span class="fk_span  noIcon">您需要登陆才可以使用该功能</span>
+        <a href="/sso/login/" class="leftBtn" id="login_a_btn">登录</a>
+        <a href="/sso/register/" class="leftBtn">注册</a>
+    </span>
+        </div>
+        <script type="text/javascript">
+            var lotMenu = 'cqssc_memu';
+        </script>
+        <script type="text/javascript" src="../../script/navdrag.js"></script>
+
+        <div class="web_listOP">
+            <ul id="menu_ul" style="position: relative;">
+                <li  data-tag="idx">
+                    <a href="/shishicai/">重庆时时彩</a>
+                </li>
+                <li  data-tag="kj">
+                    <a href="/shishicai/kaijiang/">历史开奖号码</a>
+                </li>
+                <li  data-tag="lza">
+                    <a href="/shishicai/luzhuanalysis/">综合路珠分析</a>
+                    <span class="wen_newIcon"></span>
+                </li>
+                <li  data-tag="zh">
+                    <a href="/shishicai/merge/">综合版面</a>
+                </li>
+                <li   data-tag="yl">
+                    <a href="/shishicai/yilou/">号码遗漏统计</a>
+                </li>
+                <li   data-tag="sls">
+                    <a href="/shishicai/numbertooutput/">上期历史</a>
+                </li>
+                <li   data-tag="hml">
+                    <a href="/shishicai/luzhunumber/">号码路珠</a>
+                </li>
+                <li   data-tag="lhl">
+                    <a href="/shishicai/luzhulonghu/">龙虎路珠</a>
+                </li>
+                <li  data-tag="dsl">
+                    <a href="/shishicai/luzhubigorsmall/">单双大小路珠</a>
+                </li>
+                <li   data-tag="zhl">
+                    <a href="/shishicai/luzhutotal/">总和路珠</a>
+                </li>
+                <li   data-tag="dsls">
+                    <a href="/shishicai/ballstat/">单双大小历史</a>
+                </li>
+                <li   data-tag="lst">
+                    <a href="/shishicai/numberstat/">历史号码统计</a>
+                </li>
+                <li class=hover  data-tag="jrt">
+                    <a href="/shishicai/opencodeanalysis/">今日号码统计</a>
+                    <span class="wen_newIcon"></span>
+                </li>
+                <li   data-tag="mrcl">
+                    <a href="/shishicai/changlongdaystat">每日长龙统计</a>
+                    <span class="wen_newIcon"></span>
+                </li>
+                <li   data-tag="hzs">
+                    <a href="/shishicai/zoushitu/">横版走势图</a>
+                </li>
+                <li  data-tag="lhm">
+                    <a href="/shishicai/longhubetmode/">龙虎模式</a>
+                </li>
+                <li   data-tag="tbm">
+                    <a href="/shishicai/betmode/">淘宝模式</a>
+                </li>
+                <li  data-tag="mfc">
+                    <a href="/shishicai/betgame/">免费参考</a>
+                </li>
+                <li  data-tag="fxm">
+                    <a href="/shishicai/experience/">分享模式</a>
+                </li>
+                <li  data-tag="kjs">
+                    <a href="/shishicai/shipin/" class="redColor">开奖视频</a>
+                </li>
+                <li   data-tag="jq">
+                    <a href="/jiqiao/shishicai/">时时彩技巧</a>
+                </li>
+                <li   data-tag="lmt">
+                    <a href="/shishicai/twosidedstat/">两面数据统计</a>
+                </li>
+                <li  data-tag="yld">
+                    <a href="/shishicai/omitdata/">遗漏大数据</a>
+
+                </li>
+                <li    data-tag="tsxts">
+                    <a href="/shishicai/specialformdata/">特殊形态统计</a>
+                    <span class="wen_newIcon"></span>
+                </li>
+                <li  data-tag="dsz">
+                    <a href="/shishicai/bsoetrend/">单双大小走势图</a>
+                </li>
+                <li   data-tag="lrf">
+                    <a href="/shishicai/coldhotnumber/">冷热码分析</a>
+                </li>
+
+                <li  data-tag="sjyy" >
+                    <a href="http://www.1396app.com/promotiontopic?code=shishicai" target="_blank" class="sjyy" rel="nofollow">手机应用</a>
+                </li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+
+
+        <div style="clear: left; width: 100%; float: left;">
+        </div>
+
+        <script type="text/javascript">    var lotteryLuzhu = "";</script>
+
+
+        <div id="lot-wrap">
+
+            <input type="hidden" id="callFun" value="todaystatlist" time="2000" />
+
+
+            <div id="mobang" style="display: none">
+                <span id="sid{$index}" class="param"><span class="sparam1">参数设置{$index}：当数值为<input tty="0" type="text" style="width: 25px; margin: 0 5px 0 5px;" value="{$star}" id="star{$index}" pid="{$index}" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" maxlength="3" />至<input tty="0" type="text" style="width: 25px; margin: 0 5px 0 5px;" value="{$end}" id="end{$index}" pid="{$index}" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" maxlength="3" />时为</span><i class="{$bgcolor}"></i><span class="sparam2">色</span><a class="spanAdd2 sa2" pid="{$index}"></a></span>
+            </div>
+            <div id="colorSet">
+                <div class="content" style="padding-bottom: 5px; text-align: left"><b>使用说明：</b>提供号码当日的开出次数及近期未开次数，使用参数设置可自定义关注遗漏范围，请根据个人需要手动设置，各参数的数值可设置范围是：2-500。</div>
+                <p>
+                    <span id="sid1" class="param"><span class="sparam1">参数设置1：当数值为<input tty="0" style="width: 25px; margin: 0 5px 0 5px;" value="15" type="text" id="star1" pid="1" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" maxlength="3" />至<input tty="0" style="width: 25px; margin: 0 5px 0 5px;" value="100" type="text" id="end1" pid="1" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" maxlength="3" />时为</span><i class="color_red"></i><span class="sparam2">色</span><a id="spDel" class="spanAdd2 sa2" pid="1" style="display: none;"></a></span>
+                    <a id="spAdd" class="spanAdd2"></a>
+                    <input type="button" id="changedata" class="spanAdd" value="确认" />
+                </p>
+            </div>
+            <div class="clear"></div>
+
+
+            <div id="tblist">
+                <table class="lot-table">
+                    <tr class="head">
+                        <td colspan="3" style="width: 19%;">第一球</td>
+                        <td colspan="3" style="background-color: #fff; width: 19%;">第二球</td>
+                        <td colspan="3" style="width: 19%;">第三球</td>
+                        <td colspan="3" style="background-color: #fff; width: 19%;">第四球</td>
+                        <td colspan="3" style="width: 19%;">第五球</td>
+                    </tr>
+                    <tr class="head" style="font-weight: inherit;">
+                        <td style="background-color: #fff;">号码</td>
+                        <td style="background-color: #fff;">总开</td>
+                        <td style="background-color: #fff;">未开</td>
+                        <td style="background-color: #fff;">号码</td>
+                        <td style="background-color: #fff;">总开</td>
+                        <td style="background-color: #fff;">未开</td>
+                        <td style="background-color: #fff;">号码</td>
+                        <td style="background-color: #fff;">总开</td>
+                        <td style="background-color: #fff;">未开</td>
+                        <td style="background-color: #fff;">号码</td>
+                        <td style="background-color: #fff;">总开</td>
+                        <td style="background-color: #fff;">未开</td>
+                        <td style="background-color: #fff;">号码</td>
+                        <td style="background-color: #fff;">总开</td>
+                        <td style="background-color: #fff;">未开</td>
+                    </tr>
+                    <tr class="f14">
+
+                        <td style="height: 30px;" class="ball7">
+                            0
+                        </td>
+                        <td style="background: #fff;">
+                            8
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="0">
+                                0
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            0
+                        </td>
+                        <td style="background: #fff;">
+                            11
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="red" data="42">
+                                42
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            0
+                        </td>
+                        <td style="background: #fff;">
+                            10
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="1">
+                                1
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            0
+                        </td>
+                        <td style="background: #fff;">
+                            7
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="red" data="37">
+                                37
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            0
+                        </td>
+                        <td style="background: #fff;">
+                            9
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="11">
+                                11
+                            </span>
+                        </td>
+
+                    </tr>
+                    <tr class="f14">
+
+                        <td style="height: 30px;" class="ball7">
+                            1
+                        </td>
+                        <td style="background: #fff;">
+                            5
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="red" data="19">
+                                19
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            1
+                        </td>
+                        <td style="background: #fff;">
+                            9
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="2">
+                                2
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            1
+                        </td>
+                        <td style="background: #fff;">
+                            7
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="red" data="21">
+                                21
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            1
+                        </td>
+                        <td style="background: #fff;">
+                            13
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="11">
+                                11
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            1
+                        </td>
+                        <td style="background: #fff;">
+                            8
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="8">
+                                8
+                            </span>
+                        </td>
+
+                    </tr>
+                    <tr class="f14">
+
+                        <td style="height: 30px;" class="ball7">
+                            2
+                        </td>
+                        <td style="background: #fff;">
+                            10
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="2">
+                                2
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            2
+                        </td>
+                        <td style="background: #fff;">
+                            5
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="red" data="22">
+                                22
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            2
+                        </td>
+                        <td style="background: #fff;">
+                            15
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="red" data="16">
+                                16
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            2
+                        </td>
+                        <td style="background: #fff;">
+                            15
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="8">
+                                8
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            2
+                        </td>
+                        <td style="background: #fff;">
+                            11
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="13">
+                                13
+                            </span>
+                        </td>
+
+                    </tr>
+                    <tr class="f14">
+
+                        <td style="height: 30px;" class="ball7">
+                            3
+                        </td>
+                        <td style="background: #fff;">
+                            13
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="4">
+                                4
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            3
+                        </td>
+                        <td style="background: #fff;">
+                            13
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="red" data="26">
+                                26
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            3
+                        </td>
+                        <td style="background: #fff;">
+                            12
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="10">
+                                10
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            3
+                        </td>
+                        <td style="background: #fff;">
+                            10
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="1">
+                                1
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            3
+                        </td>
+                        <td style="background: #fff;">
+                            6
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="red" data="41">
+                                41
+                            </span>
+                        </td>
+
+                    </tr>
+                    <tr class="f14">
+
+                        <td style="height: 30px;" class="ball7">
+                            4
+                        </td>
+                        <td style="background: #fff;">
+                            8
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="9">
+                                9
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            4
+                        </td>
+                        <td style="background: #fff;">
+                            10
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="12">
+                                12
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            4
+                        </td>
+                        <td style="background: #fff;">
+                            10
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="0">
+                                0
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            4
+                        </td>
+                        <td style="background: #fff;">
+                            7
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="5">
+                                5
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            4
+                        </td>
+                        <td style="background: #fff;">
+                            11
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="0">
+                                0
+                            </span>
+                        </td>
+
+                    </tr>
+                    <tr class="f14">
+
+                        <td style="height: 30px;" class="ball7">
+                            5
+                        </td>
+                        <td style="background: #fff;">
+                            8
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="12">
+                                12
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            5
+                        </td>
+                        <td style="background: #fff;">
+                            13
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="7">
+                                7
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            5
+                        </td>
+                        <td style="background: #fff;">
+                            5
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="red" data="15">
+                                15
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            5
+                        </td>
+                        <td style="background: #fff;">
+                            4
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="10">
+                                10
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            5
+                        </td>
+                        <td style="background: #fff;">
+                            9
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="7">
+                                7
+                            </span>
+                        </td>
+
+                    </tr>
+                    <tr class="f14">
+
+                        <td style="height: 30px;" class="ball7">
+                            6
+                        </td>
+                        <td style="background: #fff;">
+                            12
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="red" data="28">
+                                28
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            6
+                        </td>
+                        <td style="background: #fff;">
+                            8
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="3">
+                                3
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            6
+                        </td>
+                        <td style="background: #fff;">
+                            10
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="5">
+                                5
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            6
+                        </td>
+                        <td style="background: #fff;">
+                            10
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="7">
+                                7
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            6
+                        </td>
+                        <td style="background: #fff;">
+                            14
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="1">
+                                1
+                            </span>
+                        </td>
+
+                    </tr>
+                    <tr class="f14">
+
+                        <td style="height: 30px;" class="ball7">
+                            7
+                        </td>
+                        <td style="background: #fff;">
+                            12
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="1">
+                                1
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            7
+                        </td>
+                        <td style="background: #fff;">
+                            6
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="0">
+                                0
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            7
+                        </td>
+                        <td style="background: #fff;">
+                            11
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="3">
+                                3
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            7
+                        </td>
+                        <td style="background: #fff;">
+                            13
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="4">
+                                4
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            7
+                        </td>
+                        <td style="background: #fff;">
+                            9
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="2">
+                                2
+                            </span>
+                        </td>
+
+                    </tr>
+                    <tr class="f14">
+
+                        <td style="height: 30px;" class="ball7">
+                            8
+                        </td>
+                        <td style="background: #fff;">
+                            10
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="10">
+                                10
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            8
+                        </td>
+                        <td style="background: #fff;">
+                            10
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="5">
+                                5
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            8
+                        </td>
+                        <td style="background: #fff;">
+                            8
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="9">
+                                9
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            8
+                        </td>
+                        <td style="background: #fff;">
+                            9
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="0">
+                                0
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            8
+                        </td>
+                        <td style="background: #fff;">
+                            7
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="9">
+                                9
+                            </span>
+                        </td>
+
+                    </tr>
+                    <tr class="f14">
+
+                        <td style="height: 30px;" class="ball7">
+                            9
+                        </td>
+                        <td style="background: #fff;">
+                            9
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="7">
+                                7
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            9
+                        </td>
+                        <td style="background: #fff;">
+                            10
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="10">
+                                10
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            9
+                        </td>
+                        <td style="background: #fff;">
+                            7
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="4">
+                                4
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            9
+                        </td>
+                        <td style="background: #fff;">
+                            7
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="3">
+                                3
+                            </span>
+                        </td>
+                        <td style="height: 30px;" class="ball7">
+                            9
+                        </td>
+                        <td style="background: #fff;">
+                            11
+                        </td>
+                        <td style="background: #fff;">
+                            <span class="span" data="4">
+                                4
+                            </span>
+                        </td>
+
+                    </tr>
+                </table>
+
+            </div>
+
+            <script type="text/javascript">
+                function todaystatlist() {
+                    $.get('/shishicai/_partialtodaystat', { code: "cqssc", t: Math.random() }, function (text) {
+                        $('#tblist').html(text);
+                        loadData();
+                    });
+                }
+
+            </script>
+
+        </div>
+        <div id="caishijie_cqssc_bottom" class="w980"></div>
+        <div id="caishijie_cqssc_bottom_lr" class="ad_small_banner_s"></div>
+
+    </div>
+</div>
+<div id="caishijie_pk10_left"></div>
+<div id="caishijie_pk10_right"></div>
+
+<div class="clear" style="height: 0px; font-size: 0px;"></div>
+<div style="width: 1000px; margin: 0 auto;">
+    <div id="caishijie_bottom" class="business"></div>
+
+    <div class="ad_small_banner" id="caishijie_bottom_leftright"></div>
+    <div  class="web_winner"><span>敬告用户：</span>除皇家产品外，本站所刊登广告的网站和内容一概与本站无关，用户须自行判断广告网站的真实性，由此所产生的后果本公司概不负责！</div>
+</div>
+<!--底部 start-->
+<div class="hj_public_foot">
+    <div class="hj_public_foot_d">
+
+        <div class="hj_public_foot_d1">
+            <div class="leftContent">
+                <i>皇家彩世界</i>
+                <div class="leftContent_d">
+                    <div class="lc_d">
+                        <span class="lc_name">關于我們：</span>
+                        <div class="lc_info">
+                            <a href="/official/193" rel="nofollow">免责声明</a>
+                            <a href="/official/194" rel="nofollow">法律声明</a>
+                            <a href="/help/" target="_blank">帮助中心</a>
+                        </div>
+                        <div class="hj_public_clearBoth"></div>
+                    </div>
+                    <div class="lc_d">
+                        <span class="lc_name">相關産品：</span>
+                        <div class="lc_info">
+                            <a href="/zhibo/" target="_blank">開獎直播</a>
+                            <a href="/software/" target="_blank">軟件中心</a>
+                            <a href="/map.html" target="_blank">網站地圖</a>
+                        </div>
+                        <div class="hj_public_clearBoth"></div>
+                    </div>
+
+                    <div class="lc_d">
+                        <span class="lc_name">交&nbsp;流&nbsp;群：</span>
+                        <div class="lc_info">
+                            <span>329235586</span>
+                            <span>220634190</span>
+                            <span>284202968</span>
+                            <span>98470270</span>
+                            <span>235983757<a href="http://shang.qq.com/wpa/qunwpa?idkey=87c5bcb73f504d114adcacdf867065d5f2fe749aae312b9b0a905e4956d6e3b0" rel="nofollow">加入</a></span>
+                        </div>
+                        <div class="hj_public_clearBoth"></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="hj_public_foot_d2">
+            <div class="leftContent">
+                <ul>
+                    <li>
+                        <span></span>
+                        <p>十六年專業保證</p>
+                    </li>
+                    <li>
+                        <span class="lc_span2"></span>
+                        <p>千余員工傾力奉獻</p>
+                    </li>
+                    <li>
+                        <span class="lc_span3"></span>
+                        <p>絕對精准數據獲取</p>
+                    </li>
+                    <li>
+                        <span class="lc_span4"></span>
+                        <p>尊貴品牌服務</p>
+                    </li>
+                </ul>
+                <div class="hj_public_clearBoth"></div>
+            </div>
+            <div class="foot_d2_content">
+                <div class="Contact">
+                    <div class="PhoneNumber">
+
+                        <p>國內: <span>400-654-9200</span></p>
+                        <p>境外: <span>00852-62104572</span></p>
+                    </div>
+                    <div class="time">
+                        <p>12小時尊貴服務</p>
+                        <p class="t_text">周一至周日: 9:30-凌晨02:00</p>
+                    </div>
+                </div>
+                <div class="rightContent">
+                    <a onclick="javascript:window.open('http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzkzODE3MTczOF8zNzU4NzBfNDAwNjU0OTIwMF8yXw', '_blank', 'height=502, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');" href="javascript:void(0);">
+
+
+                        <img src="//rescsj.56hx.com/themes/images/headfoot/hj_public_qq.jpg" alt="" />
+                    </a>
+                    <!-- BEGIN ProvideSupport.com Text Chat Link Code -->
+
+                    <!-- END ProvideSupport.com Text Chat Link Code -->
+                    <!-- WPA Button Begin -->
+                    <!-- WPA Button End -->
+                </div>
+            </div>
+        </div>
+
+        <div class="hj_public_clearBoth"></div>
+
+    </div>
+</div>
+
+
+<div class="web370_online">
+    <a onclick="javascript:window.open('http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzkzODE3MTczOF8zNzU4NzBfNDAwNjU0OTIwMF8yXw', '_blank', 'height=502, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');" class="web370_online_qq"  href="javascript:void(0);" ></a>
+    <a class="web370_online_fb userfeedback" href="javascript:void(0);" id="online_feedback_unlogin"></a>
+    <a class="web370_online_fb" href="/home/feedback" target="_blank" id="online_feedback_login" style="display:none"></a>
+</div>
+
+<script type="text/javascript" src="../../script/service.js"></script>
+<script type="text/javascript">
+    //是否存在 广告横幅 分左右两块
+    var adsplit = "csj_lot_cqssc_lotmenu_s_banner";
+    //左右漂浮广告
+    var leftright = "caishijie_pk10_left,caishijie_pk10_right";
+</script>
+<script  src="http://a.591dyd.com/service/adjs?codes=caishijie_lot_cqssc,csj_lot_cqssc_lotmenu_s_banner,caishijie_cqssc_bottom,caishijie_pk10_left,caishijie_pk10_right,caishijie_bottom,caishijie_logo_right,caishijie_cqssc_bottom_lr,caishijie_bottom_leftright&amp;format=html&amp;website=42&amp;jsoncallback=AddList"></script>
+
+
+<!--底部 end-->
+
+
+<script src="//rescsj.56hx.com/dialog/jquery.artDialog.min.js" type="text/javascript"></script><script src="../../script/lot/todaystat.js" type="text/javascript"></script><script src="../../script/lot/lotcommon.js" type="text/javascript"></script><script src="../../script/lot/warntime.js" type="text/javascript"></script><script src="../../script/lot/cqssc/award.js" type="text/javascript"></script>
+
+<div style="display: none;">
+    <script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODE3MTczOF8zNzY4MDNfNDAwNjU0OTIwMF8"></script>
+    <script src="http://s9.cnzz.com/stat.php?id=5418000&web_id=5418000&show=pic1" language="JavaScript"></script>
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?dad24abebba647625189f407f7103e48";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            if (top != self) {
+                $(".history_gg").show();
+            }
+            $(".top_warn .closeBtns").click(function () {
+                $(".top_warn").fadeOut(100);
+                $(".ydImg").css({ "top": "5px" });
+            })
+        });
+
+
+    </script>
+
+</div>
+<script type="text/javascript" src="../../script/fbloginframe.js?id=userfeedback&class=userfeedback"></script>
+
+</body>
+</html>
