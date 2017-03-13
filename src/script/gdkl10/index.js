@@ -5,11 +5,11 @@ console.log(host+pathname);
 
 var successFn = function(res){
     $('#lot-content').html(res);
-    $('.feedbackDiv').remove();
-    $('li[data-tag="zh"]').remove();
-    $('li[data-tag="tbm"]').remove();
-    $('li[data-tag="sjyy"]').remove();
-    $('li[data-tag="jq"]').remove();
+    // $('.feedbackDiv').remove();
+    // $('li[data-tag="zh"]').remove();
+    // $('li[data-tag="tbm"]').remove();
+    // $('li[data-tag="sjyy"]').remove();
+    // $('li[data-tag="jq"]').remove();
 }
 
 $.ajax({

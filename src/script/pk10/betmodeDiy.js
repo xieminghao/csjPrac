@@ -21,6 +21,11 @@ $.ajax({
 	success: function(res){
 		$('.lot-wrap').replaceWith(res);
 
+        // 阻止点击a标签跳转
+        $('#lot_content a').on('click',function(e){
+            e.preventDefault();
+        });
+
 	}
 });
 

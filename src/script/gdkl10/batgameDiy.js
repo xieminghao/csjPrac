@@ -21,53 +21,50 @@ $.ajax({
 	success: function(res){
 		$('.lot-wrap').replaceWith(res);
 
-		tick();
-        gethistoryandbetgame();
-        function gethistoryandbetgame(){
-            $.get('/pk10/gethistoryandbetgame', { count: 20, t: Math.random()}, function (result) {
-                // debugger;
-                // result = eval('(' + result + ')');
-                var htmlrs = "";
-                var table = '<table  class="lot-table">';
-                for (var j = 0; j < result.itemArray.length; j++) {
-                    htmlrs = appendTable(result.itemArray[j], "☆");
-                    if (htmlrs) {
-                        table += '<tr><td style="border-bottom:none;height:30px; background-color:#F0F0F0;">';
-                        table += htmlrs.head;
-                        table += '</td></tr><tr><td>';
-                        table += htmlrs.table;
-                        table += '</td></tr>';
+		$(function () {
+            tick();
+            $.get('/gdkl10/gethistoryandbetgame', { count: 20, t: Math.random() },
+                function (result) {
+                    var htmlrs = "";
+                    result = eval('(' + result + ')');
+                    var table = '<table  class="lot-table">';
+                    for (var j = 0; j < result.itemArray.length; j++) {
+                        htmlrs = appendTable(result.itemArray[j], "☆");
+                        if (htmlrs) {
+                            table += '<tr><td style="height:21px; background-color:#F0F0F0;border-bottom:none;">';
+                            table += htmlrs.head;
+                            table += '</td></tr><tr><td style="border:none;">';
+                            table += htmlrs.table;
+                            table += '</td></tr>';
+                        }
                     }
-                }
-                table += '</table>';
-                $("#historyBetGame").html(table);
-            },'json');
-        }
-
+                    table += '</table>';
+                    $("#historyBetGame").html(table);
+                });
+        });
 
         var pId = 0;
         var betCount = 0;
         var tickTimer = null;
 
-        function tick() {
-            $.get('/pk10/getcurrentbetgame', { t: Math.random() },
-            function (result) {
-                // result = eval('(' + result + ')');
-                var allBetCount = betCount;
-                var nPid = pId;
-                var htmlrs = appendTable(result.itemArray[0], "★");
-                $("#newBetGame").html(htmlrs.head);
-                $("#newBetGameData").html(htmlrs.table);
-                if (pId > 0 && (htmlrs.betCount != allBetCount || nPid != htmlrs.pId)) {
-                    //if ($('#soundCheckBox')[0].checked) PlaySound();
-                    allBetCount = htmlrs.betCount;
-                    nPid = htmlrs.pId;
+         function tick() {
+             $.get('/gdkl10/getcurrentbetgame', { t: Math.random() },
+                    function (result) {
+                        result = eval('(' + result + ')');
+                        var allBetCount = betCount;
+                        var nPid = pId;
+                        var htmlrs = appendTable(result.itemArray[0], "★");
+                        $("#newBetGame").html(htmlrs.head);
+                        $("#newBetGameData").html(htmlrs.table);
+                        if (pId > 0 && (htmlrs.betCount != allBetCount || nPid != htmlrs.pId)) {
+                            //if ($('#soundCheckBox')[0].checked) PlaySound();
+                            allBetCount = htmlrs.betCount;
+                            nPid = htmlrs.pId;
+                        }
+                        //if (tickTimer) clearTimeout(tickTimer);
+                        //tickTimer = setTimeout(tick, 20000);
+                    });
                 }
-                //if (tickTimer) clearTimeout(tickTimer);
-                //tickTimer = setTimeout(tick, 20000);
-            },'json');
-        }
-
 
         function PlaySound() {
             try {
@@ -116,7 +113,7 @@ $.ajax({
                 newTable = newTable + betData[i].name;
                 newTable = newTable + "</td>";
                 var tdCount = 0;
-                for (var j = 0; j < betData[i].data.length && j < 3; j++) {
+                for (var j = 0; j < betData[i].data.length; j++) {
                     tdCount = tdCount + 1;
                     allCount = allCount + 1;
 
