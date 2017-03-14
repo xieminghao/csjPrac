@@ -92,7 +92,7 @@ $.ajax({
                 var url = location.href;
                 $.post("/home/pailusetting", { enable: check }, function (result) {
                     //location.reload();
-
+                    setCookie('showPailu',check?'1':'0',5);
                     //由之前的post整个页面 变成局部更新
                     setPaiLu();
 
