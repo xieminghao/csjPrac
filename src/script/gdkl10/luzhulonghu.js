@@ -88,6 +88,8 @@ $.ajax({
         $('.lot-wrap').replaceWith(res);
         $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/navdrag.js',type:'text/javascript'}).appendTo($('body'));
          $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/lot/lotcommon.js',type:'text/javascript'}).appendTo($('body'));
+        $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/lot/gdkl10/award.js',type:'text/javascript'}).appendTo($('body'));
+
         $(function () {
             $(".show-bjl label").bind("click", function () {
                 $("#" + $(this).prev().attr("id")).click();
@@ -96,10 +98,11 @@ $.ajax({
             $("#ckb_pailu").bind("click", function () {
                 var check = $(this).hasClass("checked") ? false : true;
                 var selDate = $("#dateData").val();
-                var url = location.href;
+                var url = '/gdkl10/luzhulonghu/';
                 $.post("/home/pailusetting", { enable: check }, function (result) {
                     //location.reload();
 
+                    setCookie('showPailu',check?'1':'0',5);
                     //由之前的post整个页面 变成局部更新
                     setPaiLu();
 

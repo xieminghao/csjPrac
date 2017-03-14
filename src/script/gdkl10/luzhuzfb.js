@@ -37,9 +37,6 @@ function reloadLuzhu(url, date, unload) {
         $('#' + _container).css("position", "");
     });
 }
-
-
-
 var vAjax = Boolean("");
 function updatePickdate(dp) {
     var selDate = $("#dateData").val();
@@ -58,29 +55,15 @@ function updatePickdate(dp) {
 
     } else {
         if (dp.cal.date.d == (new Date()).getDate()) {
-            reloadLuzhu('/gdkl10/luzhutotal/', selDate, 0);
+            reloadLuzhu('/gdkl10/luzhuzfb/', selDate, 0);
         } else {
-            reloadLuzhu('/gdkl10/luzhutotal/', selDate, 1);
+            reloadLuzhu('/gdkl10/luzhuzfb/', selDate, 1);
         }
     }
 }
 function clearedDate() {
-    reloadLuzhu('/gdkl10/luzhutotal/', '', 0);
+    reloadLuzhu('/gdkl10/luzhuzfb/', '', 0);
 }
-
-
-function getPRData_1(){
-       return ["大","小","1,2,2,2,1,1,1,1,2,1,1,2,2,2,1,1,1,2,2,1,2,2,1,1,1,1,2,3,2,1,2,1,2,1,2,1,1,1,2,1,2,1,2,2,1,2,1,2,1,1,1,2,2,2,2,1,2,2,1,1,2,2,1,1,2,1,1,2,1,2,1,2,1"];
-}
-
-function getPRData_2(){
-       return ["单","双","1,1,2,1,1,2,2,2,1,2,2,1,2,1,2,1,1,1,2,2,2,2,1,2,2,2,2,1,1,1,1,1,1,2,1,1,2,1,2,2,2,2,1,1,2,1,2,2,2,1,2,1,1,1,2,1,1,2,1,2,2,1,2,1,2,1,2,2,2,1,2,2,2,1,1,1,1,2,1,1,1,2,1,1,1,1"];
-}
-function getPRData_3(){
-       return ["大","小","1,1,1,2,2,1,2,2,1,2,1,1,1,1,1,2,1,2,2,2,2,1,2,2,1,1,1,1,1,2,2,2,1,2,1,2,1,1,1,1,1,2,1,1,1,1,2,1,1,1,2,1,2,1,1,1,2,1,1,1,1,1,1,1,2,2,1,1,2,2,1,1,1,2,2,2,2,1,2,1,2,2,1,1,1,2,2,2,2,2,1,2,1,2,2,1"];
-}
-
-
 
 
 $.ajax({
@@ -91,54 +74,16 @@ $.ajax({
     success: function(res){
         $('.lot-wrap').replaceWith(res);
         $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/navdrag.js',type:'text/javascript'}).appendTo($('body'));
-         
-        $(function () {
-            $(".show-bjl label").bind("click", function () {
-                $("#" + $(this).prev().attr("id")).click();
-            });
+        $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/lot/lotcommon.js',type:'text/javascript'}).appendTo($('body'));
+        $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/lot/gdkl10/award.js',type:'text/javascript'}).appendTo($('body'));
 
-            $("#ckb_pailu").bind("click", function () {
-                var check = $(this).hasClass("checked") ? false : true;
-                var selDate = $("#dateData").val();
-                var url = '/gdkl10/luzhutotal/';
-                $.post("/home/pailusetting", { enable: check }, function (result) {
-                    //location.reload();
-                    setCookie('showPailu',check?'1':'0',5);
-                    //由之前的post整个页面 变成局部更新
-                    setPaiLu();
-
-                    var unload = "0";
-                    if (selDate != "" && new Date(selDate).getDate() == (new Date()).getDate()) {
-                        unload = "0";
-                    } else {
-                        unload = "1";
-                    }
-                    var vselectdate = $("#pageName").attr("selectdate");
-                    //冠亚和 路珠选择时间 单独处理(加载局部视图)
-                    if (vselectdate == "LuzhuSelectDate") {
-                        LuzhuDate(selDate, unload);
-                    } else {
-                        reloadLuzhu(url, selDate, unload);
-                    }
-                }, 'json');
-            });
-        });
-
-
-        
         $(function () {
             $("#dateData").val("");
         });
-
         $(function () {
-	        setLuzhuScroll();
-	    });
-
-
-
-
-
-
+            changeLuZhuBall();
+            setLuzhuScroll();
+        });
 
 
 
