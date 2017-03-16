@@ -109,7 +109,7 @@ $.ajax({
     url: host+pathname,
     data:{},
     datatype:'html',
-    type:'get',
+    type:'GET',
     success: function(res){
         $('.lot-wrap').replaceWith(res);
         $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/navdrag.js',type:'text/javascript'}).appendTo($('body'));

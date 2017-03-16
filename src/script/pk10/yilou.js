@@ -13,6 +13,8 @@ $.ajax({
     success: function(res){
         $('.lot-wrap').replaceWith(res);
         $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/navdrag.js',type:'text/javascript'}).appendTo($('body'));
+        $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/lot/lotcommon.js',type:'text/javascript'}).appendTo($('body'));
+        $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/lot/pk10/award.js',type:'text/javascript'}).appendTo($('body'));
         $(".web_Sortk .btn span").live("click", function () {
             $.get($(this).attr("data-url"), null, function (text) {
                 $('#lot_content').html(text);

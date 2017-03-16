@@ -3,24 +3,6 @@ var fixedMenu = $(".web_listOP");
 var lot_menu_x = 0;
 var lot_menu_y = 0;
 
-$(function () {
-    fixedMenu = $(".web_listOP");
-    lot_menu_x = fixedMenu.offset().left;
-    lot_menu_y = fixedMenu.offset().top;
-
-    $(window).resize(function () {
-        fixedMenu.removeAttr("style");
-        lot_menu_x = fixedMenu.offset().left;
-        lot_menu_y = fixedMenu.offset().top;
-    });
-
-    /*注册事件*/
-    if (document.addEventListener) {
-        document.addEventListener('DOMMouseScroll', scrollFunc, false);
-    }//W3C
-    window.onmousewheel = document.onmousewheel = scrollFunc;//IE/Opera/Chrome
-});
-
 var scrollFunc = function (e) {
     if (location.pathname.indexOf("nineplan") > 0) return;
     e = e || window.event;
@@ -48,6 +30,24 @@ var scrollFunc = function (e) {
         fixedMenu.find("ul").css({ "padding": "0 0 10px 0" });
     }
 }
+
+$(function () {
+    fixedMenu = $(".web_listOP");
+    lot_menu_x = fixedMenu.offset().left;
+    lot_menu_y = fixedMenu.offset().top;
+
+    $(window).resize(function () {
+        fixedMenu.removeAttr("style");
+        lot_menu_x = fixedMenu.offset().left;
+        lot_menu_y = fixedMenu.offset().top;
+    });
+
+    /*注册事件*/
+    if (document.addEventListener) {
+        document.addEventListener('DOMMouseScroll', scrollFunc, false);
+    }//W3C
+    window.onmousewheel = document.onmousewheel = scrollFunc;//IE/Opera/Chrome
+});
 
 //原来位置
 var menuPosition = [];

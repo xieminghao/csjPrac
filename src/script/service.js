@@ -203,7 +203,6 @@ if (document.cookie.match(new RegExp("(^| )HJMK=([^;]*)(;|$)")) != null) {
                     resetMenuPosition(menu_set.split("|"));
                 }
             }
-            console.log($("#online_feedback_unlogin").length);
             $("#online_feedback_unlogin").hide();
             $("#online_feedback_login").show();
         } else {
