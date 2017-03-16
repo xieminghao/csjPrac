@@ -1,6 +1,4 @@
-console.log('load common!');
 var HOST = 'http://120.76.188.66:8080';
-
 jQuery.extend({
     //HTTP get方法
     get: function (url, data, callback, type) {
@@ -38,5 +36,5 @@ jQuery.extend({
             success: callback,
             dataType: type
         });
-    },
+    }
 });
