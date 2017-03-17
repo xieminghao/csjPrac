@@ -10,9 +10,15 @@ $.ajax({
     datatype:'html',
     type:'get',
     success: function(res){
-        $('.lot-wrap').replaceWith(res);
+        //$('.lot-wrap').replaceWith(res);
+        $('.lot-wrap').append(res);
+
+        var iframeEle = $('<div style="padding:0px 10px 20px;clear:left;"><iframe width="1000" height="420" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="'+host+pathname+'/shipin/"></iframe><div>');
+        // iframeEle.attr('src','http://m.1399p.com/video/pk10');
+        $('#img-scroll').before(iframeEle);
+
         $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/navdrag.js',type:'text/javascript'}).appendTo($('body'));
-        document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?t=" + new Date().getHours();
+        //document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?t=" + new Date().getHours();
         $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/videomove.js',type:'text/javascript'}).appendTo($('body'));
         $(function () {
             $('.btn_share_html').click(function () {
