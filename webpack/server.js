@@ -34,55 +34,55 @@ var server = new WebpackDevServer(webpack(config), {
     historyApiFallback: true,
     quiet: true,
     stats: { colors: true },
-    // proxy: {
-    //     "/home/*": {
-    //         "target": {
-    //             "host": "120.76.188.66",
-    //             // "host": "10.3.208.224",
-    //             "protocol": 'http:',
-    //             "port": 8080
-    //             //"port": 8035
-    //         },
-    //         changeOrigin: true,
-    //         secure: false
-    //     },
-    //     "/shishicai/*": {
-    //         "target": {
-    //             "host": "120.76.188.66",
-    //             "protocol": 'http:',
-    //             "port": 8080
-    //         },
-    //         changeOrigin: true,
-    //         secure: false
-    //     },
-    //     // "/pk10/*": {
-    //     //     "target": {
-    //     //         "host": "120.76.188.66",
-    //     //         "protocol": 'http:',
-    //     //         "port": 8080
-    //     //     },
-    //     //     changeOrigin: true,
-    //     //     secure: false
-    //     // },
-    //     "/gdkl10/*": {
-    //         "target": {
-    //             "host": "120.76.188.66",
-    //             "protocol": 'http:',
-    //             "port": 8080
-    //         },
-    //         changeOrigin: true,
-    //         secure: false
-    //     },
-    //     "/*/ajax": {
-    //         "target": {
-    //             "host": "120.76.188.66",
-    //             "protocol": 'http:',
-    //             "port": 8080
-    //         },
-    //         changeOrigin: true,
-    //         secure: false
-    //     },
-    // }
+     //proxy: {
+     //    "/home/*": {
+     //        "target": {
+     //            "host": "120.76.188.66",
+     //            // "host": "10.3.208.224",
+     //            "protocol": 'http:',
+     //            "port": 8080
+     //            //"port": 8035
+     //        },
+     //        changeOrigin: true,
+     //        secure: false
+     //    },
+     //    "/shishicai/*": {
+     //        "target": {
+     //            "host": "120.76.188.66",
+     //            "protocol": 'http:',
+     //            "port": 8080
+     //        },
+     //        changeOrigin: true,
+     //        secure: false
+     //    },
+     //     "/pk10/luzhulonghu/": {
+     //         "target": {
+     //             "host": "120.76.188.66",
+     //             "protocol": 'http:',
+     //             "port": 8080
+     //         },
+     //         changeOrigin: true,
+     //         secure: false
+     //     },
+     //    "/gdkl10/*": {
+     //        "target": {
+     //            "host": "120.76.188.66",
+     //            "protocol": 'http:',
+     //            "port": 8080
+     //        },
+     //        changeOrigin: true,
+     //        secure: false
+     //    },
+     //    "/*/ajax": {
+     //        "target": {
+     //            "host": "120.76.188.66",
+     //            "protocol": 'http:',
+     //            "port": 8080
+     //        },
+     //        changeOrigin: true,
+     //        secure: false
+     //    },
+     //}
 });
 
 server.listen(_config.port, function() {
