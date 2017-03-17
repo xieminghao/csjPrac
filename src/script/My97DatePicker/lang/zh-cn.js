@@ -1,6 +1,3 @@
-/**
- * Created by liutongwang on 2017/3/5.
- */
 var $lang={
     errAlertMsg: "\u4E0D\u5408\u6CD5\u7684\u65E5\u671F\u683C\u5F0F\u6216\u8005\u65E5\u671F\u8D85\u51FA\u9650\u5B9A\u8303\u56F4,\u9700\u8981\u64A4\u9500\u5417?",
     aWeekStr: ["\u5468","\u65E5","\u4E00","\u4E8C","\u4E09","\u56DB","\u4E94","\u516D"],

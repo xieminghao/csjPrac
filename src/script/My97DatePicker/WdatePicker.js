@@ -1,6 +1,3 @@
-/**
- * Created by liutongwang on 2017/3/5.
- */
 /*
  * My97 DatePicker 4.8 Beta4
  * License: http://www.my97.net/dp/license.asp

@@ -1,6 +1,3 @@
-/**
- * Created by liutongwang on 2017/3/7.
- */
 $(function () {
     var selDate = $("#dateData").val();
     if (selDate) {
