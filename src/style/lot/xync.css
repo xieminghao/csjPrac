@@ -1,0 +1,302 @@
+.lot-nums {
+    border: solid 1px #f2dcaf;
+    padding-top: 5px;
+    padding-left: 5px;
+    clear: both;
+    width: 338px;
+    background-color: #fff;
+    height: 32px;
+}
+
+.lot-nums span {
+    background: url(/images/lucky_ball.png) no-repeat;
+    width: 32px;
+    height: 32px;
+    float: left;
+    padding-right: 10px;
+}
+
+.nums {
+    width: 480px;
+}
+
+.nums i {
+    background: url(/images/lucky_ball.png) no-repeat;
+    width: 32px;
+    height: 32px;
+    float: left;
+    margin-left: 24px;
+}
+
+.shade i {
+    background: url(/images/lucky_ball-shade.png) no-repeat;
+}
+
+
+.noshade {
+    background: url(/images/lucky_ball.png) no-repeat !important;
+}
+
+
+.lot-nums .no01,
+.lot-table .lot-no01 {
+    background-position: 0px 0px !important;
+}
+
+.lot-nums .no02,
+.lot-table .lot-no02 {
+    background-position: 0px -34px !important;
+}
+
+.lot-nums .no03,
+.lot-table .lot-no03 {
+    background-position: 0px -66px !important;
+}
+
+.lot-nums .no04,
+.lot-table .lot-no04 {
+    background-position: 0px -99px !important;
+}
+
+.lot-nums .no05,
+.lot-table .lot-no05 {
+    background-position: 0px -134px !important;
+}
+
+.lot-nums .no06,
+.lot-table .lot-no06 {
+    background-position: 0px -165px !important;
+}
+
+.lot-nums .no07,
+.lot-table .lot-no07 {
+    background-position: 0px -198px !important;
+}
+
+.lot-nums .no08,
+.lot-table .lot-no08 {
+    background-position: 0px -234px !important;
+}
+
+.lot-nums .no09,
+.lot-table .lot-no09 {
+    background-position: 0px -264px !important;
+}
+
+.lot-nums .no10,
+.lot-table .lot-no10 {
+    background-position: 0px -296px !important;
+}
+
+.lot-nums .no11,
+.lot-table .lot-no11 {
+    background-position: 0px -331px !important;
+}
+
+.lot-nums .no12,
+.lot-table .lot-no12 {
+    background-position: 0px -365px !important;
+}
+
+.lot-nums .no13,
+.lot-table .lot-no13 {
+    background-position: 0px -396px !important;
+}
+
+.lot-nums .no14,
+.lot-table .lot-no14 {
+    background-position: 0px -429px !important;
+}
+
+.lot-nums .no15,
+.lot-table .lot-no15 {
+    background-position: 0px -462px !important;
+}
+
+.lot-nums .no16,
+.lot-table .lot-no16 {
+    background-position: 0px -494px !important;
+}
+
+.lot-nums .no17,
+.lot-table .lot-no17 {
+    background-position: 0px -529px !important;
+}
+
+.lot-nums .no18,
+.lot-table .lot-no18 {
+    background-position: 0px -561px !important;
+}
+
+.lot-nums .no19,
+.lot-table .lot-no19 {
+    background-position: 0px -594px !important;
+}
+
+.lot-nums .no20,
+.lot-table .lot-no20 {
+    background-position: 0px -627px !important;
+}
+
+.wd-65 {
+    width: 65px;
+}
+
+.lot-table .ptable {
+    width: 60%;
+    border: none;
+    margin: 0 auto;
+}
+
+.lot-table .ptable .td1 {
+    border: none;
+    width: 40%;
+    text-align: center;
+}
+
+.lot-table .ptable .td2 {
+    border: none;
+    text-align: right;
+}
+
+.lot-table .betgame-title {
+    text-align: left;
+    background-color: #F0F0F0;
+    padding-left: 13px;
+}
+
+.lot-table .betgame-td2 {
+    height: 21px;
+    background-color: #F0F0F0;
+    border-top: none;
+}
+
+.lot-table .betgame-td3 {
+    width: 174px;
+    height: 29px;
+    line-height: 24px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+/*今日号码统计开始*/
+/*参数设置*/
+#colorSet {
+    float: left;
+    padding: 0 0 10px 0;
+}
+
+#colorSet .param {
+    float: left;
+    display: block;
+    padding: 3px 10px 0 0;
+}
+
+#colorSet .sparam1 {
+    float: left;
+    display: block;
+    padding: 2px 3px 0 0;
+}
+
+#colorSet .sparam2 {
+    width: 15px;
+    float: left;
+    display: block;
+    line-height: 18px;
+    padding: 2px 0 0 3px;
+    margin-top: 3px\9;
+}
+
+#colorSet .span {
+    float: left;
+    display: block;
+    height: 23px;
+    /*background: #eee;
+    border: 1px solid #b6b6b6;*/
+    cursor: pointer;
+    padding: 0 2px 0 2px;
+    padding: 0px\9;
+    margin-left: 2px;
+    margin-top: 2px\9;
+}
+
+#colorSet .spanAdd {
+    float: left;
+    display: block;
+    /* width: 40px; */
+    height: 23px;
+    /*background: #eee;
+    border: 1px solid #b6b6b6;*/
+    cursor: pointer;
+    padding: 0 5px 0 5px;
+    margin-left: 1px;
+    margin-top: 3px;
+    margin-top: 5px\9;
+}
+#colorSet .spanAdd2{
+    float: left;
+    display: block;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    margin: 5px 13px 0px 0px;
+    margin-top:7px\9;
+    background: url("/images/stat/spanAdd.png") no-repeat 0px 0px;
+}
+#colorSet .spanAdd2.sa2{
+    margin: 2px 0px 0px 13px;
+    margin-top:5px\9;
+    background: url("/images/stat/spanAdd.png") no-repeat 0px -19px;
+}
+#colorSet .color_red {
+    background-color: red;
+    width: 7px;
+    height: 13px;
+    display: block;
+    float: left;
+    margin-top: 5px;
+    margin-top: 6px\9;
+    font-size: 0px;
+}
+
+#colorSet .color_blue {
+    background-color: blue;
+    width: 7px;
+    height: 13px;
+    display: block;
+    float: left;
+    margin-top: 5px;
+    margin-top: 6px\9;
+    font-size: 0px;
+}
+
+#colorSet .color_green {
+    background-color: green;
+    width: 7px;
+    height: 13px;
+    display: block;
+    float: left;
+    margin-top: 5px;
+    margin-top: 6px\9;
+    font-size: 0px;
+}
+
+.lot-table .span {
+    color: #1d1d1d;
+}
+
+.lot-table .red {
+    color: red;
+    font-weight: bold;
+}
+
+.lot-table .blue {
+    color: blue;
+    font-weight: bold;
+}
+
+.lot-table .green {
+    color: green;
+    font-weight: bold;
+}
+/*今日号码统计结束*/
