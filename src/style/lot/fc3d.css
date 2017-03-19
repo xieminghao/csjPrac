@@ -1,0 +1,393 @@
+﻿v\:line {
+    behavior: url(#default#VML);
+    position: absolute;
+}
+
+v\:* {
+    behavior: url(#default#VML);
+    position: absolute;
+}
+
+#canvas v\:line {
+    padding: auto !important;
+    margin: auto !important;
+}
+
+.lot-nums {
+    border: solid 1px #f2dcaf;
+    padding-top: 5px;
+    padding-left: 15px;
+    clear: both;
+    width: 338px;
+    background-color: #fff;
+    height: 32px;
+}
+
+    .lot-nums span {
+        background: url(../../images/index-ico.png) -10px -414px no-repeat;
+        width: 28px;
+        height: 28px;
+        float: left;
+        margin-right: 6px;
+        margin-left: 6px;
+        font-family: Tahoma;
+        line-height: 28px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+.nums span {
+    float: left;
+    width: 10%;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 35px;
+    margin: 0px 9px;
+    font-family: Arial, '宋体', '黑体', Verdana, Geneva, sans-serif;
+}
+
+.nums {
+    width: 300px;
+    padding-left: 150px;
+}
+
+    .nums i {
+        width: 32px;
+        height: 32px;
+        float: left;
+        padding-right: 4px;
+        padding-left: 5px;
+    }
+
+.lot-table .no1 {
+    color: #FF0000;
+}
+
+.lot-table .no2 {
+    color: #5200FF;
+}
+
+.lot-table .no3 {
+    color: #760000;
+}
+
+.lot-table .no6 {
+    color: #6F8A97;
+}
+
+.betgame-num div {
+    padding: 0px 6px;
+    float: left;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.lot-table .betgame-title {
+    text-align: left;
+    background-color: #F0F0F0;
+    padding-left: 13px;
+}
+
+.lot-table .betgame-td2 {
+    height: 21px;
+    background-color: #F0F0F0;
+    border-top: none;
+}
+
+.lot-table .betgame-td3 {
+    width: 174px;
+    height: 29px;
+    line-height: 24px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+
+/***************************************************************走势***********************************************************/
+.web_contentColorSpeed {
+    width: 1000px;
+    font-family: Tahoma;
+    color: #333;
+}
+
+    .web_contentColorSpeed .web_colorSpeedMap {
+        font-size: 12px;
+        text-align: center;
+        border-collapse: collapse;
+    }
+
+        .web_contentColorSpeed .web_colorSpeedMap .web_colorSpeedProgressBar {
+            width: 10px;
+            margin: 0 auto;
+            display: inline-block;
+            background: url(../../images/ecp_progressBar.jpg) repeat-y bottom;
+            font-size: 0;
+        }
+
+        .web_contentColorSpeed .web_colorSpeedMap .questionMark_text {
+            display: inline-block;
+        }
+
+        .web_contentColorSpeed .web_colorSpeedMap .questionMark_icon {
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            position: absolute;
+            cursor: pointer;
+            margin-top: 2px;
+            *margin-top: 1px;
+            font-size: 0px;
+            z-index: 2;
+            background: url(../../images/questionMark.png) no-repeat 0 0;
+        }
+
+            .web_contentColorSpeed .web_colorSpeedMap .questionMark_icon:hover {
+                background: url(../../images/questionMark.png) no-repeat 0 -12px;
+            }
+
+        .web_contentColorSpeed .web_colorSpeedMap td {
+            border: 1px solid #ccc;
+        }
+
+        .web_contentColorSpeed .web_colorSpeedMap .web_colorSpeedBackGround1 {
+            background-color: #f2f2f2;
+        }
+
+        .web_contentColorSpeed .web_colorSpeedMap .web_colorSpeedBackGroundBlueFont {
+            color: #81abd9;
+            font-weight: bold;
+        }
+
+        .web_contentColorSpeed .web_colorSpeedMap .web_colorSpeedBackGroundRedFont {
+            color: #eda0a3;
+            font-weight: bold;
+        }
+
+        .web_contentColorSpeed .web_colorSpeedMap .web_colorSpeedBackGroundBlue {
+            background-color: #e5effa;
+        }
+
+        .web_contentColorSpeed .web_colorSpeedMap .web_colorSpeedBackGroundBlue_hover {
+            background-color: #588dc8;
+            color: #fff;
+        }
+
+        .web_contentColorSpeed .web_colorSpeedMap .web_colorSpeedBackGroundRed {
+            background-color: #fff5f6;
+        }
+
+        .web_contentColorSpeed .web_colorSpeedMap .web_colorSpeedBackGroundRed_hover {
+            background-color: #e61d25;
+            color: #fff;
+        }
+
+.web_colorSpeedBackGround2_tr2 .web_colorSpeedBackGroundRed, .web_colorSpeedBackGround2_tr2 .web_colorSpeedBackGroundBlue {
+    width: 25px;
+}
+
+.web_colorSpeedBackGround2_tr3 td {
+    width: 28px;
+}
+.web_contentColorSpeed .web_colorSpeedMap .awardFont span{
+  display:inline-block;
+  margin-right:5px;
+}
+.web_contentColorSpeed .web_colorSpeedMap  .awardFont .redFont {
+  color: #f71920;
+}
+
+.web_contentColorSpeed .web_colorSpeedMap .web_colorSpeedBackGroundBlueBall {
+    background-image: url("../../images/web_colorSpeedBall_01.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-weight: bold;
+    color: #fff;
+}
+
+.web_contentColorSpeed .web_colorSpeedMap .web_colorSpeedBackGroundRedBall {
+    background-image: url("../../images/web_colorSpeedBall_02.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-weight: bold;
+    color: #fff;
+}
+
+.web_contentColorSpeed .web_colorSpeedMap .web_colorSpeedBackGroundChBall {
+    background-image: url("../../images/web_colorSpeedBall_ch.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-weight: bold;
+    color: #fff;
+}
+
+.web_contentColorSpeed .web_colorSpeedMap .web_colorSpeedBackGroundBhBall {
+    background-image: url("../../images/web_colorSpeedBall_bh.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-weight: bold;
+    color: #fff;
+}
+
+.web_contentColorSpeed .web_colorSpeedMap .web_colorSpeedBackGroundCh {
+    background-color: #009b9d;
+    color: #fff;
+}
+
+.web_contentColorSpeed .web_colorSpeedMap .web_colorSpeedBackGroundBh {
+    background-color: #d616d5;
+    color: #fff;
+}
+
+.web_contentColorSpeed .web_colorSpeedMap .web_colorSpeedBackGround2_tr td {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+.web_contentColorSpeed .web_colorSpeedMap .web_colorSpeedBackGround2_tr .web_colorSpeedSmallFont {
+    font-weight: normal;
+}
+
+.web_contentColorSpeed .web_colorSpeedMap .web_colorSpeedBackGround2_tr .web_colorSpeedHuise {
+    background-color: #f2f2f2;
+}
+
+.web_contentColorSpeed .web_colorSpeedMap .web_colorSpeedMap_fontSize14 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.web_contentColorSpeed .web_colorSpeedMap .web_colorSpeedBackGround2_tr2 td {
+    padding: 6px 0 6px 0;
+}
+
+.web_contentColorSpeed .web_colorSpeedMap .web_colorSpeedBackGround2_tr3 td {
+    padding: 6px 0 6px 0;
+}
+
+.checkboxSpan1 {
+    display: block;
+    float: left;
+    padding-top: 2px;
+    padding-right: 5px;
+    position: relative;
+    padding-left: 16px;
+}
+
+.checkboxSpan2 {
+    display: block;
+    float: left;
+    padding-right: 15px;
+    cursor:pointer;
+}
+
+.checkboxSpan1 input {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    top: 1px;
+    *top: -4px;
+    left: 0px;
+    cursor:pointer;
+}
+
+.linkBtns {
+    padding: 3px 6px;
+    border: 1px solid #dedede;
+    text-align: center;
+    margin: 0 10px 0 0;
+    display: inline-block;
+}
+
+    .linkBtns:hover {
+        border: 1px solid #d15d00;
+        background-color: #feffef;
+        color: #d15d00;
+    }
+
+.linkBtns_hover {
+    border: 1px solid #d15d00;
+    background-color: #feffef;
+    color: #d15d00;
+}
+
+.web_colorSpeedLeftDiv {
+    float: left;
+    font-size: 12px;
+    padding: 4px 0 0 0;
+}
+
+    .web_colorSpeedLeftDiv li {
+        float: left;
+        display: block;
+    }
+
+.web_colorSpeedRightDiv {
+    float: right;
+    font-size: 12px;
+    height: 30px;
+}
+
+    .web_colorSpeedRightDiv li {
+        float: left;
+        display: block;
+    }
+
+.web_contentColorSpeed .web_colorSpeedMap .ecp_IS3_BGColor9999CC {
+    background-color: #99c;
+    color: #cfcfff;
+}
+/*********期号排序箭头**********/
+.iconJT {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 15px 0 0;
+    background: url(../../images/ecp_dataMapjt.gif) no-repeat right center;
+}
+
+.iconJB {
+    display: inline-block;
+    padding: 0 15px 0 0;
+    background: url(../../images/ecp_dataMapjb.gif) no-repeat right center;
+    cursor: pointer;
+}
+
+
+/*********帮助  弹层**********/
+.questionMark_infoDiv {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1000005;
+}
+
+    .questionMark_infoDiv .questionMark_info {
+        width: 254px;
+        padding: 7px 14px;
+        border: 1px solid #ccc;
+        background-color: #f8f8f8;
+        color: #666;
+        line-height: 18px;
+        text-align: left;
+        position: relative;
+        left: -57px;
+        bottom: 15px;
+        *bottom: 10px!important;
+        display: block;
+        z-index: 99999;
+    }
+
+        .questionMark_infoDiv .questionMark_info .ecp_QMBoderTriangle {
+            position: absolute;
+            bottom: -5px;
+            _bottom: -5px;
+            *bottom: -5px!important;
+            left: 52px;
+            display: block;
+            width: 9px;
+            height: 6px;
+            background: url(../../images/ecp_QMBoderTriangle.png) no-repeat center;
+            font-size: 0px;
+        }
