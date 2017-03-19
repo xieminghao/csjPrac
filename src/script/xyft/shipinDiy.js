@@ -1,7 +1,7 @@
 // 每个页面值调用一次的请求根据页面的location来判断请求的接口
 var host = 'http://120.76.188.66:8080'
 var pathname = location.pathname.replace('index.html','');
-var lotMenu = 'xyft_memu';
+var lotMenu = 'gd11x5_memu';
 var lotteryLuzhu = "";
 
 
@@ -42,7 +42,7 @@ $.ajax({
                 }
             });
 
-            var vLottery = "xyft";
+            var vLottery = "gd11x5";
             $("#" + vLottery).remove();
 
             if ("pk10" != vLottery) {
