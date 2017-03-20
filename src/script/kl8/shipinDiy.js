@@ -1,10 +1,27 @@
 // 每个页面值调用一次的请求根据页面的location来判断请求的接口
 var host = 'http://120.76.188.66:8080'
 var pathname = location.pathname.replace('index.html','');
-var lotMenu = 'pl3_memu';
+var lotMenu = 'kl8_memu';
 var lotteryLuzhu = "";
+// console.log(host+pathname);
+
+// var successFn = function(res){
+// 	// console.log(res);
+// 	if(pathname == '/pk10/'){
+// 		$('#lot-content').html(res);
+// 	} else {
+// 		// var x = res.match(/<script[\s\S]*?\/script>/g);
+// 		// console.log(x);
+// 		$('.lot-wrap').replaceWith(res);
+// 	}
+
+// 	$('.feedbackDiv').remove();
+// 	$('li[data-tag="zh"]').remove();
+// 	$('li[data-tag="tbm"]').remove();
+// 	$('li[data-tag="sjyy"]').remove();
 
 
+// }
 
 $.ajax({
 	// url: 'http://120.76.188.66:8080/pk10/',
@@ -21,7 +38,7 @@ $.ajax({
 
         $(function () {
             $('.btn_share_html').click(function () {
-                $('#copyInput').val('<iframe src="http://www.1395p.com/pl3/shipin/?mode=iframe" width="980" height="630" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>');
+                $('#copyInput').val('<iframe src="http://www.1395p.com/kl8/shipin/?mode=iframe" width="980" height="700" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>');
                 $('#copyInput').select();
                 try {
                     window.clipboardData.setData('Text', $('#copyInput').val());
@@ -32,7 +49,7 @@ $.ajax({
             });
             
             $('.btn_share_url').click(function () {
-                $('#copyInput').val('http://www.1395p.com/pl3/shipin/');
+                $('#copyInput').val('http://www.1395p.com/kl8/shipin/');
                 $('#copyInput').select();
                 try {
                     window.clipboardData.setData('Text', $('#copyInput').val());
@@ -42,7 +59,7 @@ $.ajax({
                 }
             });
 
-            var vLottery = "pl3";
+            var vLottery = "kl8";
             $("#" + vLottery).remove();
 
             if ("pk10" != vLottery) {
@@ -104,7 +121,6 @@ $.ajax({
                }
              )
         });
-
 
 	}
 });

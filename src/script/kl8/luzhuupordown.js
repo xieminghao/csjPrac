@@ -1,11 +1,8 @@
 // 每个页面值调用一次的请求根据页面的location来判断请求的接口
 var host = 'http://120.76.188.66:8080'
 var pathname = location.pathname.replace('index.html','');
-var lotMenu = 'pl3_memu';
-var lotteryLuzhu = false;
-
-
-
+var lotMenu = 'kl8_memu';
+var lotteryLuzhu = "";
 /*设置牌路*/
 function setPaiLu() {
     var isshow = getCookie("showPailu");
@@ -38,16 +35,33 @@ function reloadLuzhu(url, date, unload) {
     });
 }
 
+var vAjax = Boolean("");
+function updatePickdate(dp) {
+    var selDate = $("#dateData").val();
 
+    setPaiLu();
 
-function getPRData_1(){
-               return ["大","小","1,2,2,2,1,1,2,1,1,2,2,2,1,2,2,2,1,2,1,1,2,2,2,1,1,2,2,1,1,2,1,1,1,1,1,1,2,1,1,2,2,1,2,2,1,2,1,2,1,1,1,1,2,2,2,1,1,1,1,2,2,1,1,2,2,1,2,2,1,2,2,1,2,2,2,1,1,1,1,1,2,2,1,2,2,1,2,1,1"];
+    if (true == vAjax) {
+        var unload = "0";
+        if (dp.cal.date.d == (new Date()).getDate()) {
+            unload = "0";
+        } else {
+            unload = "1";
         }
-function getPRData_2(){
-               return ["单","双","1,2,1,2,2,2,1,1,1,2,2,1,1,2,2,1,1,2,1,1,1,1,2,2,2,2,2,2,2,1,2,1,1,2,2,1,2,1,2,1,2,1,1,2,2,2,1,1,1,1,2,1,1,2,1,2,1,1,1,1,1,2,2,1,2,1,1,1,2,2,2,1,2,1,1,2,2,2,1,2,1,1,2,1"];
+        //冠亚和 路珠选择时间 单独处理(加载局部视图)
+        LuzhuDate(selDate, unload);
+
+    } else {
+        if (dp.cal.date.d == (new Date()).getDate()) {
+            reloadLuzhu('/kl8/luzhuupordown/', selDate, 0);
+        } else {
+            reloadLuzhu('/kl8/luzhuupordown/', selDate, 1);
         }
-
-
+    }
+}
+function clearedDate() {
+    reloadLuzhu('/kl8/luzhuupordown/', '', 0);
+}
 
 
 
@@ -63,41 +77,13 @@ $.ajax({
         $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/navdrag.js',type:'text/javascript'}).appendTo($('body'));
          
         $(function () {
-            $(".show-bjl label").bind("click", function () {
-                $("#" + $(this).prev().attr("id")).click();
-            });
-
-            $("#ckb_pailu").bind("click", function () {
-                var check = $(this).hasClass("checked") ? false : true;
-                var selDate = $("#dateData").val();
-                var url = '/pl3/luzhutotal/';
-                $.post("/home/pailusetting", { enable: check }, function (result) {
-                    //location.reload();
-                    setCookie('showPailu',check?'1':'0',5);
-                    //由之前的post整个页面 变成局部更新
-                    setPaiLu();
-
-                    var unload = "0";
-                    if (selDate != "" && new Date(selDate).getDate() == (new Date()).getDate()) {
-                        unload = "0";
-                    } else {
-                        unload = "1";
-                    }
-                    var vselectdate = $("#pageName").attr("selectdate");
-                    //冠亚和 路珠选择时间 单独处理(加载局部视图)
-                    if (vselectdate == "LuzhuSelectDate") {
-                        LuzhuDate(selDate, unload);
-                    } else {
-                        reloadLuzhu(url, selDate, unload);
-                    }
-                }, 'json');
-            });
+            $("#dateData").val("");
         });
-
 
         $(function () {
             setLuzhuScroll();
         });
+
 
 
     }
