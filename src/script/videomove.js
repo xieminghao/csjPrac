@@ -122,7 +122,8 @@ function showTime(page, timeSpan, time) {
 }
 function CheckAward(page, method, downTimer, number, timeSpan) {
     window.clearInterval(downTimer);
-    $.post("/" + page + "/ajax", { ajaxhandler: method }, function (data) {
+    $.get("/" + page + "/ajax", { ajaxhandler: method }, function (data) {
+        //alert('data:', JSON.stringify(data));
         if (data.current.periodNumber != number) {
             var time = parseInt(data.next.awardTimeInterval / 1000) + 3;
             downTimer = window.setInterval(function () {
