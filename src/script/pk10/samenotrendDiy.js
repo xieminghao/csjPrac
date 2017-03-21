@@ -1,11 +1,15 @@
 // 每个页面值调用一次的请求根据页面的location来判断请求的接口
 var host = 'http://120.76.188.66:8080'
 var pathname = location.pathname.replace('index.html','');
+var lotMenu = '';
 var lotteryLuzhu = "";
-// console.log(host+pathname);
-
-
-
+var vdraw = 0;
+var bflag = false;
+function drawTrend() {
+    vdraw += 1;
+    bflag = true;
+    $("#periodInfo").val(vdraw);
+}
 $.ajax({
 	// url: 'http://120.76.188.66:8080/pk10/',
 	url: host+pathname,
@@ -155,14 +159,6 @@ $.ajax({
 
         })
     });
-    var vdraw = 0;
-    var bflag = false;
-    function drawTrend() {
-        vdraw += 1;
-        bflag = true;
-        $("#periodInfo").val(vdraw);
-    }
-
 	}
 });
 

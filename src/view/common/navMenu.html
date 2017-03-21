@@ -5,25 +5,25 @@
             <a href="/" id="nav01" >首页</a>
         </li>
         <li style="position: relative;" id="cpdtshow">
-            <a href="/pk10/" class=cur>彩票大厅 </a>
+            <a href="/pk10/" class=cur id="nav02">彩票大厅 </a>
             <span class="web_colorSpeedArrow"><i class="web_colorSpeedDownJt"></i></span>
         </li>
         <li style="position: relative; z-index: 999;">
-            <a href="/changlong/"  target="_blank">长龙统计</a>
+            <a href="/changlong/"  target="_blank" id="nav03">长龙统计</a>
             <img src="/images/stat/newicon03.png" style="position: absolute;right: 5px;top: 4px;" />
         </li>
-        <li><a href="/pk10/positiontrend"  target="_blank">走势图</a>
+        <li><a href="/pk10/positiontrend"  target="_blank" id="nav04">走势图</a>
         </li>
-        <!-- <li style="position: relative; z-index: 999;"  id="planshow">
-            <a href="/pk10/numberplan"  target="_blank">推荐计划</a>
-            <span class="web_colorSpeedArrow"><i class="web_colorSpeedDownJt"></i></span>
-        </li> -->
+        <!--<li style="position: relative; z-index: 999;"  id="planshow">-->
+            <!--<a href="/pk10/numberplan"  target="_blank" id="nav05">推荐计划</a>-->
+            <!--<span class="web_colorSpeedArrow"><i class="web_colorSpeedDownJt"></i></span>-->
+        <!--</li>-->
         <li>
-            <a href="/zhibo/" >开奖直播</a>
+            <a href="/zhibo/" id="nav06">开奖直播</a>
         </li>
 
         <li>
-            <a href="http://www.1396mm.com" rel="nofollow" target="_blank" rel="nofollow">博世界</a>
+            <a href="http://www.1396mm.com" rel="nofollow" target="_blank" rel="nofollow" id="nav07">博世界</a>
         </li>
         <!-- <li style="position: relative; z-index: 999;" id="navklc">
             <img src="/images/stat/newicon02.png" style="position: absolute;right: 7px;top: 4px;" />
@@ -195,3 +195,65 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    var pathname = location.pathname;
+    var $nav01 = $('#nav01');
+    var $nav02 = $('#nav02');
+    var $nav03 = $('#nav03');
+    var $nav04 = $('#nav04');
+    //var $nav05 = $('#nav05');
+    var $nav06 = $('#nav06');
+    if(pathname.indexOf('zhibo') > -1){
+        // 直播
+        if(!$('#nav06').hasClass('cur')){
+            $('#nav01').removeClass('cur');
+            $('#nav02').removeClass('cur');
+            $('#nav03').removeClass('cur');
+            $('#nav04').removeClass('cur');
+            $('#nav06').addClass('cur');
+            $('#nav07').removeClass('cur');
+        }
+    }else if(pathname.indexOf('positiontrend') > -1){
+        // 走势图
+        if(!$('#nav04').hasClass('cur')){
+            $('#nav01').removeClass('cur');
+            $('#nav02').removeClass('cur');
+            $('#nav03').removeClass('cur');
+            $('#nav04').addClass('cur');
+            $('#nav06').removeClass('cur');
+            $('#nav07').removeClass('cur');
+        }
+    }else if(pathname.indexOf('changlong') > -1){
+        // 长龙统计
+        if(!$('#nav03').hasClass('cur')){
+            $('#nav01').removeClass('cur');
+            $('#nav02').removeClass('cur');
+            $('#nav03').addClass('cur');
+            $('#nav04').removeClass('cur');
+            $('#nav06').removeClass('cur');
+            $('#nav07').removeClass('cur');
+        }
+    }else if(pathname.indexOf('pk10') > -1){
+        // pk10游戏
+        if(!$('#nav02').hasClass('cur')){
+            $('#nav01').removeClass('cur');
+            $('#nav02').addClass('cur');
+            $('#nav03').removeClass('cur');
+            $('#nav04').removeClass('cur');
+            $('#nav06').removeClass('cur');
+            $('#nav07').removeClass('cur');
+        }
+    }else if(pathname === '/'){
+        // 首页
+        if(!$('#nav01').hasClass('cur')){
+            $('#nav01').addClass('cur');
+            $('#nav02').removeClass('cur');
+            $('#nav03').removeClass('cur');
+            $('#nav04').removeClass('cur');
+            $('#nav06').removeClass('cur');
+            $('#nav07').removeClass('cur');
+        }
+    }
+</script>
