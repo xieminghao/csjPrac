@@ -6,7 +6,6 @@ var lotteryLuzhu = "";
 var successFn = function(res){
     $('.body-content').replaceWith(res);
     $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/lot/changlong.js',type:'text/javascript'}).appendTo($('body'));
-    console.log(res);
 }
 
 $.ajax({

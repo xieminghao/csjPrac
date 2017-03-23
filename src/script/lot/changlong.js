@@ -84,10 +84,19 @@ $(function () {
     //auto：是否自动更新
     function refreshChanglong(auto) {
         var type = $("#c_type a.hover").attr('data-type');
+        var lotterys = '';
+        $(".cl_s_block .cl_selected").each(function (item) {
+            var datalot = $(this).attr("data-lot");
+            lotterys = ',' + datalot + lotterys;
+        });
+        if(lotterys){
+            lotterys = lotterys.substr(1);
+        }
         $.get("/stat/changlong/",
             {
                 type: type, least: leastUpdateTime,
-                lotterys: $.cookie("changlong", "lotterys"),
+                //lotterys: $.cookie("changlong", "lotterys"),
+                lotterys: lotterys,
                 comeTimes: $("#s_times").val(),
                 t: Math.random()
             },
@@ -166,6 +175,6 @@ $(function () {
         //    tempCount = 0;
         //}
     }
-
+    refreshChanglong(true);
     setInterval(function () { refreshChanglong(true) }, (Math.random() * 10000 + 15000));
 });
