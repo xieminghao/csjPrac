@@ -32,7 +32,9 @@ define(function (require, exports, module) {
             Fc3dObj.ReRender();
             Fc3dObj.RenderTitle(action, number);
             $(".jsloading").show();
-            Fc3dObj.getData(requestUrl, { quantity: pageSize, ball: number == "" ? 0 : (number - 1) }, function (data) {
+            /*** add host and params:  isa:true   begin++ ***/
+            requestUrl=host+requestUrl;
+            Fc3dObj.getData(requestUrl, { isa:true,quantity: pageSize, ball: number == "" ? 0 : (number - 1) }, function (data) {
 
                 Fc3dObj.NumLotteryData = data.Result;
                 Fc3dObj.RenderBody(action, pageSize, number, type);

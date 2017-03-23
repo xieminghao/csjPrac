@@ -30,7 +30,7 @@ define(function (require, exports, module) {
     },
 
     exports.Init = function (name) {
-        require.async("/res/js/lot/" + name, function (explainDataObj) {
+        require.async(name, function (explainDataObj) {
             $("#divHelp").remove();
            
             $("[mykey]").unbind("hover");

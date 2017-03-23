@@ -14,9 +14,11 @@ $.ajax({
 	// headers: {'isaj': true},
 	success: function(res){
 		$('.web_dateLineBody').replaceWith(res);
+		$("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/sea.js',type:'text/javascript'}).appendTo($('body'));
+
 
 		var obj = null;
-	    seajs.use("../../script/fc3d/seajslib/chart.js", function (fc3d) {
+	    seajs.use("/script/fc3d/seajslib/chart.js", function (fc3d) {
 	    	
 	        obj = fc3d;
 	        var param = {

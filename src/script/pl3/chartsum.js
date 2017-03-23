@@ -16,19 +16,20 @@ $.ajax({
 		$('.web_dateLineBody').replaceWith(res);
 		$("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/sea.js',type:'text/javascript'}).appendTo($('body'));
 
-	    // console.log(seajs);
-	    var obj = null;
-        seajs.use("/script/fc3d/seajslib/chart.js", function (fc3d) {
-            obj = fc3d;
+
+		var obj = null;
+	    seajs.use("/script/fc3d/seajslib/chart.js", function (pl3) {
+	    	obj = pl3;
             var param = {
                 Position: -1,
-                LotteryCode: "fc3d",
-                LotteryName: "福彩3D"
+                LotteryCode: "pl3",
+                LotteryName: "排列3"
             };
-            fc3d.arguments = param;
-            fc3d.Init(2, "fc3d", "chart");
-        });
+            pl3.arguments = param;
+            pl3.Init(3, "pl3");
 
+	    });
+	    // console.log(seajs);
 		
 	}
 });

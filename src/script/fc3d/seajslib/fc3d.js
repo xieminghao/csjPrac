@@ -85,8 +85,8 @@ define(function (require, exports, module) {
                 this.DrawLineArr(lineArr);
                 break;
         }
-        require.async("/res/js/lot/seajslib/explainbase", function (obj) {
-            obj.Init("fc3d/explaindata");
+        require.async("../../fc3d/seajslib/explainbase", function (obj) {
+            obj.Init("../../fc3d/seajslib/explaindata");
         });
     };
     /*创建福彩3d基本走势头部*/
