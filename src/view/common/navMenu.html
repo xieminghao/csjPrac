@@ -215,7 +215,7 @@
             $('#nav06').addClass('cur');
             $('#nav07').removeClass('cur');
         }
-    }else if(pathname.indexOf('positiontrend') > -1){
+    }else if(pathname.indexOf('positiontrend') > -1||pathname.indexOf('chart')>-1 || pathname.indexOf('samenotrend')>-1 || pathname.indexOf('samesumtrend')>-1 ){
         // 走势图
         if(!$('#nav04').hasClass('cur')){
             $('#nav01').removeClass('cur');
