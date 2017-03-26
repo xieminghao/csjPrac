@@ -16,6 +16,8 @@ $.ajax({
 	// headers: {'isaj': true},
 	success: function(res){
 		$('.web_dateLineBody').replaceWith(res);
+		 $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/lot/gd11x5/chart.js',type:'text/javascript'}).appendTo($('body'));
+
 
 		$(function () {
             if (top != self) {
