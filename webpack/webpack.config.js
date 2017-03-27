@@ -60,6 +60,10 @@ var config = {
             from: (path.resolve(__dirname, '../src/images')),
             to: (path.resolve(__dirname, '../output/images'))
         }]),
+        new CopyWebpackPlugin([{
+            from: (path.resolve(__dirname, '../src/res')),
+            to: (path.resolve(__dirname, '../output/res'))
+        }]),
         //new HtmlWebpackPlugin({
         //    filename: _config.htmlDir + 'view/index.html',    //生成的html存放路径
         //    template: '../src/view/index.html',    //html模板路径
