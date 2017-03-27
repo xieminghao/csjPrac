@@ -15,7 +15,7 @@
         <li><a href="/pk10/positiontrend"  target="_blank" id="nav04">走势图</a>
         </li>
         <li style="position: relative; z-index: 999;"  id="planshow">
-            <a href="/pk10/numberplan"  target="_blank" id="nav05">推荐计划</a>
+            <a href="/pk10/numberplan"  target="_blank" id="plan">推荐计划</a>
             <span class="web_colorSpeedArrow"><i class="web_colorSpeedDownJt"></i></span>
         </li>
         <li>
@@ -203,73 +203,74 @@
     var $nav02 = $('#nav02');
     var $nav03 = $('#nav03');
     var $nav04 = $('#nav04');
-    //var $nav05 = $('#nav05');
+    var $nav05 = $('#plan');
     var $nav06 = $('#nav06');
+    var $nav07 = $('#nav07');
     if(pathname.indexOf('zhibo') > -1){
         // 直播
-        if(!$('#nav06').hasClass('cur')){
-            $('#nav01').removeClass('cur');
-            $('#nav02').removeClass('cur');
-            $('#nav03').removeClass('cur');
-            $('#nav04').removeClass('cur');
-            $('#nav05').removeClass('cur');
-            $('#nav06').addClass('cur');
-            $('#nav07').removeClass('cur');
+        if(!$nav06.hasClass('cur')){
+            $nav01.removeClass('cur');
+            $nav02.removeClass('cur');
+            $nav03.removeClass('cur');
+            $nav04.removeClass('cur');
+            $nav05.removeClass('cur');
+            $nav06.addClass('cur');
+            $nav07.removeClass('cur');
         }
     }else if(pathname.indexOf('positiontrend') > -1||pathname.indexOf('chart')>-1 || pathname.indexOf('samenotrend')>-1 || pathname.indexOf('samesumtrend')>-1 ){
         // 走势图
-        if(!$('#nav04').hasClass('cur')){
-            $('#nav01').removeClass('cur');
-            $('#nav02').removeClass('cur');
-            $('#nav03').removeClass('cur');
-            $('#nav04').addClass('cur');
-            $('#nav05').removeClass('cur');
-            $('#nav06').removeClass('cur');
-            $('#nav07').removeClass('cur');
+        if(!$nav04.hasClass('cur')){
+            $nav01.removeClass('cur');
+            $nav02.removeClass('cur');
+            $nav03.removeClass('cur');
+            $nav04.addClass('cur');
+            $nav05.removeClass('cur');
+            $nav06.removeClass('cur');
+            $nav07.removeClass('cur');
         }
     }else if(pathname.indexOf('changlong') > -1){
         // 长龙统计
-        if(!$('#nav03').hasClass('cur')){
-            $('#nav01').removeClass('cur');
-            $('#nav02').removeClass('cur');
-            $('#nav03').addClass('cur');
-            $('#nav04').removeClass('cur');
-            $('#nav05').removeClass('cur');
-            $('#nav06').removeClass('cur');
-            $('#nav07').removeClass('cur');
+        if(!$nav03.hasClass('cur')){
+            $nav01.removeClass('cur');
+            $nav02.removeClass('cur');
+            $nav03.addClass('cur');
+            $nav04.removeClass('cur');
+            $nav05.removeClass('cur');
+            $nav06.removeClass('cur');
+            $nav07.removeClass('cur');
         }
     }else if(pathname.indexOf('numberplan') > -1){
         // 长龙统计
-        if(!$('#nav05').hasClass('cur')){
-            $('#nav01').removeClass('cur');
-            $('#nav02').removeClass('cur');
-            $('#nav03').removeClass('cur');
-            $('#nav04').removeClass('cur');
-            $('#nav05').addClass('cur');
-            $('#nav06').removeClass('cur');
-            $('#nav07').removeClass('cur');
+        if(!$nav05.hasClass('cur')){
+            $nav01.removeClass('cur');
+            $nav02.removeClass('cur');
+            $nav03.removeClass('cur');
+            $nav04.removeClass('cur');
+            $nav05.addClass('cur');
+            $nav06.removeClass('cur');
+            $nav07.removeClass('cur');
         }
     }else if(pathname.indexOf('pk10') > -1){
         // pk10游戏
-        if(!$('#nav02').hasClass('cur')){
-            $('#nav01').removeClass('cur');
-            $('#nav02').addClass('cur');
-            $('#nav03').removeClass('cur');
-            $('#nav04').removeClass('cur');
-            $('#nav05').removeClass('cur');
-            $('#nav06').removeClass('cur');
-            $('#nav07').removeClass('cur');
+        if(!$nav02.hasClass('cur')){
+            $nav01.removeClass('cur');
+            $nav02.addClass('cur');
+            $nav03.removeClass('cur');
+            $nav04.removeClass('cur');
+            $nav05.removeClass('cur');
+            $nav06.removeClass('cur');
+            $nav07.removeClass('cur');
         }
     }else if(pathname === '/'){
         // 首页
-        if(!$('#nav01').hasClass('cur')){
-            $('#nav01').addClass('cur');
-            $('#nav02').removeClass('cur');
-            $('#nav03').removeClass('cur');
-            $('#nav04').removeClass('cur');
-            $('#nav05').removeClass('cur');
-            $('#nav06').removeClass('cur');
-            $('#nav07').removeClass('cur');
+        if(!$nav01.hasClass('cur')){
+            $nav01.addClass('cur');
+            $nav02.removeClass('cur');
+            $nav03.removeClass('cur');
+            $nav04.removeClass('cur');
+            $nav05.removeClass('cur');
+            $nav06.removeClass('cur');
+            $nav07.removeClass('cur');
         }
     }
 </script>

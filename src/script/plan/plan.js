@@ -123,7 +123,7 @@ function doPlay() {
                 if (bg.length) bg.remove();
                 bg = document.createElement('bgsound');
                 bg.id = "duSound";
-                bg.src = '/res/themes/images/du.mp3';
+                bg.src = '/images/du.mp3';
                 bg.loop = 1;
                 $(bg).appendTo(document.body);
             }
