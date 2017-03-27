@@ -14,10 +14,10 @@
         </li>
         <li><a href="/pk10/positiontrend"  target="_blank" id="nav04">走势图</a>
         </li>
-        <!--<li style="position: relative; z-index: 999;"  id="planshow">-->
-            <!--<a href="/pk10/numberplan"  target="_blank" id="nav05">推荐计划</a>-->
-            <!--<span class="web_colorSpeedArrow"><i class="web_colorSpeedDownJt"></i></span>-->
-        <!--</li>-->
+        <li style="position: relative; z-index: 999;"  id="planshow">
+            <a href="/pk10/numberplan"  target="_blank" id="nav05">推荐计划</a>
+            <span class="web_colorSpeedArrow"><i class="web_colorSpeedDownJt"></i></span>
+        </li>
         <li>
             <a href="/zhibo/" id="nav06">开奖直播</a>
         </li>
@@ -212,6 +212,7 @@
             $('#nav02').removeClass('cur');
             $('#nav03').removeClass('cur');
             $('#nav04').removeClass('cur');
+            $('#nav05').removeClass('cur');
             $('#nav06').addClass('cur');
             $('#nav07').removeClass('cur');
         }
@@ -222,6 +223,7 @@
             $('#nav02').removeClass('cur');
             $('#nav03').removeClass('cur');
             $('#nav04').addClass('cur');
+            $('#nav05').removeClass('cur');
             $('#nav06').removeClass('cur');
             $('#nav07').removeClass('cur');
         }
@@ -232,6 +234,18 @@
             $('#nav02').removeClass('cur');
             $('#nav03').addClass('cur');
             $('#nav04').removeClass('cur');
+            $('#nav05').removeClass('cur');
+            $('#nav06').removeClass('cur');
+            $('#nav07').removeClass('cur');
+        }
+    }else if(pathname.indexOf('numberplan') > -1){
+        // 长龙统计
+        if(!$('#nav05').hasClass('cur')){
+            $('#nav01').removeClass('cur');
+            $('#nav02').removeClass('cur');
+            $('#nav03').removeClass('cur');
+            $('#nav04').removeClass('cur');
+            $('#nav05').addClass('cur');
             $('#nav06').removeClass('cur');
             $('#nav07').removeClass('cur');
         }
@@ -242,6 +256,7 @@
             $('#nav02').addClass('cur');
             $('#nav03').removeClass('cur');
             $('#nav04').removeClass('cur');
+            $('#nav05').removeClass('cur');
             $('#nav06').removeClass('cur');
             $('#nav07').removeClass('cur');
         }
@@ -252,6 +267,7 @@
             $('#nav02').removeClass('cur');
             $('#nav03').removeClass('cur');
             $('#nav04').removeClass('cur');
+            $('#nav05').removeClass('cur');
             $('#nav06').removeClass('cur');
             $('#nav07').removeClass('cur');
         }
