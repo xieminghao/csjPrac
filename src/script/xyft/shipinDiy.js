@@ -15,7 +15,7 @@ $.ajax({
 	success: function(res){
 		$('.lot-wrap').append(res);
 
-        var iframeEle = $('<div style="clear:left;padding:20px 0px;"><iframe width="980" height="420" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="'+host+pathname+'/shipin/"></iframe><div>');
+        var iframeEle = $('<div style="clear:left;padding:20px 0px;"><iframe width="980" height="630" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="'+host+pathname+'/shipin/"></iframe><div>');
         // iframeEle.attr('src','http://m.1399p.com/video/pk10');
         $('#img-scroll').before(iframeEle);
 
