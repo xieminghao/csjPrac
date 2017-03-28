@@ -30,7 +30,7 @@ function reloadLuzhu(url, date, unload) {
     $('#' + _container).css({ "width": "100%" });
     $('#' + _container).css("position", "relative").append("<div style='margin:0 auto; width:100%;height:100%; color:#FFF; position:absolute; top:240px; z-index:11;left:0px;'>数据正在加载中...</div><div class='loaddingBg'></div>");
     $.get(url, { t: Math.random(), date: date }, function (text) {
-        alert(text.indexOf('object'));
+        //alert(text.indexOf('object'));
         $('#' + _container).html(text);
         $("#pageName").attr("unload", unload);
         $('#' + _container).css("position", "");
