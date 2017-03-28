@@ -87,7 +87,7 @@
 });
 
 //绘制走势图
-function drawTrend() {
+var drawTrend = function() {
     var ball = $(".lot-trend .play-name .cur").attr("ball");
     if (!ball) ball = 1;
 
