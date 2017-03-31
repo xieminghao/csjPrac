@@ -29,7 +29,7 @@ $(document).ready(function () {
     function nextAnimated() {
         //首先判断展示区域是否处于动画
         if (!$show.is(":animated")) {
-            if (page >= 8) {
+            if (page >= 5) {
                 $show.animate({ left: 0 }, "normal");
                 page = 1;
                 $number = 0;
@@ -99,7 +99,11 @@ function AppLoad()
     var html = [];
     for (var i = 0, len = newData.length; i < len; i++) {
         newData[i].img = " <img src='" + $("#app_List").attr("link")+ newData[i].img + "' alt=" + newData[i].title+ " />";
-        html.push(template.replaceWith(newData[i]));
+        try {
+            html.push(template.replaceWith(newData[i]));
+        } catch(e){}
     };
-    $('#app_List').html(html.join("")).show();
+    try {
+        $('#app_List').html(html.join("")).show();
+    }catch(e){}
 }
