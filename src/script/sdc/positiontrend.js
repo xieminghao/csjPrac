@@ -11,7 +11,7 @@ $.ajax({
     datatype:'html',
     type:'get',
     success: function(res){
-        $('.lot-wrap').replaceWith(res);
+        $('.web_dateLineBody').replaceWith(res);
         $(function () {
             require(['trendChart'], function (trendChart) {
                 var chartLine = new trendChart({ css: { noyl: "noyl", bline: "bline", lines: [".hover2"] }, lineWidth: 2, lineColor: "#BB8569", ckbSplit: "#chkFGX" });
