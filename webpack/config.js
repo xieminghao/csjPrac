@@ -89,7 +89,7 @@ module.exports = {
     isRelease: isRelease,
     isPublish: isPublish,
     isOpen: true,
-    publicPath: isPublish? 'https://www.caipiao.com/':(isRelease? '': 'http://'+ ip + ':'+ port +'/'),
+    publicPath: isPublish? '/':(isRelease? '': 'http://'+ ip + ':'+ port +'/'),
     htmlDir: isDev? '': '',
     noop: function(){},
     getEntryJs: getEntryJs,
