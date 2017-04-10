@@ -1,6 +1,6 @@
 // 每个页面值调用一次的请求根据页面的location来判断请求的接口
-var pathname = '/pk10/samepositiontrend';
-
+//var pathname = '/pk10/samepositiontrend';
+var pathname = location.pathname.replace('index.html','');
 var lotMenu = '';
 var lotteryLuzhu = "";
 var vdraw = 0;
