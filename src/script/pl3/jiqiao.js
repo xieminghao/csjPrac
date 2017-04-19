@@ -10,7 +10,7 @@ $.ajax({
     type:'get',
     success: function(res){
         $('.lot-wrap').replaceWith(res);
-
+         $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/public/jiqiao_common.js',type:'text/javascript'}).appendTo($('body'));
     }
 });
 
