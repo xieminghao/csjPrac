@@ -1,6 +1,7 @@
 // 每个页面值调用一次的请求根据页面的location来判断请求的接口
 var search = location.search;
-var pathname = location.pathname.replace('index.html','');
+// var pathname = location.pathname.replace('index.html','');
+var pathname = '/jiqiao/xyft';
 var lotteryLuzhu = "";
 
 $.ajax({
