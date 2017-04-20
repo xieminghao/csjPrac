@@ -1,7 +1,17 @@
 // 每个页面值调用一次的请求根据页面的location来判断请求的接口
-var pathname = location.search.split('?r=')[1];
+var searchList = decodeURIComponent(decodeURIComponent(location.search)).split('?r=')[1].split('&');
+console.log('searchList:', searchList)
+var pathname = searchList[0];
+var stit = searchList[1];
+document.title = document.title.replace('教你如何稳赚不赔',stit).replace('皇家彩世界', '新世界')
+var keywords = $("meta[name=keywords]").attr("content");
+var description = $("meta[name=description]").attr("content");
+$("meta[name=keywords]").attr('content', keywords.replace('教你如何稳赚不赔', stit).replace('皇家彩世界', '新世界'))
+$("meta[name=description]").attr('content', description.replace('教你如何稳赚不赔', stit).replace('皇家彩世界', '新世界'))
+
 var lotMenu = 'pk10_memu';
 var lotteryLuzhu = "";
+
 /*异步load路珠*/
 function reloadLuzhu(url, date, unload) {
     var _container = $("#pageName").attr("container");
