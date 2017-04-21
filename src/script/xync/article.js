@@ -31,8 +31,13 @@ $.ajax({
     type:'get',
     success: function(res){
         $('.lot-wrap').replaceWith(res);
-        $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/navdrag.js',type:'text/javascript'}).appendTo($('body'));
 
+        $sublink = $("div.method-position>a")[1];
+        var sublinkhref = $sublink.getAttribute('href');
+        var subarr = sublinkhref.split('/');
+        $sublink.href = '/' + subarr[2] + '/' + subarr[1];
+
+        $("<scri"+"pt>"+"</scr"+"ipt>").attr({src:'../../script/navdrag.js',type:'text/javascript'}).appendTo($('body'));
         $(function () {
             var fixedMenu = $(".web_listOP");
             var x = fixedMenu.offset().left;
