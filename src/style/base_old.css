@@ -398,9 +398,6 @@ body {
 .header .rf {
     float: right
 }
-    .header .huodong {
-        width:250px; height:60px;float:left; margin-left:20px;
-    }
 
 .header ul li {
     float: left;
@@ -480,15 +477,15 @@ body {
 }
 
 .menu li a.rear {
-    background: #ed1c24;
+    background: #353535
 }
 
 .menu li a.rear.cur {
-    background: #d2060e
+    background: #252525
 }
 
 .menu li a:hover.rear {
-    background-color: #d2060e
+    background-color: #252525
 }
 
 .menu li a.last_one {
@@ -518,12 +515,12 @@ body {
 .menu .twoMenu a {
     font-weight: 100;
     line-height: 37px;
-    background-color: #d2060e;
-    border-top: 1px solid #b20007
+    background-color: #252525;
+    border-top: 1px solid #515151
 }
 
 .menu .twoMenu a:hover {
-    background-color: #ff2931
+    background-color: #000
 }
 
 .body-content {
@@ -972,9 +969,10 @@ a.pagelink:hover {
 }
 
 .w223 a {
+    width: 223px;
     height: 70px;
-    display: block;
-    text-align:center;
+    margin-left: 10px;
+    display: block
 }
 
 .w223 img {
@@ -1359,8 +1357,7 @@ a.pagelink:hover {
     text-align: left;
     width: 100%;
     background: #f6f6f6;
-    border-top: 1px solid #ddd;
-    position:relative;
+    border-top: 1px solid #ddd
 }
 
 .hj_public_foot .hj_public_foot_d {
@@ -1395,7 +1392,7 @@ a.pagelink:hover {
 
 .hj_public_foot .hj_public_foot_d .hj_public_foot_d1 .leftContent {
     float: left;
-    width: 465px
+    width: 415px
 }
 
 .hj_public_foot .hj_public_foot_d .hj_public_foot_d1 .leftContent .leftContent_d {
@@ -1417,20 +1414,19 @@ a.pagelink:hover {
 .hj_public_foot .hj_public_foot_d .hj_public_foot_d1 .leftContent .leftContent_d .lc_d .lc_info {
     float: left;
     display: block;
-    width: 362px
+    width: 320px
 }
 
 .hj_public_foot .hj_public_foot_d .hj_public_foot_d1 .leftContent .leftContent_d .lc_d .lc_info a,.hj_public_foot .hj_public_foot_d .hj_public_foot_d1 .leftContent .leftContent_d .lc_d .lc_info span {
     display: block;
-    width: 90px;
+    width: 105px;
     float: left;
-    color: #333;
-    position:relative;
+    color: #333
 }
 
 .hj_public_foot .hj_public_foot_d .hj_public_foot_d1 .leftContent .leftContent_d .lc_d .lc_info a {
     display: block;
-    width: 90px;
+    width: 105px;
     float: left;
     color: #333;
     text-decoration: none
@@ -1456,10 +1452,7 @@ a.pagelink:hover {
     font-family: "新細明體";
     margin-left: 10px;
     color: #FFF;
-    text-decoration: none;
-    position:absolute;
-    right: -15px;
-    top: 2px;
+    text-decoration: none
 }
 
 .hj_public_foot .hj_public_foot_d .hj_public_foot_d1 .leftContent .leftContent_d .lc_d .lc_info span a:hover {
@@ -1607,8 +1600,7 @@ a.pagelink:hover {
     line-height: 16px;
     border: 2px solid #d01e1e;
     padding: 6px 5px 6px 5px;
-    display: inline-block;
-    width:176px;
+    display: inline-block
 }
 
 .hj_public_foot .hj_public_foot_d .hj_public_foot_d2 .Contact .time .t_text {
@@ -1709,15 +1701,17 @@ a.pagelink:hover {
 
 .web_colorSpeedSelectBlock_light {
     width: 100%;
+    background-color: #f3f3f3;
+    filter: alpha(opacity=95);
+    -moz-opacity: 9.5;
+    opacity: 9.5;
     position: absolute;
     top: 192px;
     left: 0;
     float: left;
     clear: left;
-    height: 250px;
-    z-index: 99;
-    background: url("/images/img/web380_colorSpeedSelectBg.png");
-    border-bottom:1px solid #e1e1e1;
+    // height: 198px;
+    z-index: 99
 }
 
 .web_colorSpeedSelectBlock {
@@ -1867,39 +1861,29 @@ a.pagelink:hover {
 
 .web370_online {
     position: fixed;
-    *bottom: 40px;
-    bottom: 30px;
-    right: 0px;
-    width: 62px;
-    z-index: 1000;
-    /*margin-bottom:-97px;*/
+    top: 5px;
+    right: 0;
+    width: 47px;
+    z-index: 1000
 }
 
 .web370_online a {
     display: block;
-    width: 61px;
-    height: 62px;
-    margin-bottom:3px;
-    background: url("/images/img/web380_online_bg.png") no-repeat 0 0;
+    width: 47px;
+    height: 74px;
+    background: url("/images/headfoot/web370_online_bg.png") no-repeat 0 0
 }
 
 .web370_online a.web370_online_qq:hover {
-    background-position: -64px 0;
+    background-position: -47px 0
 }
 
 .web370_online a.web370_online_fb {
-    background-position: 0 -65px
+    background-position: 0 -74px
 }
 
 .web370_online a.web370_online_fb:hover {
-    background-position: -64px -65px
-}
-.web370_online a.web370_online_top {
-    background-position: 0 -130px
-}
-
-.web370_online a.web370_online_top:hover {
-    background-position: -64px -130px
+    background-position: -47px -74px
 }
 
 .web370_cssb_l_referralProgram {
@@ -1919,108 +1903,6 @@ a.pagelink:hover {
 }
 
 .web_colorSpeedSelectBlock .web370_cssb_l_referralProgram .web_colorSpeedSelectCon .web_colorSpeedLi .web_colorSpeedFont .web370_colorSpeedUnderway {
-    width: 36px;
-    height: 19px;
-    background: url("/images/nav/web370_colorSpeedUnderway.png") no-repeat;
-    position: absolute;
-    right: 0;
-    top: -16px;
-    z-index: 2
-}
-
-.web380_colorSpeedSelectBlock_light {
-    height:auto;
-    background: url("/images/img/web380_colorSpeedSelectBg.png");
-    border-bottom:1px solid #e1e1e1;
-    padding-bottom:7px;
-}
-.web380_colorSpeedSelectBlock_light .web_colorSpeedSelectCon {
-    height:auto;
-}
-.web380_colorSpeedSelectBlock_light .web_colorSpeedSelectCon .web_colorSpeedLiBlock {
-    float:left;
-    width:335px;
-    height:165px;
-    overflow:hidden;
-    border-right:1px solid #fedec2;
-}
-.web380_colorSpeedSelectBlock_light .web_colorSpeedSelectCon .web_colorSpeedLi {
-    margin-bottom:3px;
-}
-    .web380_colorSpeedSelectBlock_light .web380_cssc_title_red, .web380_colorSpeedSelectBlock_light .web380_cssc_title_yellow {
-    float:left;
-    display:block;
-    width:16px;
-    font-size:12px;
-    color:#ffffff;
-    text-align:center;
-    line-height:14px;
-    margin: 8px 10px 0 8px;
-    background: url("/images/img/web380_titlebg.png") no-repeat;
-    }
-    
-    .web380_colorSpeedSelectBlock_light .web380_cssc_title_red {
-    padding:14px 4px 0;
-    height:46px;
-    background-position:0 0;
-    }
-    .web380_colorSpeedSelectBlock_light .web380_cssc_title_yellow {
-    padding:10px 4px 0;
-    height:50px;
-    background-position:0 -63px;
-    }
-    .web380_colorSpeedSelectBlock_light .web_colorSpeedLiBlock2 {
-    float:left;
-    padding:5px 0 0;
-    height:160px;
-    overflow:hidden;
-    font-family: "Microsoft YaHei";
-    }
-    .web380_colorSpeedSelectBlock_light .web_colorSpeedLiBlock2 ul{
-    float:left;
-    }
-    .web380_colorSpeedSelectBlock_light .web_colorSpeedLiBlock2 li{
-    float:left;
-    width:107px;
-    line-height:36px;
-    text-align:left;
-    }
-    .web380_colorSpeedSelectBlock_light .web_colorSpeedLiBlock2 li a{
-    /*display:block;*/
-    font-size:14px;
-    color:#333333;
-    position:relative;
-    }
-    .web380_colorSpeedSelectBlock_light .web_colorSpeedLiBlock2 li a:hover{
-    color:#ed1c24;
-    }
-    .web380_colorSpeedSelectBlock_light .web_colorSpeedLiBlock2.gpBlock {
-    border-right:1px solid #fedec2;
-    width:428px;
-    }
-    .web380_colorSpeedSelectBlock_light .web_colorSpeedLiBlock2.szBlock {
-    width:108px;
-    }
-    .web380_colorSpeedSelectBlock_light .web_colorSpeedLiBlock2 li .web_colorSpeedHot {
-    width: 20px;
-    height: 11px;
-    background: url("/images/nav/web_colorSpeedHotIcon.gif") no-repeat;
-    position: absolute;
-    right: -15px;
-    top: -10px;
-    z-index: 2
-}
-
-.web380_colorSpeedSelectBlock_light .web_colorSpeedLiBlock2 li .web_colorSpeedNew {
-    width: 20px;
-    height: 11px;
-    background: url("/images/nav/web_colorSpeedHotIcon.gif") no-repeat 0 -11px;
-    position: absolute;
-    right: -15px;
-    top: -10px;
-    z-index: 2
-}
-.web380_colorSpeedSelectBlock_light .web_colorSpeedLiBlock2 li .web370_colorSpeedUnderway {
     width: 36px;
     height: 19px;
     background: url("/images/nav/web370_colorSpeedUnderway.png") no-repeat;
